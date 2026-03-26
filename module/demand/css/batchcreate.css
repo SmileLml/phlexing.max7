@@ -1,0 +1,18 @@
+#batchCreateForm .c-module {width: 200px;}
+#batchCreateForm .c-name {width: 300px;}
+#batchCreateForm .c-pri {width: 100px;}
+#batchCreateForm .c-spec{width: 200px;}
+#batchCreateForm .c-source{width: 120px;}
+#batchCreateForm .c-verify{width: 200px;}
+#batchCreateForm .c-category{width: 120px;}
+#batchCreateForm .c-assignedTo{width: 150px;}
+#batchCreateForm .c-actions{width: 120px;}
+#batchCreateForm .c-bsa{width: 120px;}
+#batchCreateForm .c-duration, .c-keywords{width: 120px;}
+
+#batchCreateForm .input-group .colorpicker, #batchEditForm .input-group .colorpicker {z-index: 2;}
+#batchCreateForm .input-group .colorpicker.open, #batchEditForm .input-group .colorpicker.open {z-index: 5;}
+
+.table tbody>tr>td {vertical-align: top;}
+
+input[id^="undeterminedProduct"] {min-width: 100px;}

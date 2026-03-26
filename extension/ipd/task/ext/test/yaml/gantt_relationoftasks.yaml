@@ -1,0 +1,16 @@
+title: zt_team
+author: Yuting Wang
+version: "1.0"
+fields:
+  - field: id
+    range: 1-100
+  - field: execution
+    range: 3
+  - field: pretask
+    range: "2,3,5,11"
+  - field: condition
+    range: "end,begin,begin,end"
+  - field: task
+    range: "3,5,11,12"
+  - field: action
+    range: "begin,begin,end,end"

@@ -1,0 +1,41 @@
+$(function(){
+   // window.editor['content'].addListener('ready', function(){
+   //     $('div#content .edui-toolbar').append("<div class='edui-box edui-button edui-for-markdown edui-default'><div class='edui-default' onmouseover='toggleHover(this)' onmouseout='toggleHover(this)'><div class='edui-button-wrap edui-default' style='padding-right:4px;padding-left:4px;'><div class='edui-default' onclick='toggleEditor(\"markdown\")' title='Markdown'>Markdown</div></div></div></div>");
+   // });
+    toggleEditor(initType);
+})
+
+function toggleHover(obj)
+{
+    if($(obj).hasClass('edui-state-hover')) return $(obj).removeClass('edui-state-hover');
+    return $(obj).addClass('edui-state-hover');
+}
+
+function toggleEditor(type)
+{
+    if(type == 'html')
+    {
+        $('.contenthtml').removeClass('hidden');
+        $('.contentmarkdown').addClass('hidden');
+    }
+    else if(type == 'markdown')
+    {
+        $('.contenthtml').addClass('hidden');
+        $('.contentmarkdown').removeClass('hidden');
+    }
+    $('#contentType').val(type);
+}
+
+function toggleContentBox(type)
+{
+    if(type == 'chapter')
+    {
+        $('#contentBox').addClass('hidden');
+        $('#contentBox').next().addClass('hidden');
+    }
+    else
+    {
+        $('#contentBox').removeClass('hidden');
+        $('#contentBox').next().removeClass('hidden');
+    }
+}

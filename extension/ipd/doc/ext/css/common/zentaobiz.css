@@ -1,0 +1,3 @@
+#mainRow > .side-col > .cell > ul.nav > li > a {padding: 8px 11px;}
+.tree-group > .module-name , .tree-group > .doc-title {white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: block;}
+.panel-title {white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}

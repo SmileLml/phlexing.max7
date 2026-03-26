@@ -1,0 +1,25 @@
+title: zt_workflow.
+author: Shujie Tian
+version: "1.0"
+fields:
+  - field: id
+    range: 1-1000
+  - field: group
+    range: 0
+  - field: type
+    range: flow
+  - field: app
+    prefix: "flow"
+    range: a-z
+  - field: module
+    prefix: "flow"
+    range: a-z
+  - field: name
+    prefix: "工作流"
+    range: 1-1000
+  - field: role
+    range: custom
+  - field: status
+    range: normal
+  - field: version
+    range: '1.0'

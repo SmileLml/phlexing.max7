@@ -1,0 +1,1 @@
+ALTER TABLE `zt_im_conferenceaction` CHANGE `type` `type` ENUM('create','invite','join','leave','close') NOT NULL DEFAULT 'create';

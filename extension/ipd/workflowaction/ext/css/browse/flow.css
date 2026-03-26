@@ -1,0 +1,31 @@
+.w-350px {width: 350px;}
+.w-100px{width:75px !important;}
+a.disabled, a.disabled:focus, a.disabled:hover, a[disabled], a[disabled]:focus, a[disabled]:hover {color: #aaa !important; text-decoration: none; cursor: default;}
+
+#actionListTable td.actions{overflow:visible;}
+#actionListTable td.actions .btn{
+  display: inline-block;
+  width: 26px;
+  padding: 2px;
+  overflow: hidden;
+  line-height: 20px;
+  color: #16a8f8;
+  background: 0 0;
+  border:0px;
+  border-color: transparent;
+}
+#actionListTable td.actions .moreActions.btn{width: 32px;}
+#actionListTable td.actions .dropdown{display:inline-block;}
+
+.preview-content .main-table table thead tr th:last-child{width:170px !important;}
+.preview-content .main-table table tbody tr td:last-child .dropdown{display:inline-block !important;}
+.preview-content .main-table table tr th:first-child{padding-left:10px}
+.preview-content .main-table .table-footer {padding-left:10px}
+.preview-content .main-table table tbody tr td:first-child{padding-left:10px}
+.preview-content .main-table table tbody tr td:first-child .checkbox-primary label{padding-left:0px}
+.preview-content .main-table table tbody tr td:first-child .example-text-holder{width:1px; border:0px;}
+.preview-content .addItem,.preview-content .delItem{padding:6px 8px;}
+
+.preview-content table.table-borderless {table-layout: fixed;}
+.preview-content table.table-borderless th.w-100px{width:100px !important;}
+.preview-content table.table-borderless td, .preview-content table.table-borderless th {overflow: hidden; white-space: nowrap;}

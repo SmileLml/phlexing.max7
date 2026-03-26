@@ -1,0 +1,9 @@
+#querybox #searchform {border-bottom: 1px solid #ddd; margin-bottom: 20px;}
+.main-table tbody>tr>td {overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+.c-room, .c-project, .c-mode, .c-dept {width: 115px;}
+.c-execution {width: 150px;}
+.c-participant, .c-minutedBy {width: 90px;}
+.c-date {width: 110px;}
+[lang^=zh] .c-room {width: 100px;}
+[lang^=zh] .c-minutedBy {width: 80px;}
+[lang^=zh] .c-date {width: 100px;}

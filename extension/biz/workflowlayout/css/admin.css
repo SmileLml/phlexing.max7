@@ -1,0 +1,40 @@
+.table-layout {margin-bottom: 0;}
+.table-layout tr td .form-control[disabled] {background: none}
+.table-layout tr td .form-control[disabled]:hover {border-color: transparent;}
+.table-layout tr td .title {cursor: pointer; display: inline-block;}
+.table-layout tr td .title-bar {white-space:nowrap; cursor: pointer; width: 160px;}
+.table-layout tr td .label-hide {color: #03c; background: none}
+.table-layout tr td .label-show {color: #fff; background: #aaa}
+.table-layout tr td .btn.disabled, .table tr.disabled td .btn.disabled, .table tr td .btn.disabled .label-hide, .table tr.fixed-disabled td .btn span, .table tr.fixed-required td .btn span {border: none; color: #aaa; cursor: not-allowed; background: none}
+.table-layout tr td .icon-move {transition:all 0.2s; cursor: move;}
+.table-layout tr:hover {background: #edf3fe}
+.table-layout tr:hover .title-bar {transition: width 0.3s;}
+
+.table-layout tr:not(.noRequired, .required):hover .icon-move {opacity: 1}
+.table-layout tr.drag-shadow {border: 1px solid #ddd;}
+.table-layout tr.drop-to, .cols-list .col.drag-from {opacity: 0.5; visibility: visible;  background: #e5e5e5}
+.table-layout tr.required::after{display:none;}
+.table-layout tr td.title {max-width: 300px; overflow: hidden;}
+
+.table-layout tr.disabled{color: #aaa; cursor: not-allowed;}
+.table-layout tr.disabled .title {opacity: 0.5;}
+.table-layout tr.disabled .title strong {font-weight: normal;}
+.table-layout tr.disabled .icon-ok {opacity: 0.05;}
+.table-layout tr.disabled .label-hide {color: #fff; background: #aaa}
+.table-layout tr.disabled .label-show {color: #03c; background: none}
+
+.table-layout tr:last-child td {border: none;}
+#fixedRequired tr:first-child td {border-top: 1px solid #ddd;}
+
+.table-layout.sort-disabled .icon-move {display: none;}
+
+#subTables-list .table-layout tr:last-child td{border-bottom: none;}
+
+#adminLayoutForm {padding-bottom: 20px;}
+#adminLayoutForm .form-actions{background-color: rgba(255,255,255,.9); position: fixed; padding: 10px 0 15px; bottom: 0; left: 0; right: 0; z-index: 999;}
+@-moz-document url-prefix() {.modal-body > .form-actions {margin-bottom: 20px;}#adminLayoutForm {padding-bottom: 40px;}}
+
+#layoutTabs {border-bottom: 0px;}
+#layoutTabs>li{max-width: 100px; overflow:hidden; white-space: nowrap; text-overflow: ellipsis;}
+#layoutTabs>li.active>a:before {bottom:1px;}
+#layoutPanel{ margin-top: 10px; border: 1px solid #ddd; box-shadow: none; -webkit-box-shadow: none;}

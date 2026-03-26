@@ -1,0 +1,107 @@
+<?php
+/**
+ * The ajaxgetdropmenu view file of caselib module of ZenTaoPMS.
+ * @copyright   Copyright 2009-2023 禅道软件（青岛）有限公司(ZenTao Software (Qingdao) Co., Ltd. www.zentao.net)
+ * @license     ZPL(https://zpl.pub/page/zplv12.html) or AGPL(https://www.gnu.org/licenses/agpl-3.0.en.html)
+ * @author      Mengyi Liu <liumengyi@easycorp.ltd>
+ * @package     caselib
+ * @link        https://www.zentao.net
+ */
+namespace zin;
+if(in_array("{$module}-{$method}", $config->index->oldPages))
+{
+    include '../view/ajaxgetdropmenu.html.php';
+    return;
+}
+
+$data = array('my' => array(), 'other' => array(), 'closed' => array());
+
+$allProductlink = $module == 'ticket' ? helper::createLink('ticket', 'browse', 'browseType=byProduct&param=all') : helper::createLink('feedback', 'admin', 'browseType=byProduct&param=all');
+if($this->config->vision == 'lite' and $module != 'ticket') $allProductlink = helper::createLink('feedback', 'browse', 'browseType=byProduct&param=all');
+
+/**
+ * 获取产品所属分组。
+ * Get product group.
+ *
+ * @param object $product
+ * @return string
+ */
+$getProductGroup = function($product): string
+{
+    global $app;
+    if($product->status == 'normal' and $product->PO == $app->user->account) return 'my';
+    if($product->status == 'closed') return 'closed';
+    return 'other';
+};
+
+/**
+ * 定义产品所属分组。
+ * Define the group of product.
+ */
+$productGroup = array();
+
+/* 处理分组数据。Process grouped data. */
+foreach($products as $programID => $programProducts)
+{
+    $programItem = array();
+    $programItem['id']    = $programID;
+    $programItem['type']  = 'program';
+    $programItem['text']  = $programID ? zget($programs, $programID) : $lang->product->emptyProgram;
+    $programItem['items'] = array();
+
+    if(!$programID) $programItem['label'] = '';
+
+    foreach($programProducts as $index => $product)
+    {
+        $group = $productGroup[$product->id] = $getProductGroup($product);
+        $name  = (in_array($this->config->systemMode, array('ALM', 'PLM')) and $product->line) ? zget($lines, $product->line, '') . ' / ' . $product->name : $product->name;
+
+        $item = array();
+        $item['id']       = $product->id;
+        $item['text']     = $product->name;
+        $item['active']   = $productID == $product->id;
+        $item['keys']     = zget(common::convert2Pinyin(array($product->name)), $product->name, '');
+        $item['data-app'] = $app->tab;
+
+        if($config->systemMode == 'light' || $config->vision == 'or')
+        {
+            $data[$group][] = $item;
+        }
+        else
+        {
+            if(!isset($data[$group][$programID])) $data[$group][$programID] = $programItem;
+            $data[$group][$programID]['items'][] = $item;
+        }
+    }
+}
+
+/* 将分组数据转换为索引数组。Format grouped data to indexed array. */
+foreach($data as $key => $value) $data[$key] = array_values($value);
+
+/**
+ * 定义每个分组名称信息，包括可展开的已关闭分组。
+ * Define every group name, include expanded group.
+ */
+$tabs = array();
+$tabs[] = array('name' => 'my',     'text' => $lang->product->mine, 'active' => zget($productGroup, $productID, '') === 'my');
+$tabs[] = array('name' => 'other',  'text' => $lang->product->other, 'active' => zget($productGroup, $productID, '') === 'other');
+$tabs[] = array('name' => 'closed', 'text' => $lang->product->closedProducts);
+
+/**
+ * 定义最终的 JSON 数据。
+ * Define the final json data.
+ */
+$json = array();
+$json['data']       = $data;
+$json['tabs']       = $tabs;
+$json['searchHint'] = $lang->searchAB;
+$json['link']       = array('product' => sprintf($link, '{id}'));
+$json['labelMap']   = array('program' => $lang->program->common);
+$json['expandName'] = 'closed';
+$json['itemType']   = 'product';
+
+/**
+ * 渲染 JSON 字符串并发送到客户端。
+ * Render json data to string and send to client.
+ */
+renderJson($json);

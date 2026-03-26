@@ -1,0 +1,846 @@
+# the basic info.
+name: PROEdition       # Extension name.
+code: bizext       # Extension code, must be letter or nubmer.
+type: extension       # Extension type, can be extension, patch or theme.
+copyright: QingDao Nature Easy Soft Network Technology Co.,LTD # Copyright info.
+site: http://www.zentao.net                                   # The official site.
+author: Zentao team                               # The author, can be a list.
+abstract: Gather effort calendar gantt repo forum excel extensions.
+
+# the desc and install doc. can be multi line, support html tags like a, p, div, h3-h6, strong, img, table, tr, td, ol, ul, li, span
+desc: |
+  Gather effort calendar gantt repo forum excel extensions.
+install: |
+  1.You can bug our business edition.
+license: |
+  The “software” is developed by Qingdao Nature Easy Soft Network Technology Co., Ltd (hereinafter referred to as Nature Easy Soft ). If you do not accept terms and conditions of this license, you do not have the right to download, install or use the software and its related service. If you continue installing it, it will be deemed as your acceptance of this license and agreed to accept its terms and conditions. You shall not reproduce, duplicate, copy, sell, trade or resell the software for any purpose, if not authorized.
+
+  The licensed software is provided to users, as well as instructions to install and use the software. Users have the permission to use the software. However, it is not guaranteed that the software is permanently free.
+  Users with licensed software own all data of members, products, orders and related information in the system and bear the related legal obligations.
+  Under one license the user is granted the right to install, use, display and run the software on one computer which means a hardware system with a storage device to run the software.
+  If any unstated rights, they all belong to Nature Easy Soft. If the user want to use those rights, written consent from Nature Easy Soft has to be obtained.
+  Except what have been stated in this license, terms and conditions of other Nature Easy Soft service are not specified. Please contact us to know about the terms and conditions of service mentioned above, for there are separate licenses concerning it.
+
+  Nature Easy Soft reserved the right of the final interpretation of this license.
+
+# releases.
+releases:              # Release versions.
+  11.0:
+    zentao:
+      compatible: 16.0
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: 兼容开源版。
+    date: 2021-12-29
+  11.0.beta1:
+    zentao:
+      compatible: 16.0.beta1
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: 兼容开源版。
+    date: 2021-12-09
+  10.3.1:
+    zentao:
+      compatible: 15.7.1
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: 兼容开源版。
+    date: 2021-11-04
+  10.3:
+    zentao:
+      compatible: 15.7
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: 兼容开源版。
+    date: 2021-10-21
+  10.2:
+    zentao:
+      compatible: 15.5
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: 兼容开源版。
+    date: 2021-09-17
+  10.1:
+    zentao:
+      compatible: 15.3
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: Fix Bug
+    date: 2021-08-09
+  10.0.2:
+    zentao:
+      compatible: 15.0.3
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: 兼容开源版。
+    date: 2021-06-24
+  10.0.1:
+    zentao:
+      compatible: 15.0.2
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: 兼容开源版。
+    date: 2021-06-12
+  10.0:
+    zentao:
+      compatible: 15.0
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: 兼容开源版。
+    date: 2021-05-06
+  10.0.rc1:
+    zentao:
+      compatible: 15.0.rc1
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: 兼容开源版。
+    date: 2021-04-07
+  9.0.3:
+    zentao:
+      compatible: 12.5.3
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: 兼容开源版。
+    date: 2021-01-06
+  9.0.2:
+    zentao:
+      compatible: 12.5.2
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: 修复Bug，兼容开源版。
+    date: 2020-12-18
+  9.0.1:
+    zentao:
+      compatible: 12.5.1
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: 修复漏洞，兼容开源版。
+    date: 2020-11-30
+  9.0:
+    zentao:
+      compatible: 12.5
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: 兼容开源版
+    date: 2020-11-19
+  8.9.4:
+    zentao:
+      compatible: 12.4.4
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: 修复Bug
+    date: 2020-10-30
+  8.9.3:
+    zentao:
+      compatible: 12.4.3
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: 兼容开源版
+    date: 2020-10-13
+  8.9.2:
+    zentao:
+      compatible: 12.4.2
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: 兼容开源版
+    date: 2020-09-16
+  8.9.1:
+    zentao:
+      compatible: 12.4.1
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: 兼容开源版
+    date: 2020-08-10
+  8.9:
+    zentao:
+      compatible: 12.4
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: 兼容开源版
+    date: 2020-07-27
+  8.8.3:
+    zentao:
+      compatible: 12.3.3
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: 修复Bug
+    date: 2020-07-02
+  8.8.2:
+    zentao:
+      compatible: 12.3.2
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: 兼容开源版。
+    date: 2020-06-01
+  8.8.1:
+    zentao:
+      compatible: 12.3.1
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: 兼容开源版。
+    date: 2020-05-19
+  8.8:
+    zentao:
+      compatible: 12.1
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: 兼容开源版。
+    date: 2020-03-25
+  8.7.1:
+    zentao:
+      compatible: 12.0.1
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: 兼容开源版。
+    date: 2020-02-13
+  8.7:
+    zentao:
+      compatible: 12.0
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: 兼容开源版。
+    date: 2020-01-03
+  8.6:
+    zentao:
+      compatible: 11.7
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: 兼容开源版。
+    date: 2019-12-09
+  8.5.3:
+    zentao:
+      compatible: 11.6.5
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: Fix bug.
+    date: 2019-11-08
+  8.5.2:
+    zentao:
+      compatible: 11.6.3
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: Git版本库增加分支追踪，优化ldap。
+    date: 2019-09-23
+  8.5.1:
+    zentao:
+      compatible: 11.6.1
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: 兼容开源版
+    date: 2019-08-23
+  8.5:
+    zentao:
+      compatible: 11.6
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: Adjust int editor.
+    date: 2019-07-15
+  8.4:
+    zentao:
+      compatible: 11.5
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: Effort add comment.
+    date: 2019-05-08
+  8.3:
+    zentao:
+      compatible: 11.4.1
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: 重构甘特图
+    date: 2019-04-08
+  8.2:
+    zentao:
+      compatible: 11.3
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: 兼容开源版
+    date: 2019-02-27
+  8.1:
+    zentao:
+      compatible: 11.2
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: 兼容开源版
+    date: 2019-01-28
+  8.0:
+    zentao:
+      compatible: 11.1
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: 兼容开源版
+    date: 2019-01-04
+  7.5.1:
+    zentao:
+      compatible: 10.6
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: 兼容开源版
+    date: 2018-11-20
+  7.5:
+    zentao:
+      compatible: 10.5.1
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: Add Kanban/Burn/Group export. Adjust story export.
+    date: 2018-11-05
+  7.4:
+    zentao:
+      compatible: 10.5
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: Fix Bugs.
+    date: 2018-10-25
+  7.3:
+    zentao:
+      compatible: 10.4
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: Fix Bugs.
+    date: 2018-09-28
+  7.2:
+    zentao:
+      compatible: 10.3
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: Fix Bugs.
+    date: 2018-08-27
+  7.1:
+    zentao:
+      compatible: 10.1
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: Fix Bugs.
+    date: 2018-07-26
+  7.0.beta:
+    zentao:
+      compatible: 10.0
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: New UI/UX and new experience!
+    date: 2018-06-26
+  6.7.3:
+    zentao:
+      compatible: 9.8.3
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: 兼容开源版9.8.3。
+    date: 2018-04-08
+  6.7.2:
+    zentao:
+      compatible: 9.8.2
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: 兼容开源版9.8.2。
+    date: 2018-03-23
+  6.7.1:
+    zentao:
+      compatible: 9.8.1
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: 兼容开源版9.8.1, 优化英文语言文件.
+    date: 2017-02-06
+  6.7:
+    zentao:
+      compatible: 9.8
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: 兼容开源版9.8, 修复Bug.
+    date: 2017-01-18
+  6.6.1:
+    zentao:
+      compatible: 9.7
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: 兼容开源版9.7, 修复Bug.
+    date: 2017-12-28
+  6.6:
+    zentao:
+      compatible: 9.6.3
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: 优化报表，工作日志，ldap，完善细节。
+    date: 2017-12-04
+  6.5.1:
+    zentao:
+      compatible: 9.5.1
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: 兼容9.5.1
+    date: 2017-09-27
+  6.5:
+    zentao:
+      compatible: 9.5
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: 兼容9.5
+    date: 2017-08-24
+  6.4:
+    zentao:
+      compatible: 9.4
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: 兼容9.4
+    date: 2017-07-26
+  6.3.1:
+    zentao:
+      compatible: 9.2.1
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: 兼容9.2.1
+    date: 2017-05-22
+  6.3:
+    zentao:
+      compatible: 9.2
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: 兼容9.2
+    date: 2017-05-16
+  6.2:
+    zentao:
+      compatible: 9.1.2
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: 增加移动版界面
+    date: 2017-04-19
+  6.1:
+    zentao:
+      compatible: 9.1
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: 兼容9.1。
+    date: 2017-03-23
+  6.0.1:
+    zentao:
+      compatible: 9.0.1
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: 兼容9.0.1。
+    date: 2017-02-15
+  6.0:
+    zentao:
+      compatible: 9.0
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: 兼容9.0。
+    date: 2017-01-17
+  6.0.beta:
+    zentao:
+      compatible: 9.0.beta
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: 兼容9.0.beta。
+    date: 2017-01-03
+  5.5.1:
+    zentao:
+      compatible: 8.4.1
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: 兼容8.4.1。
+    date: 2016-12-12
+  5.5:
+    zentao:
+      compatible: 8.4
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: 兼容8.4。
+    date: 2016-12-06
+  5.4.1:
+    zentao:
+      compatible: 8.3.1
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: 兼容8.3.1。
+    date: 2016-11-17
+  5.4:
+    zentao:
+      compatible: 8.3
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: 修复Bug。
+    date: 2016-11-07
+  5.3.3:
+    zentao:
+      compatible: 8.2.6
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: 修复Bug。
+    date: 2016-09-13
+  5.3.2:
+    zentao:
+      compatible: 8.2.5
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: 修复Bug，增加禅道客户端的一些功能支持。
+    date: 2016-08-05
+  5.3.1:
+    zentao:
+      compatible: 8.2.4
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: 修复Bug
+    date: 2016-06-28
+  5.3:
+    zentao:
+      compatible: 8.2.3
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: 优化专业版。
+    date: 2016-06-24
+  5.2.1:
+    zentao:
+      compatible: 8.2.1
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: 兼容开源版8.2.1，修复Bug
+    date: 2016-05-24
+  5.2:
+    zentao:
+      compatible: 8.2
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: 兼容开源版8.2，修复Bug
+    date: 2016-05-17
+  5.1.3:
+    zentao:
+      compatible: 8.1.3
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: 兼容开源版8.1.3，修复Bug
+    date: 2016-03-23
+  5.1:
+    zentao:
+      compatible: 8.1
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: 兼容开源版8.1，修复Bug
+    date: 2016-03-15
+  5.0.1:
+    zentao:
+      compatible: 8.0.1
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: 兼容开源版8.0.1
+    date: 2015-12-24
+  4.7.1:
+    zentao:
+      compatible: 7.3
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: 兼容开源版7.3
+    date: 2015-09-21
+  4.7:
+    zentao:
+      compatible: 7.2.5
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: 完善水晶报表功能，增加各种报表。
+    date: 2015-08-06
+  4.6:
+    zentao:
+      compatible: 7.2.4
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: 增加全文检索和导出报表功能。
+    date: 2015-07-03
+  4.5:
+    zentao:
+      compatible: 7.1
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: 重写日历，修复Bug。
+    date: 2015-03-10
+  4.4:
+    zentao:
+      compatible: 7.0
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: 重写看板，调整版本库。
+    date: 2015-02-06
+  4.3:
+    zentao:
+      compatible: 6.3
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: 完善水晶报表和数据表格。
+    date: 2014-12-02
+  4.2:
+    zentao:
+      compatible: 6.3
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: 增加客户端API，数据表格。
+    date: 2014-11-06
+  4.1.beta:
+    zentao:
+      compatible: 6.2
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: 修复Bug，可以上传、查看授权。
+    date: 2014-08-05
+  4.0.beta1:
+    zentao:
+      compatible: 6.0
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: 修复Bug，修改界面。
+    date: 2014-06-20
+  3.3:
+    zentao:
+      compatible: 5.3
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: 修复Bug。
+    date: 2014-03-21
+  3.2.1:
+    zentao:
+      compatible: 5.2.1
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: 修复Bug。
+    date: 2013-12-09
+  3.2:
+    zentao:
+      compatible: 5.2
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: 调整样式，修复Bug。
+    date: 2013-11-03
+  3.1:
+    zentao:
+      compatible: 5.1
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: 增加git和代码评审。svn本地支持，提高查看速度。及修复一些Bug。
+    date: 2013-09-28
+  3.0:
+    zentao:
+      compatible: 5.0
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: 适应开源版5.0。
+    date: 2013-09-03
+  3.0.beta1:
+    zentao:
+      compatible: 5.0.beta1
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: 适应开源版5.0.beta1。
+    date: 2013-08-09
+  2.2.beta:
+    zentao:
+      compatible: 4.2.beta
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: 适应开源版4.2，去除company字段。
+    date: 2013-07-05
+  2.1:
+    zentao:
+      compatible: 4.0.1,4.1
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: 增加notify插件，调整日历视图，优化显示界面。
+    date: 2013-05-03
+  2.0.1:
+    zentao:
+      compatible: 4.0.1
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: 兼容Zentao 4.0.1。
+    date: 2012-03-18
+  2.0:
+    zentao:
+      compatible: 4.0
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: 兼容Zentao 4.0，优化专业版功能。
+    date: 2012-03-03
+  1.3:
+    zentao:
+      compatible: 3.3
+      incompatible:
+    conflicts:
+    depends:
+    charge: business
+    changelog: 添加excel导入需求、Bug、任务。
+    date: 2012-10-29

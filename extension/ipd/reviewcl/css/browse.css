@@ -1,0 +1,12 @@
+.side-col .tree a.active{font-weight: 700; color: #0c64eb;}
+
+#sidebar .cell{overflow: auto !important;}
+.hide-sidebar #sidebar #sidebarHeader{display: none}
+table td{white-space:nowrap;text-overflow:ellipsis;overflow:hidden;}
+.main-table tbody>tr>td:first-child{padding-left: 8px}
+.btn-group {margin-right: 10px !important;}
+.btn-group a i.icon-plus {font-size: 16px;}
+.btn-group a.btn-primary {border-right: 1px solid rgba(255,255,255,0.2);}
+.btn-group button.dropdown-toggle.btn-primary {padding:6px;}
+#mainMenu.clearfix {margin: 0;}
+ .toolbar {display: flex; justify-content: space-between; background: #fff; padding: 5px 10px;}

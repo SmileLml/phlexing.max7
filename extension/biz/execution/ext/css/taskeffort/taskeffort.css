@@ -1,0 +1,39 @@
+#tableContainer {background-color: #fff; box-shadow: 0 1px 1px rgba(0,0,0,.05), 0 2px 6px 0 rgba(0,0,0,.045); border-radius: 4px;}
+#tableHeader {background-color: #fff; border-bottom: 1px solid #eee; height: 70px; position: relative;}
+#timeList {position: relative; height: 70px;}
+#timeList .day-cell {position: absolute; border-right: 1px solid #eee; height: 70px; font-weight: bold;}
+#timeList .day-name {height: 34px; padding: 7px; text-align: center; line-height: 20px; border-bottom: 1px solid #eee;}
+#timeList .day-consumed, #timeList .day-left {position: absolute; left: 0; top: 34px; height: 34px; padding: 7px; text-align: center; line-height: 20px; width: 50%;}
+#timeList .day-left {left: 50%; border-left: 1px solid #eee;}
+#totalDays {position: relative; height: 34px;}
+#totalDays .day-cell {position: absolute; border-right: 1px solid #eee; height: 34px; font-weight: bold; text-align: center;}
+#totalDays .day-consumed, #totalDays .day-left {position: absolute; width: 50%; left: 0; top: 0; height: 34px; padding: 7px; line-height: 20px;}
+#totalDays .day-left {left: 50%; border-left: 1px solid #eee;}
+#tableHeader.is-fixed {position: fixed; background-color: #666; color: #fff; z-index: 1000; top: 0;}
+#tableHeader.is-fixed .day-left, #tableHeader.is-fixed .day-name, #tableHeader.is-fixed .day-cell, #tableHeader.is-fixed #headerColName, #tableHeader.is-fixed #headerColGroup, #tableFooter.is-fixed #footerTotal, #tableFooter.is-fixed #totalDays .day-cell, #tableFooter.is-fixed #totalDays .day-left {border-color: #aaa;}
+#tableFooter.is-fixed {position: fixed; background-color: #666; color: #fff; z-index: 1000; bottom: 0;}
+#headerColGroup, #headerColName, #headerTimeline {position: absolute; width: 200px; left: 0; top: 0; bottom: 0;}
+#headerColGroup, #headerColName {border-right: 1px solid #eee; padding: 18px 10px;}
+#headerColName {left: 200px; line-height: 32px; font-weight: bold; text-align: center;}
+#headerTimeline, #totalCells {left: 400px; right: 0; overflow: hidden; width: auto; position: absolute;}
+#tableFooter {border-top: 1px solid #eee; height: 34px; position: relative;}
+#tableBody {min-height: 34px; position: relative;}
+#footerTotal {width: 400px; text-align: center; position: absolute; left: 0; top: 0; bottom: 0; line-height: 32px; border-right: 1px solid #eee;}
+#groups {width: 400px; border-right: 1px solid #eee; line-height: 16px;}
+#groups > .row-group {display: table;}
+#groups > .row-group + .row-group {border-top: 1px solid #eee;}
+#groups > .row-group > .cell-group {display: table-cell; width: 200px; vertical-align: middle;}
+#groups > .row-group > .group-name {padding: 8px; word-break: break-all;}
+#groups > .row-group > .group-tasks {border-left: 1px solid #eee; display: flex; flex-direction: column;}
+#groups .group-task {padding: 8px; display: flex; align-items: center; flex: auto; word-break: break-all;}
+#groups .group-task + .group-task {border-top: 1px solid #eee;}
+#cellsContainer {position: absolute; left: 400px; right: 0; top: 0; bottom: 0; overflow: hidden;}
+#cells {position: absolute; left: 0; right: 0; top: 0; bottom: 0;}
+#scrollbarContainer {position: absolute; left: 400px; right: 0; top: -12px; overflow: auto; min-height: 1px; opacity: 0; background-color: rgba(220,220,220,.5); transition: opacity .3s; z-index: 10;}
+#scrollbar {height: 1px;}
+#tableContainer:hover #scrollbarContainer {opacity: 1;}
+#cells .data-cell {position: absolute; background-color: #fff; border-right: 1px solid #eee; border-bottom: 1px solid #eee;}
+#cells .day-consumed, #cells .day-left {position: absolute; width: 50%; top: 0; left: 0; right: 0; padding: 8px; display: flex; justify-content: center; align-items: center; bottom: 0;}
+#cells .day-left {left: 50%; border-left: 1px solid #eee;}
+#tableContainer .hover-row, #tableContainer .hover-day {background-color: rgba(0,0,0,.05);}
+#tableContainer .hover-day.hover-row {background-color: rgba(0,0,0,.1);}

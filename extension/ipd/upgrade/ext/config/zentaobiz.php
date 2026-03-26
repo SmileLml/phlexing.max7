@@ -1,0 +1,46 @@
+<?php
+$config->excludeFiles['module/task/ext/control/create.php']   = 1;
+$config->excludeFiles['module/task/ext/control/activate.php'] = 1;
+$config->excludeFiles['module/task/ext/control/cancel.php']   = 1;
+$config->excludeFiles['module/task/ext/control/close.php']    = 1;
+$config->excludeFiles['module/task/ext/control/finish.php']   = 1;
+$config->excludeFiles['module/task/ext/control/start.php']    = 1;
+
+$config->delete['3.7'][]       = 'module/workflowlayout/ext/control/admin.php';
+$config->delete['5.0.rc1'][]   = 'module/attend/ext/control/setmanager.php';
+$config->delete['5.1'][]       = 'module/search/ext/model/hook/saveIndex.zentaobiz.hook.php';
+$config->delete['5.1'][]       = 'module/doc/ext/view/view.html.php';
+$config->delete['5.3.1'][]     = 'module/execution/ext/control/kanban.php';
+$config->delete['5.3.1'][]     = 'module/execution/ext/view/kanban.flow.html.hook.php';
+$config->delete['6.0.beta1'][] = 'module/project/ext/lang/zh-cn/flow.php';
+$config->delete['6.0.beta1'][] = 'module/project/ext/lang/en/flow.php';
+$config->delete['6.0.beta1'][] = 'module/project/ext/view/kanban.word.html.hook.php';
+$config->delete['6.0.beta1'][] = 'module/project/ext/view/kanban.flow.html.hook.php';
+$config->delete['6.0.beta1'][] = 'module/doc/ext/view/browse.html.php';
+$config->delete['6.2'][]       = 'module/execution/ext/view/kanban.word.html.hook.php';
+$config->delete['6.2'][]       = 'module/bug/ext/control/activate.php';
+$config->delete['6.2'][]       = 'module/bug/ext/view/activate.flow.html.hook.php';
+$config->delete['6.2'][]       = 'module/bug/ext/control/resolve.php';
+$config->delete['6.2'][]       = 'module/bug/ext/view/resolve.flow.html.hook.php';
+$config->delete['6.2'][]       = 'module/bug/ext/control/close.php';
+$config->delete['6.2'][]       = 'module/bug/ext/view/resolve.flow.html.hook.php';
+$config->delete['6.2'][]       = 'module/task/ext/control/start.php';
+$config->delete['6.2'][]       = 'module/task/ext/view/start.flow.html.hook.php';
+$config->delete['6.2'][]       = 'module/task/ext/control/finish.php';
+$config->delete['6.2'][]       = 'module/task/ext/view/finish.flow.html.hook.php';
+$config->delete['6.2'][]       = 'module/task/ext/control/pause.php';
+$config->delete['6.2'][]       = 'module/task/ext/view/pause.flow.html.hook.php';
+$config->delete['6.2'][]       = 'module/task/ext/control/close.php';
+$config->delete['6.2'][]       = 'module/task/ext/view/close.flow.html.hook.php';
+$config->delete['6.2'][]       = 'module/task/ext/control/cancel.php';
+$config->delete['6.2'][]       = 'module/task/ext/view/cancel.flow.html.hook.php';
+$config->delete['6.2'][]       = 'module/task/ext/control/activate.php';
+$config->delete['6.2'][]       = 'module/task/ext/view/activate.flow.html.hook.php';
+
+$config->flowAction['batchedit']      = 'batchEdit';
+$config->flowAction['batchcreate']    = 'batchCreate';
+$config->flowAction['exporttemplate'] = 'exportTemplate';
+$config->flowAction['showimport']     = 'showImport';
+$config->flowAction['batchconfirm']   = 'batchConfirm';
+$config->flowAction['batchresolve']   = 'batchResolve';
+$config->flowAction['adminview']      = 'adminView';

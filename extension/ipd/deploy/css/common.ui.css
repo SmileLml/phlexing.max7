@@ -1,0 +1,14 @@
+.deploy-menu-header {position: relative; left: 0; width: 180px; height: 32px; border: 1px solid var(--color-border); justify-content: center; padding: 0 24px; border-right: 0;}
+.deploy-menu-header::before,
+.deploy-menu-header::after {content: ''; position: absolute; top: 0; right: -12px; width: 0; height: 0; border-style: solid; border-color: transparent transparent transparent var(--color-border); border-width: 15px 0 15px 12px;}
+.deploy-menu-header::after {right: -11px; border-color: transparent transparent transparent var(--color-canvas);}
+.deploy-menu-header .module-title {font-size: var(--font-size-base);}
+.deploy-menu-header > .btn-close {position: absolute; right: 0; font-weight: normal;}
+.deploy-menu-header > .btn-close:not(:hover) {opacity: .5;}
+
+#deployMenu menu.nav {border-bottom: 1px solid #ddd}
+#deployMenu .nav-item>a.active {border-bottom-color: var(--color-primary-500) !important; border-bottom-width: 2px; margin-bottom: -1px;}
+#deployMenu .manage-btn {margin-top: -38px;}
+
+#productRow .first-action .delete-span {display: none;}
+#productRow .first-action {margin-right: 30px;}

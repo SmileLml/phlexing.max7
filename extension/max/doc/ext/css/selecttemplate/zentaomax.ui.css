@@ -1,0 +1,4 @@
+.cornerMark {position: absolute; top: 0; right: 0; width: 0; height: 0; border-style: solid; border-width: 0 20px 20px 0; border-color: transparent #2196F3 transparent transparent;}
+.checkIcon {position: absolute; top: 1px; right: -20px; color: white; font-size: 10px;}
+.h-600px{height: 600px;}
+.modal-content{padding-bottom: 60px;}

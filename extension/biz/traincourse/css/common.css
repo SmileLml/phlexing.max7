@@ -1,0 +1,5 @@
+#mainRow > .side-col > .cell > ul.nav > li > a {padding: 8px 11px;}
+
+#course .tree li.active>span.item{font-weight: 700; color: #0c64eb;}
+#course .tree li.active>span.item a{font-weight: 700; color: #0c64eb;}
+#course .tree li>span.item a{color: #0d3d88;}

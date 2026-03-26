@@ -1,0 +1,7 @@
+.modal-body .panel-form-batch .form-batch-container {
+  max-height: 400px !important;
+}
+
+.modal-body .panel-form-batch {padding-top: 1rem;}
+.modal-body .table {margin-bottom: 1.5rem;}
+.modal-body .table + .panel-form-batch {padding-top: 0;}

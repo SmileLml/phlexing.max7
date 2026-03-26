@@ -1,0 +1,7 @@
+.btn-group {margin-right: 10px !important;}
+.btn-group a i.icon-plus {font-size: 16px;}
+.btn-group a.btn-primary {border-right: 1px solid rgba(255,255,255,0.2);}
+.btn-group button.dropdown-toggle.btn-primary {padding:6px;}
+.main-col .main-header{background-color:#fff; padding:8px 0px; padding-left:14px;}
+.main-col .main-header .pull-left{padding-top:8px}
+.main-col .main-header .pull-left a{padding-left:16px;}

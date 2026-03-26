@@ -1,0 +1,6 @@
+#viewPage .section-list {flex-direction: row;}
+#viewPage .table-data-tr {flex-direction: column;}
+#viewPage .table-data-th {font-weight: bold; color: var(--color-gray-900);}
+#viewPage .table-data-td {padding-left: 0;}
+
+#mainNavbar + #mainContainer #viewPage {height: auto;}

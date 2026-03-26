@@ -1,0 +1,71 @@
+.courses {position: relative; margin-left: -20px;}
+.courses dl { margin:0 0 0 -10px; line-height: 20px; }
+.article-content dl{padding-right:0;}
+.courses .article { padding: 0; border: none; box-shadow: none; margin: 0}
+.book,.chapter,.courses .article { line-height: 30px; padding: 3px 0; transition: all 0.3s; border-radius: 4px} .book > strong,.chapter > strong,.courses .article > strong { font-size: 16px; display: inline-block; } .chapter > strong,.courses .article > strong { font-size: 14px; } .courses .article > strong { font-weight: normal; }
+.courses .actions { display: inline-block; margin-left: 20px;}
+.courses .actions a { color: #999; font-weight: normal; }
+.book:hover .actions a,.chapter:hover .actions a,.courses .article:hover .actions a { color: #506EAF; }
+.chapter, .courses .article { line-height: 20px; }
+.chapter .order,.courses .article .order { display: inline-block; margin-right: 0; height: 20px; line-height: 20px; padding: 0 6px; text-align: center; transition: all 0.3s;  }
+.courses dd:hover .order,.book:hover:before{border-color: #999}
+.courses > .catalog > .actions > .sort-handle {display: none}
+.courses .catalog.article .radio-primary {overflow: hidden; text-overflow:ellipsis; display:flex;}
+.courses .catalog.article .radio-primary > a {white-space: nowrap;}
+#mainMenu {overflow: hidden; text-overflow:ellipsis;}
+#mainMenu .breadcrumb{padding:0; margin:8px 0;font-size:14px;color:#666; white-space: nowrap;}
+.main-actions {padding-top: 30px;}
+.main-row{margin-bottom: 20px;}
+.main-info .cell.clearfix{display:flex;}
+.main-info .item{min-height:200px;width:30%;position:relative;padding:10px;}
+.main-info .item .image{height:100%;display:flex;align-items:center;justify-content:center;}
+.main-info .item .image i{font-size:100px;}
+.main-info .item .image i:before{content: '\f1c5';}
+.main-info .item.image {width: 300px; height: 300px;text-align: center;}
+.main-info .item.item-img {width: 300px; height: 300px;text-align: center;}
+.main-info .item.item-img img {height:270px; width:auto; max-width:270px; object-fit:cover;}
+.main-info .content{margin-left:0px;width:calc(100% - 320px);}
+.main-info .title{font-size:30px;}
+.main-info .course-desc{color: #838a9d; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 9; -webkit-box-orient: vertical;}
+.main-info .course-require{color: #838a9d; font-size: 14px; max-height: 70px; overflow: hidden; text-overflow: ellipsis; overflow-y: auto; display: -webkit-box;-webkit-box-orient: vertical;}
+.main-info .detail-content th{font-size:14px;text-align:left; vertical-align: top}
+.main-info .detail-content td{font-size:14px;}
+.main-info .action{position: absolute; right: 0px; bottom: 0px; margin-bottom: 10px;}
+.main-info .action .disabled{pointer-events:auto}
+.main-info .detail-content{position:relative;padding-left:0;}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover{border:none;border-bottom:1px solid #666;font-weight:700;color:#333;background:#fff;}
+#main .side-col .nav-tabs>li>a {font-size:16px;padding:0;margin-right:20px; line-height:34px;border:none;}
+.nav-tabs>li>a{font-size:16px;padding:0;margin-right:20px; line-height:34px;border:none;}
+.nav>li>a:focus, .nav>li>a:hover{background:#fff;border:none;}
+.detail{padding: 0 0;}
+.detail-title{line-height:12px;}
+.detail-content {
+    padding: 0;
+    margin-top: 14px;
+    line-height: 24px;
+    padding-left: 12px;
+}
+.detail-content .table-data{width:90%;}
+.nav-tabs{margin:10px;}
+.chapter > strong {padding: 6px 0 ;}
+
+/* chapter category */
+.checkbox-primary>label:after, .checkbox-primary>label:before, .radio-primary>label:after, .radio-primary>label:before{border-radius:50% !important}
+.checkbox-primary>label{padding-left: 18px;}
+.checkbox-primary.checked>label:before{height: 14px;width: 14px;font-size:12px;top:4px;}
+.checkbox-primary.checked>label:after{height:14px;width:14px;top:3px;}
+.checkbox-primary>label:after{top:3px;width:14px;height:14px;}
+.icon-caret-right{border: 1px solid #828a9d;border-radius: 50%;font-size: 13px;margin-left: 10px;position: relative;top: -1px;}
+.icon-caret-right:before{position: relative;top: 0px;left: 1px;min-width:10px;}
+
+.courses .article{justify-content:space-between;padding: 3px 6px;}
+.courses .flex{display:flex;}
+.courses .actions{display:none;}
+.courses .active{background:#f1f1f1;}
+.courses .active:hover .activeDuration{display:block;}
+.breadcrumb>li+li:before{content: '>';}
+.activeDuration{display:none;}
+
+#tabExam td.exam-passed{color: green;}
+#tabExam td.exam-unpass{color: red;}
+.table {margin-bottom: 0px}

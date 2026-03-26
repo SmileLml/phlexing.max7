@@ -1,0 +1,6 @@
+.table-form td {padding-top: 2px; padding-bottom: 2px;}
+
+#param, #param_chosen .chosen-single {border-radius: 0 4px 4px 0;}
+#param, #param_chosen .chosen-choices{border-radius: 0 4px 4px 0;}
+
+#tips .icon-info{font-size: 15px;}

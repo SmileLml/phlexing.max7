@@ -1,0 +1,15 @@
+.col-spliter {width: 20px; position: relative; z-index: 10; cursor: ew-resize;}
+.col-spliter:before,
+.col-spliter:after {content: ''; display: block; position: absolute; left: 50%; width: 10px; margin-left: -5px; top: 0; bottom: 0; background: rgba(0,0,0,.075); opacity: 0; transition: opacity .2s;}
+.col-spliter:before {border-radius: 5px;}
+.col-spliter:after {background: transparent; top: 50%; bottom: auto; height: 20px; opacity: 1; width: 4px; border-left: 1px solid rgba(0,0,0,.2); border-right: rgba(0,0,0,.2) 1px solid; margin-left: -2px; margin-top: -10px; }
+/* .col-spliter:hover:after {width: 2px; background: rgba(0,0,0,.15); margin-left: -1px; top: 0; bottom: 20px; height: auto; margin-top: auto; border: none;} */
+.col-spliter:hover:after {border-color: rgba(0,0,0,.3);}
+.col-spliter:hover:before,
+.col-spliter:hover:after,
+.row-spliting .col-spliter:before,
+.row-spliting .col-spliter:after {opacity: 1;}
+.side-col{padding-right: 0px}
+
+#book li{padding-left: 20px;}
+#reviewTree .opinion{display:inline-block; width: 220px}

@@ -1,0 +1,8 @@
+.file-selector-item .item-content {max-width: 70%;}
+.file-selector-list .item-content .item-title {overflow: hidden;}
+
+.reviewerBox > div {min-width: 100% !important;}
+
+.reviewerBox div#table-charter-completionapproval, .reviewerBox div#table-charter-cancelprojectapproval {z-index: 3;}
+
+form .file-selector-tip {white-space: pre-line;}

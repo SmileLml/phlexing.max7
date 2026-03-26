@@ -1,0 +1,6 @@
+.row {margin: 0px;}
+.input-group-addon.fix-padding {width: 0px;}
+.input-group-addon+.input-group-addon{border-left: 0px}
+#branch_chosen .chosen-single {border-left: 0px}
+.productDiv {display: inline-block;}
+.picker-selection-single{max-width: 220px; text-overflow: clip;}

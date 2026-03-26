@@ -1,0 +1,8 @@
+.icon-confirm {color: #18a6fd; font-size: 18px;}
+.submitBtn{display:none;}
+.is-nest-child:hover .submitBtn{ display: inline-block;line-height:3px;padding:3px 6px;}
+.editDeadline {display: none; line-height: normal !important; padding: 2px 6px; color: #fff !important;}
+.deadline:hover .editDeadline{display: inline-block !important;}
+.deadline {overflow: inherit !important;}
+.c-enddate{width: 120px;text-align: center;}
+.editCheckbox .table-actions .btn-group.dropup{display: none;}

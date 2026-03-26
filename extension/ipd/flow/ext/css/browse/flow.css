@@ -1,0 +1,9 @@
+#main .container #menuActions{float:right !important;}
+#menuActions .btn-group {margin-right: 10px;}
+#menuActions .btn-toolbar{float:left; position:relative;}
+#pageActions .btn-toolbar{float:left;}
+div.dropdown {display: inline-block;}
+.main-table .table>tbody>tr>td:not(.actions), .main-table .table>thead>tr>th{ white-space: nowrap;overflow:hidden;text-overflow:ellipsis;}
+#featurebar .nav{min-height:30px;}
+.main-table tbody>tr>td>a.disabled, a.disabled:focus, a.disabled:hover, a[disabled], a[disabled]:focus, a[disabled]:hover {color: #aaa;}
+#queryBox .btn{min-width:auto;}

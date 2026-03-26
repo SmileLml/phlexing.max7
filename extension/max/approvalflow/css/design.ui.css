@@ -1,0 +1,401 @@
+.main-content {
+  overflow: hidden;
+  position: relative;
+}
+.main-content .main-header {margin-bottom: 0;}
+#graph {
+  position: relative;
+  height: 100%;
+  overflow: overlay;
+  overflow: auto;
+  background: #f0f0f2;
+}
+#editor {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 50px;
+  min-height: 100%;
+  min-width: 100%;
+}
+.editor-node-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    border-radius: 4px;
+    overflow: hidden;
+    z-index: 100;
+}
+.editor-node.end .editor-node-container, .editor-node.begin .editor-node-container {
+    background: #a9b4cd;
+}
+.editor-node.branch>.nodes {
+    display: flex;
+    color: #aaa;
+    flex-direction: column;
+    align-items: center;
+}
+.editor-node.approval, .editor-node.cc, .editor-node.condition, .editor-node.end, .editor-node.start {
+    position: relative;
+    width: 200px;
+    height: 150px;
+}
+.editor-node.end .editor-node-container, .editor-node.start .editor-node-container {
+    background: #a9b4cd;
+}
+.editor-node-container .node-title {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    padding: 3px 13px;
+}
+.editor-node-container .node-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-grow: 1;
+    margin: 0 4px 4px;
+    padding: 7px 6px 7px 7px;
+    background: #fff;
+    border-radius: 4px;
+    min-height: 38px;
+    font-size: 14px;
+    color: #3e4759;
+    cursor: pointer;
+}
+.editor-node.approval .bottom-v-line, .editor-node.cc .bottom-v-line, .editor-node.condition .bottom-v-line, .editor-node.end .bottom-v-line, .editor-node.start .bottom-v-line {
+    position: absolute;
+    bottom: 0;
+    left: 99px;
+    height: 150px;
+    width: 2px;
+    background-color: #c2c5cc;
+}
+.editor-node.approval .add-node-btn, .editor-node.cc .add-node-btn, .editor-node.condition .add-node-btn, .editor-node.end .add-node-btn, .editor-node.start .add-node-btn {
+    position: absolute;
+    bottom: 26px;
+    left: 89px;
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+}
+.add-node-btn {
+    position: relative;
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+}
+.add-node-btn:hover,.add-node-btn.add-node-btn-active {
+    border: 1px solid #37f;
+    box-shadow: 0 0 3px 0 #37f;
+}
+.add-node-btn .add-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 4px solid #c1d6ff;
+    background-color: #fff;
+    color: #37f;
+    outline: none;
+    cursor: pointer;
+}
+.add-node-btn .add-btn .add-btn-icon {
+    font-size: 10px;
+    font-weight: 700;
+}
+.editor-node.route {
+    display: flex;
+    flex-direction: column;
+}
+.editor-node.route>.add-condition {
+    position: relative;
+    height: 28px;
+    margin-bottom: 16px;
+    border-radius: 14px;
+    border: 1px solid transparent;
+    align-self: center;
+    color: #37f;
+    font-size: 12px;
+    cursor: pointer;
+    z-index: 1;
+}
+.editor-node.route>.add-condition:hover {
+    border: 1px solid #37f;
+    box-shadow: 0 0 3px 0 #37f;
+}
+.editor-node.route>.add-condition .add-condition-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0 10px;
+    border: 4px solid #c1d6ff;
+    border-radius: 14px;
+    background-color: #fff;
+}
+.editor-node.route .editor-node.branch>.top-v-line {
+    display: block;
+    position: absolute;
+    top: -31px;
+    left: calc(50% - 1px);
+    width: 2px;
+    height: 31px;
+    background-color: #c2c5cc;
+}
+.editor-node.route .editor-node.branch>.bottom-v-line {
+    display: block;
+    width: 2px;
+    background-color: #c2c5cc;
+    flex-grow: 1;
+}
+.editor-node.route .editor-node.branch:first-child>.bottom-line-mask {
+    bottom: -2px;
+    left: 0;
+}
+.editor-node.route .editor-node.branch:last-child>.bottom-line-mask {
+    bottom: -2px;
+    right: 0;
+}
+.editor-node.route>.branches {
+    display: flex;
+    justify-content: center;
+}
+.editor-node.branch {
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 50px;
+    min-height: 100%;
+}
+.editor-node.route>.top-h-line {
+    height: 2px;
+    background-color: #c2c5cc;
+    margin-top: 13px;
+    margin-bottom: -15px;
+}
+.editor-node.route .editor-node.branch:first-child>.bottom-line-mask, .editor-node.route .editor-node.branch:first-child>.top-line-mask, .editor-node.route .editor-node.branch:last-child>.bottom-line-mask, .editor-node.route .editor-node.branch:last-child>.top-line-mask {
+    display: block;
+    position: absolute;
+    width: 50%;
+    height: 2px;
+    background-color: #f0f0f2;
+}
+.editor-node.route .editor-node.branch:first-child>.top-line-mask {
+    top: -31px;
+    left: 0;
+}
+.editor-node.route .editor-node.branch:last-child>.top-line-mask {
+    top: -31px;
+    right: 0;
+}
+.editor-node.route .editor-node.branch>.top-v-line {
+    display: block;
+    position: absolute;
+    top: -31px;
+    left: calc(50% - 1px);
+    width: 2px;
+    height: 31px;
+    background-color: #c2c5cc;
+}
+.editor-node.approval {
+    position: relative;
+    width: 200px;
+    height: 150px;
+}
+.editor-node.approval .editor-node-container {
+    background-color: #407ef4;
+}
+.editor-node.cc .editor-node-container {
+    background-color: #66b696;
+}
+.editor-node.condition .node-title {
+    color: #2eb795;
+    line-height: 20px;
+    padding-right: 4px;
+    border-bottom: 1px solid #f6f6f7;
+}
+.editor-node .node-title {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    padding: 3px 13px;
+    color: #ffffff;
+}
+.editor-node.condition .node-title-priority {
+    padding-right: 4px;
+    flex-shrink: 0;
+    flex-grow: 1;
+    text-align: right;
+    margin-left: 5px;
+}
+.editor-node .editor-node-container .node-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-grow: 1;
+    margin: 0 4px 4px;
+    padding: 7px 6px 7px 7px;
+    background: #fff;
+    border-radius: 4px;
+    min-height: 38px;
+    font-size: 14px;
+    color: #3e4759;
+    cursor: pointer;
+}
+.editor-node.approval .editor-node-container, .editor-node.cc .editor-node-container, .editor-node.condition .editor-node-container, .editor-node.end .editor-node-container, .editor-node.start .editor-node-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    max-height: 92px;
+    z-index: 2;
+}
+.editor-node.has-error .editor-node-container {
+    border: 1px solid #ff5b4c;
+    box-shadow: 0 0 3px 0 #ff5b4c;
+}
+.editor-node.condition .editor-node-container {
+    background: #fff;
+}
+.node-btns button {
+    border: transparent;
+    background: #fff;
+}
+.editor-node.route>.bottom-h-line {
+    height: 2px;
+    background-color: #c2c5cc;
+}
+.editor-node.route>.bottom-v-line {
+    height: 100px;
+    width: 2px;
+    background-color: #c2c5cc;
+    align-self: center;
+}
+.editor-node.route>.add-node-btn {
+    margin-top: -61.5px;
+    margin-bottom: 38.5px;
+    align-self: center;
+}
+.editor-node .editor-node-container:hover>.delete-btn {
+    display: block;
+}
+.editor-node .editor-node-container>.delete-btn {
+    display: none;
+    position: absolute;
+    top: 3px;
+    right: 5px;
+    font-size: 7px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.add-node-types {
+    display: flex;
+    position: absolute;
+    top: -2px;
+    left: 25px;
+    min-width: 200px;
+    background-color: #fff;
+    padding: 8px;
+    z-index: 5;
+    border-radius: 4px;
+    box-shadow: 0 4px 16px 0 rgb(56 73 69 / 11%);
+}
+.add-node-types .node-type {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 16px;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 4px;
+}
+.node-type-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 32px;
+    line-height: 60px;
+    text-align: center;
+    background: #6292e3;
+    color: #fff;
+    border-radius: 50%;
+}
+.node-type-name {
+  padding-top: 10px;
+}
+
+
+
+.panel.visible {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+}
+
+.modal-title-name {
+    font-weight: bold;
+}
+
+.form-reviewer, .form-cc, .form-condition {
+    border: 1px solid #ddd;
+    margin: 0 10px 10px;
+}
+.form-condition .close, .form-reviewer .close, .form-cc .close {
+    padding: 8px;
+    font-weight: normal;
+}
+.form-title {
+    font-size: 15px;
+    font-weight: bold;
+    padding: 10px;
+    background-color: #efefef;
+}
+.radio-inline {padding-right: 10px;}
+.detail-add {padding: 10px;}
+.detail-add a {
+    border-radius: 5px;
+    background: #ebebeb;
+    border: 1px solid #ebebeb;
+    padding: 5px 10px;
+    display: inline-block;
+    margin: 10px 0;
+}
+.detail-add a:hover {
+    color: #000;
+    border: 1px solid #ddd;
+}
+.form-save {
+    margin: 10px 0 20px;
+}
+.detail-title {font-size: 14px; font-weight: 700; line-height: 20px;}
+.detail-content {padding: 0; margin-top: 10px;}
+.detail+.detail {
+    padding-top: 10px;
+    border-top: none;
+}
+.select-box > .select-box.detail {margin-left: 0;margin-right: 0;}
+.addCondition span {
+  padding: 6px;
+  color: #868686;
+}
+
+.node-detail {
+    min-width: 186px;
+    max-width: 186px;
+}
+
+.section-list > .form-group {padding-left: 0; padding-right: 0;}
+.tabs .tabs-nav {column-gap: 0;}
+.nav-tabs > .nav-item > a {border: 1px solid #ddd; position: unset;}
+.nav-tabs > .nav-item > a.active {background: rgba(var(--color-primary-50-rgb),var(--tw-bg-opacity)); border: 1px solid rgba(var(--color-primary-300-rgb),var(--tw-bg-opacity))}
+.table .form-batch-label {font-weight: 400;}
+.nav-tabs > .nav-item > a:after {border: unset;}

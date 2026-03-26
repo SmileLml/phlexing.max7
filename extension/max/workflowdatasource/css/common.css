@@ -1,0 +1,8 @@
+.input-group + .input-group {margin-top: 5px;}
+.input-group-addon label{margin-bottom: 0;}
+
+.tooltip{z-index: 10000;}
+.table-form td + td{padding: 5px;}
+
+.buildin0 {color: red;}
+.buildin1 {color: green;}

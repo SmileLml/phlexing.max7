@@ -1,0 +1,10 @@
+.c-group, .c-openedByAB {width: 128px;}
+.name-padding {padding-right: 30px !important;}
+.name-padding a,
+.name-padding .unclickable
+{max-width: calc(100% - 15px); display: inline-block; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+.name-padding .unclickable {line-height: 28px; vertical-align: middle;}
+.label-position{position: absolute; right: 4px; top: 7px;}
+#pivotList td {overflow: hidden; white-space: nowrap;}
+.m-pivot-browse #triggerModal .modal-dialog {width: 600px;}
+.draft-label {margin-left: 8px; background: #8166ee1f !important; color: #8166ee !important; border-radius: 20px; font-size: 11px; height: 20px;}

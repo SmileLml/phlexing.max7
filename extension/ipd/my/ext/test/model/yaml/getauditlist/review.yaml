@@ -1,0 +1,17 @@
+title: zt_review
+author: Shujie Tian
+version: "1.0"
+fields:
+  - field: id
+    range: 1-1000
+  - field: title
+    prefix: '评审'
+    range: 1-1000
+  - field: createdBy
+    range: 'admin,user1,user2,user3,user4,user5'
+  - field: object
+    range: 1-1000
+  - field: status
+    range: 'wait,done,auditing,pass'
+  - field: result
+    range: pass

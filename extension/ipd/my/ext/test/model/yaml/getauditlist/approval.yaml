@@ -1,0 +1,10 @@
+title: zt_approval
+author: Shujie Tian
+version: "1.0"
+fields:
+  - field: objectType
+    range: review
+  - field: objectID
+    range: 1-1000
+  - field: flow
+    range: 0

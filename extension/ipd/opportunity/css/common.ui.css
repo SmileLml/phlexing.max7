@@ -1,0 +1,4 @@
+form [class^=pri-] {border: none; font-size: .8125rem;}
+form .pri-high {color: rgb(255 73 18/var(--tw-text-opacity));}
+form .pri-middle {color: rgba(var(--color-warning-600-rgb),var(--tw-text-opacity));}
+form .pri-low {color: rgba(var(--color-gray-600-rgb),var(--tw-text-opacity));}

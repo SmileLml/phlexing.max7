@@ -1,0 +1,23 @@
+.panel-body {overflow: auto;}
+.layout-buildin-tip, .layout-empty-tip, .layout-no-tip {padding: 80px 10px;}
+.layout-buildin-tip > .btn, .layout-empty-tip > .btn {color: #fff!important;}
+
+.tr-child, .tr-child > td {padding: 0 !important;}
+.tr-child > td > table {padding: 5px; background-color: #fff; border: 2px solid #DDDDDD;}
+
+td.child > .table tr > td > textarea {height: 28px;}
+
+.table tbody .icon-move {cursor: pointer;}
+
+.buildin0 {color: red;}
+.buildin1 {color: green;}
+
+.table-actions .btn-group {margin-top: 0;}
+
+.main-table tbody>tr>td:first-child:before {-webkit-transition: none!important; transition: none!important;}
+
+.errorTR th, .errorTR td {padding: 0px !important;}
+
+.picker-drop-menu {display: none;}
+
+#actionListTable td.actions .dropup {position: absolute; top:auto; bottom:100%;}

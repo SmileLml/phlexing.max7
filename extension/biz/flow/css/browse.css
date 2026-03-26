@@ -1,0 +1,5 @@
+.nowrap {white-space: nowrap;}
+.main-table table tbody td:last-child {overflow: visible;}
+.table-actions > .btn-group {margin-top: 0px;}
+.main-row .side-col .nav > li > a {padding: 0px;}
+.table-responsive {overflow-x: visible;}

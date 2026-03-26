@@ -1,0 +1,2 @@
+a[href*=managecontacts] {border-radius: 0px; border-left-color: transparent;}
+button[onclick*=ajaxGetContacts] {border-radius: 0px 2px 2px 0px; border-left-color: transparent;}

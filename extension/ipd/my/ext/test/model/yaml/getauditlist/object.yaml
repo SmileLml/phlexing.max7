@@ -1,0 +1,17 @@
+title: zt_object
+author: Shujie Tian
+version: "1.0"
+fields:
+  - field: id
+    range: 1-1000
+  - field: title
+    prefix: '质量保证计划'
+    range: 1-1000
+  - field: createdBy
+    range: 'admin,user1,user2,user3,user4,user5'
+  - field: type
+    range: 'reviewed'
+  - field: data
+    range: []
+  - field: from
+    range: 0

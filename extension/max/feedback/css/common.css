@@ -1,0 +1,15 @@
+.nav-tabs .nav-heading{padding-bottom:2px;padding-top:5px;}
+
+.label-status{background:none; border:1px solid #ddd; font-weight:normal; margin-left:5px;}
+
+#subNavbar ul.nav li.feedback-active>a{font-weight: 700; color: #0c64eb;}
+
+#feedbackTree .label-action {border-color: #cbd0db; color: #7d8599;background-color:transparent;}
+#feedbackTree .label.label-type {background: #fff; border: 1px solid #7d8599; color:#7d8599; margin-right:5px;}
+.table-footer {z-index: 1;}
+[lang^=en] .table-borderless>tbody>tr>th {width:110px !important;}
+[lang^=de] .table-borderless>tbody>tr>th {width:110px !important;}
+[lang^=fr] .table-borderless>tbody>tr>th {width:110px !important;}
+[lang^=en] #source .table-data>tbody>tr>th {width:125px !important;}
+[lang^=de] #source .table-data>tbody>tr>th {width:125px !important;}
+[lang^=fr] #source .table-data>tbody>tr>th {width:125px !important;}

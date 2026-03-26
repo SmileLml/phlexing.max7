@@ -1,0 +1,26 @@
+<?php
+
+namespace Spiral\RoadRunner\Jobs\Task;
+
+/**
+ * @psalm-immutable
+ * @psalm-allow-private-mutation
+ */
+interface QueuedTaskInterface extends TaskInterface
+{
+    /**
+     * Returns the unique identifier of the task in the queue.
+     *
+     * @psalm-mutation-free
+     * @return non-empty-string
+     */
+    public function getId();
+
+    /**
+     * Returns the (non-empty) name of the queue.
+     *
+     * @psalm-mutation-free
+     * @return non-empty-string
+     */
+    public function getQueue();
+}

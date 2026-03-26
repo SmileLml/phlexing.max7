@@ -1,0 +1,13 @@
+.needNotReviewBox {width: 130px; display: inline-block; padding: 7px;}
+#dataform .priBox {width: 120px;}
+#dataform .categoryBox {width: 150px;}
+#dataform .icon-help{position: relative; top: -1px;}
+.input-control.required:after {display: block; right: 29px; top: 5px;}
+
+.input-control.required:after {display: block; right: 29px; top: 5px;}
+#pri + .chosen-container > .chosen-single {border-top-left-radius: 0 !important; border-bottom-left-radius: 0 !important;}
+
+.pri-selector > .btn {padding: 5px 8px !important; width: 100%;}
+.pri-selector > .dropdown-menu {padding: 10px;}
+
+#undeterminedProduct {border-left-color: #dcdcdc;}

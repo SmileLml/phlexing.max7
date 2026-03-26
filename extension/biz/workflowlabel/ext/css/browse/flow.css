@@ -1,0 +1,27 @@
+#menuActions{float:right !important;}
+#featurebar .breadcrumb{padding: 5px 0; margin: 0}
+#featurebar .breadcrumb>li+li:before {content: '>'}
+.input-group-required > .required::after, .required-wrapper.required::after {top:12px !important;}
+.modal-body .table {margin-bottom:0px !important;}
+a.disabled, a.disabled:focus, a.disabled:hover, a[disabled], a[disabled]:focus, a[disabled]:hover {color: #aaa !important; text-decoration: none; cursor: default;}
+
+.preview-content .main-table table thead tr th:last-child{width:170px !important;}
+.preview-content .main-table table tbody tr td:last-child .dropdown{display:inline-block !important;}
+.preview-content .main-table table tr th:first-child{padding-left:10px}
+.preview-content .main-table .table-footer {padding-left:10px}
+.preview-content .main-table table tbody tr td:first-child{padding-left:10px}
+.preview-content .main-table table tbody tr td:first-child .checkbox-primary label{padding-left:0px}
+.preview-content .main-table table tbody tr td:first-child .example-text-holder{width:1px; border:0px;}
+
+#labelList td.actions .btn{
+  display: inline-block;
+  width: 26px;
+  padding: 2px;
+  overflow: hidden;
+  line-height: 20px;
+  color: #16a8f8;
+  background: 0 0;
+  border-color: transparent;
+}
+
+.btn.addItem,.btn.delItem{padding: 3px 8px;}

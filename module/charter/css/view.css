@@ -1,0 +1,7 @@
+.table-data tbody>tr>th {width: 100px;}
+td.launched{color: #00da88;}
+td.failed{color: #FB2B2B;}
+
+.label-outline.label-wait{color: #838a9d; background: #f2f5fb; border-color: #e1e5ee;}
+.label-outline.label-launched {color: #00da88; background: #ecfff8; border-color: #00da88;}
+.label-outline.label-failed{color: #FB2B2B; background: unset; border-color: #FB2B2B;}

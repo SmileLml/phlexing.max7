@@ -1,0 +1,30 @@
+UPDATE `zt_workflowfield` SET `control` = 'label',    `options` = '[]'   WHERE `buildin` = 0 AND `field` = 'id'; 
+UPDATE `zt_workflowfield` SET `control` = 'label',    `options` = '[]'   WHERE `buildin` = 0 AND `field` = 'parent';
+UPDATE `zt_workflowfield` SET `control` = 'select',   `options` = 'user' WHERE `buildin` = 0 AND `field` = 'assignedTo';
+UPDATE `zt_workflowfield` SET `control` = 'select',   `options` = 'user' WHERE `buildin` = 0 AND `field` = 'createdBy';
+UPDATE `zt_workflowfield` SET `control` = 'datetime', `options` = '[]'   WHERE `buildin` = 0 AND `field` = 'createdDate';
+UPDATE `zt_workflowfield` SET `control` = 'select',   `options` = 'user' WHERE `buildin` = 0 AND `field` = 'editedBy';
+UPDATE `zt_workflowfield` SET `control` = 'datetime', `options` = '[]'   WHERE `buildin` = 0 AND `field` = 'editedDate';
+UPDATE `zt_workflowfield` SET `control` = 'select',   `options` = 'user' WHERE `buildin` = 0 AND `field` = 'assignedBy';
+UPDATE `zt_workflowfield` SET `control` = 'datetime', `options` = '[]'   WHERE `buildin` = 0 AND `field` = 'assignedDate';
+UPDATE `zt_workflowfield` SET `control` = 'radio',    `options` = '["\\u672a\\u5220\\u9664","\\u5df2\\u5220\\u9664"]' WHERE `buildin` = 0 AND `field` = 'deleted';
+
+UPDATE `zt_workflowfield` SET `options` = (SELECT `id` FROM `zt_workflowdatasource` WHERE `type` = 'lang' AND `datasource` = 'bugResolution ' LIMIT 1) WHERE `module` = 'bug'      AND `field` = 'resolution';
+UPDATE `zt_workflowfield` SET `options` = (SELECT `id` FROM `zt_workflowdatasource` WHERE `type` = 'lang' AND `datasource` = 'feedbackStatus' LIMIT 1) WHERE `module` = 'feedback' AND `field` = 'status';
+UPDATE `zt_workflowfield` SET `options` = (SELECT `id` FROM `zt_workflowdatasource` WHERE `type` = 'lang' AND `datasource` = 'taskStatus'     LIMIT 1) WHERE `module` = 'task'     AND `field` = 'status';
+UPDATE `zt_workflowfield` SET `options` = (SELECT `id` FROM `zt_workflowdatasource` WHERE `type` = 'lang' AND `datasource` = 'testcasePri'    LIMIT 1) WHERE `module` = 'testcase' AND `field` = 'pri';
+UPDATE `zt_workflowfield` SET `options` = (SELECT `id` FROM `zt_workflowdatasource` WHERE `type` = 'lang' AND `datasource` = 'testcaseStage'  LIMIT 1) WHERE `module` = 'testcase' AND `field` = 'stage';
+UPDATE `zt_workflowfield` SET `options` = (SELECT `id` FROM `zt_workflowdatasource` WHERE `type` = 'lang' AND `datasource` = 'testcaseStatus' LIMIT 1) WHERE `module` = 'testcase' AND `field` = 'status';
+UPDATE `zt_workflowfield` SET `options` = (SELECT `id` FROM `zt_workflowdatasource` WHERE `type` = 'lang' AND `datasource` = 'testcaseType'   LIMIT 1) WHERE `module` = 'testcase' AND `field` = 'type';
+UPDATE `zt_workflowfield` SET `options` = (SELECT `id` FROM `zt_workflowdatasource` WHERE `type` = 'lang' AND `datasource` = 'testtaskPri'    LIMIT 1) WHERE `module` = 'testtask' AND `field` = 'pri';
+UPDATE `zt_workflowfield` SET `options` = (SELECT `id` FROM `zt_workflowdatasource` WHERE `type` = 'lang' AND `datasource` = 'testtaskStatus' LIMIT 1) WHERE `module` = 'testtask' AND `field` = 'status';
+UPDATE `zt_workflowfield` SET `options` = (SELECT `id` FROM `zt_workflowdatasource` WHERE `type` = 'lang' AND `datasource` = 'storyStatus'    LIMIT 1) WHERE `module` = 'story'    AND `field` = 'status';
+UPDATE `zt_workflowfield` SET `options` = (SELECT `id` FROM `zt_workflowdatasource` WHERE `type` = 'lang' AND `datasource` = 'storyPri'       LIMIT 1) WHERE `module` = 'story'    AND `field` = 'pri';
+UPDATE `zt_workflowfield` SET `options` = (SELECT `id` FROM `zt_workflowdatasource` WHERE `type` = 'lang' AND `datasource` = 'storyStage'     LIMIT 1) WHERE `module` = 'story'    AND `field` = 'stage';
+UPDATE `zt_workflowfield` SET `options` = (SELECT `id` FROM `zt_workflowdatasource` WHERE `type` = 'lang' AND `datasource` = 'releaseStatus'  LIMIT 1) WHERE `module` = 'release'  AND `field` = 'status';
+
+UPDATE `zt_workflowfield` SET `options` = '', `control` = 'input' WHERE `module` = 'release' AND `field` = 'stories';
+UPDATE `zt_workflowfield` SET `options` = '', `control` = 'input' WHERE `module` = 'release' AND `field` = 'bugs';
+UPDATE `zt_workflowfield` SET `options` = '', `control` = 'input' WHERE `module` = 'release' AND `field` = 'leftBugs';
+UPDATE `zt_workflowfield` SET `options` = '', `control` = 'input' WHERE `module` = 'build' AND `field` = 'stories';
+UPDATE `zt_workflowfield` SET `options` = '', `control` = 'input' WHERE `module` = 'build' AND `field` = 'bugs';

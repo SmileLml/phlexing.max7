@@ -1,0 +1,13 @@
+#dropmenu {padding-top: 10px; padding-bottom: 10px;}
+#dropmenu button:hover {--skin-ghost-rgb: unset;}
+#dropmenu button {--skin-ghost-rgb: unset; padding-left: 1rem; padding-right: 2rem;}
+#dropmenu button span {font-size: 18px; font-weight: 700;}
+#dropmenu button i {font-size: 18px;}
+#dropmenu .icon-angle-right {left: unset; right: 0.5rem;}
+
+#moduleMenu .listitem.active {background-color: var(--color-primary-100);}
+#moduleMenu .listitem div {padding-left: 5px;}
+#main .hover-primary:hover {color: var(--color-primary-500);}
+#main .hover-primary:before,#main .hover-primary:hover:before {background: none;}
+
+#main .metric-header span {white-space: normal;}

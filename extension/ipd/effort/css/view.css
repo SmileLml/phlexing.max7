@@ -1,0 +1,4 @@
+.modal-comment .modal-body{overflow:hidden !important;}
+.modal-comment .modal-body .form-group .ke-edit{height:100px !important;}
+.modal-comment .modal-body .form-group .ke-edit .ke-edit-iframe{height:100px !important;}
+.table-form tbody tr th{text-align: left;}

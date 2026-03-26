@@ -1,0 +1,56 @@
+title: table zt_project
+author: Sun Guangming
+version: "1.0"
+fields:
+  - field: id
+    range: 1-100
+  - field: project
+    range: 0
+  - field: model
+    range: "waterfall"
+  - field: name
+    note: "名称"
+    fields:
+    - field: name1
+      range: '项目{100}'
+    - field: name2
+      range: 1-10000
+  - field: type
+    range: project
+  - field: status
+    range: doing
+  - field: auth
+    range: "extend"
+  - field: parent
+    range: 0
+  - field: path
+    range: `,1,`
+  - field: grade
+    range: "1"
+  - field: code
+    fields:
+      - field: code1
+        range: project
+      - field: code2
+        range: 1-10,1-10000
+  - field: begin
+    range: "(-3M)-(+M):1D"
+    type: timestamp
+    format: "YY/MM/DD"
+    postfix: "\t"
+  - field: end
+    range: "(+5w)-(+2M):1D"
+    type: timestamp
+    format: "YY/MM/DD"
+    postfix: "\t"
+  - field: acl
+    range: open
+  - field: openedVersion
+    range: "16.5"
+  - field: openedDate
+    range: "(-3M)-(+M):1D"
+    type: timestamp
+    format: "YY/MM/DD"
+    postfix: "\t"
+  - field: deleted
+    range: 0

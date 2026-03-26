@@ -1,0 +1,274 @@
+<?php
+/**
+ * The taskform view file of issue module of ZenTaoPMS.
+ * @copyright   Copyright 2009-2024 禅道软件（青岛）有限公司(ZenTao Software (Qingdao) Co., Ltd. www.zentao.net)
+ * @license     ZPL(https://zpl.pub/page/zplv12.html) or AGPL(https://www.gnu.org/licenses/agpl-3.0.en.html)
+ * @author      Shujie Tian <tianshujie@easycorp.ltd>
+ * @package     issue
+ * @link        https://www.zentao.net
+ */
+namespace zin;
+
+jsVar('teamMemberError', $lang->task->error->teamMember);
+jsVar('estimateNotEmpty', sprintf($lang->error->gt, $lang->task->estimate, '0'));
+
+form
+(
+    setID('resolveFrom'),
+    set::submitBtnText($lang->issue->resolve),
+    set::actions(array('submit')),
+    set::url(createLink('issue', 'resolve', "issueID={$issue->id}&from={$from}")),
+    formGroup
+    (
+        set::width('2/3'),
+        set::label($lang->issue->resolution),
+        picker
+        (
+            set::name('resolution'),
+            set::items($lang->issue->resolveMethods),
+            set::value($resolution),
+            set::required(true),
+            on::change('getSolutions')
+        )
+    ),
+    formGroup
+    (
+        set::width('2/3'),
+        setClass(!$project->multiple ? 'hidden' : ''),
+        set::label($lang->task->execution),
+        set::name('execution'),
+        set::items($executions),
+        set::value($issue->execution),
+        set::required(true),
+        on::change('loadAll')
+    ),
+    formGroup
+    (
+        set::width('2/3'),
+        set::label($lang->task->type),
+        set::name('type'),
+        set::items($lang->task->typeList),
+        set::value($task->type),
+        set::required(true),
+        on::change('typeChange')
+    ),
+    formRow
+    (
+        formGroup
+        (
+            set::width('2/3'),
+            set::label($lang->task->module),
+            set::required(strpos(",{$config->task->create->requiredFields},", ",module,") !== false),
+            picker
+            (
+                set::name('module'),
+                set::items($moduleOptionMenu),
+                set::value($task->module),
+                set::required(true)
+            )
+        ),
+        formGroup
+        (
+            setClass('showAllModuleBox'),
+            checkbox(set::rootClass('ml-4'), set::text($lang->task->allModule), set::id('showAllModule'), set::name('showAllModule'), set::checked($showAllModule), on::change('loadModules'))
+        )
+    ),
+    formRow
+    (
+        formGroup
+        (
+            set::width('2/3'),
+            set::label($lang->task->assignTo),
+            setClass('assignedToBox'),
+            picker
+            (
+                setID('assignedTo'),
+                set::name('assignedTo'),
+                set::items(array()),
+                set::value($task->assignedTo)
+            ),
+            btn
+            (
+                set
+                (
+                    array
+                    (
+                        'class' => 'btn primary-pale hidden add-team mr-3',
+                        'data-toggle' => 'modal',
+                        'url' => '#modalTeam',
+                        'icon' => 'plus'
+                    )
+                ),
+                $lang->task->addMember
+            ),
+            div(setClass('assignedToList'))
+        ),
+        formGroup
+        (
+            setID('multipleBox'),
+            setClass('items-center'),
+            checkbox(
+                set::name('multiple'),
+                set::text($lang->task->multiple),
+                set::rootClass('ml-4'),
+                on::change('toggleTeam')
+            )
+        )
+    ),
+    formRow
+    (
+        formGroup
+        (
+            set::width('2/3'),
+            set::label($lang->task->name),
+            set::name('name'),
+            set::value($task->name),
+            set::required(true)
+        ),
+        formGroup
+        (
+            set::width('1/3'),
+            setClass('no-background'),
+            inputGroup
+            (
+                span
+                (
+                    setClass("input-group-addon"),
+                    $lang->task->pri
+                ),
+                priPicker
+                (
+                    set::name('pri'),
+                    set::value('3'),
+                    set::items(array_filter($lang->task->priList))
+                ),
+                span
+                (
+                    setClass("input-group-addon"),
+                    $lang->task->estimateAB
+                ),
+                inputControl
+                (
+                    input(set::name('estimate')),
+                    to::suffix($lang->task->suffixHour),
+                    set::suffixWidth(20)
+                )
+            )
+        )
+    ),
+    formGroup
+    (
+        set::label($lang->task->desc),
+        set::required(strpos(",{$config->task->create->requiredFields},", ",desc,") !== false),
+        editor
+        (
+            set::name('desc'),
+            set::value($task->desc)
+        )
+    ),
+    formGroup
+    (
+        set::width('2/3'),
+        set::label($lang->task->datePlan),
+        set::required(strpos(",{$config->task->create->requiredFields},", ",estStarted,") !== false || strpos(",{$config->task->create->requiredFields},", ",deadline,") !== false),
+        inputGroup
+        (
+            datepicker
+            (
+                set::control('date'),
+                set::name('estStarted'),
+                set::value($task->estStarted),
+                set::placeholder($lang->task->estStarted)
+            ),
+            span
+            (
+                setClass('input-group-addon'),
+                $lang->task->to
+            ),
+            datepicker
+            (
+                set::control('date'),
+                set::name('deadline'),
+                set::value($task->deadline),
+                set::placeholder($lang->task->deadline)
+            )
+        )
+    ),
+    formGroup
+    (
+        set::width('2/3'),
+        set::label($lang->issue->resolvedBy),
+        set::name('resolvedBy'),
+        set::items($users),
+        set::value($app->user->account)
+    ),
+    formGroup
+    (
+        set::width('2/3'),
+        set::label($lang->issue->resolvedDate),
+        datePicker
+        (
+            set::name('resolvedDate'),
+            set::value(date('Y-m-d'))
+        )
+    ),
+    formHidden('status', 'wait'),
+    formHidden('fromIssue', $issue->id),
+    modal
+    (
+        setID('modalTeam'),
+        set::title($lang->task->addMember),
+        div
+        (
+            setClass('flex items-center w-96 mb-4'),
+            span(setClass('mr-4 w-16'), $lang->task->mode),
+            picker
+            (
+                set::name("mode"),
+                set::value("linear"),
+                set::items($lang->task->modeList),
+                set::width('150px'),
+                set::required(true)
+            )
+        ),
+        formBatch
+        (
+            set::tagName('div'),
+            setID('teamTable'),
+            set::mode('add'),
+            set::sortable(true),
+            set::size('sm'),
+            set::minRows(3),
+            set::onRenderRow(jsRaw('renderRowData')),
+            formBatchItem
+            (
+                set::name('id'),
+                set::width('32px'),
+                set::control('index')
+            ),
+            formBatchItem
+            (
+                set::name('team'),
+                set::label($lang->task->teamMember),
+                set::width('240px'),
+                set::control('picker'),
+                set::items(array())
+            ),
+            formBatchItem
+            (
+                set::name('estimateBox'),
+                set::label($lang->task->estimateAB),
+                set::width('135px'),
+                set::control('inputGroup'),
+                set::required(true),
+                inputControl
+                (
+                    input(set::name("teamEstimate")),
+                    to::suffix($lang->task->suffixHour),
+                    set::suffixWidth(20)
+                )
+            ),
+            set::actions(array(array('text' => $lang->save, 'class' => 'primary team-saveBtn')))
+        )
+    )
+);

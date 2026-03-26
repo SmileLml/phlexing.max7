@@ -1,0 +1,18 @@
+.c-id {width: 50px;}
+.c-code {width: 200px;}
+.c-name {min-width: 200px;}
+.c-acl {width: 250px;}
+.c-user {width: 100px;}
+.c-type {width: 100px;}
+.c-status {width: 105px;}
+.c-desc, .c-days {width: 120px;}
+.c-date {width: 115px;}
+
+.waterfallstage {margin-bottom:20px;}
+.waterfallstage .waterfallheader {padding-bottom:8px; font-weight:bolder;}
+.waterfallstage .waterfallheader .input-group-addon {border:none; background:none;}
+.waterfallstage .waterfallheader .chosen-container {width:200px !important;}
+.copyproducts{ height: 25px; border-radius: 4px; margin: 0 5px; border-color: #ddd; padding-left: 4px; }
+
+#mainContent .confirm-title {font-size: 15px;}
+#mainContent .info-tips {font-size: 12px; color: #0c60e1; font-weight: 400}

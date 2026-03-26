@@ -1,0 +1,24 @@
+title: zt_workflowfield.
+author: Shujie Tian
+version: "1.0"
+fields:
+  - field: id
+    range: 1-1000
+  - field: group
+    range: 0
+  - field: module
+    range: flowa,flowb
+  - field: field
+    prefix: 'type'
+    range: a-z
+  - field: type
+    range: varchar
+  - field: length
+    range: 255
+  - field: name
+    prefix: '类型'
+    range: 1-1000
+  - field: control
+    range: select
+  - field: options
+    range: category

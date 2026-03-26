@@ -1,0 +1,9 @@
+.length + .digits {border-left-width: 1px; border-radius: 4px 0 0 4px !important;}
+.table-form td.dataTip {line-height: 18px;}
+.field-tr .required.required-wrapper::after {left: 192px;}
+.field-input {width: 188px;}
+
+#optionTR td > div.drag-shadow {display: none}
+#optionTR td.sortable-sorting {cursor: move;}
+#optionTR td.sortable-sorting > div {transition: all .2s; position: relative; z-index: 5; opacity: .3;}
+#optionTR td.sortable-sorting > div.drag-row {opacity: 1; z-index: 10; box-shadow: 0 2px 4px red;}

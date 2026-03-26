@@ -1,0 +1,8 @@
+.main-table tbody tr td {border: 1px #F5F5F5 solid !important; background: white !important;}
+.main-table tbody tr th {background: white !important;}
+.main-table tbody tr:first-child th {background: #F5F5F5 !important;}
+#resultExplain th {background: #F5F5F5!important;}
+.main-table tbody tr {border: 1px #F5F5F5 solid !important; }
+.finalOpinion {overflow: auto}
+.th-flex {display: flex;}
+.icon-align-center {display: inherit; align-items: center; margin-left: 4px;}

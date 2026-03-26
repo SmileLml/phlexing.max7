@@ -1,0 +1,2 @@
+#reviewForm .table td {text-overflow: ellipsis; overflow: hidden; white-space: nowrap;}
+#reviewForm .table td.c-actions {text-overflow:clip;}

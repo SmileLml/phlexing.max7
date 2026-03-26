@@ -1,0 +1,7 @@
+#relationTable .checkbox-primary {display:inline-block; padding-right:5px;}
+.addRelation, .delRelation{padding:6px 10px;}
+.icon-remove:before{content:"\e936";}
+.form-actions .btn {min-width: 120px !important;}
+.side-col .leftmenu > .nav > li > a {line-height: 30px; border: none; border-radius: 4px; }
+.side-col .menu > .nav > li > a {padding: 0 15px 0 15px; max-height: 36px; overflow: hidden;}
+.side-col .nav-primary>li.active>a, .side-col .nav-primary>li.active>a:focus, .side-col .nav-primary>li.active>a:hover {color: #fff; background-color: #2272eb;}

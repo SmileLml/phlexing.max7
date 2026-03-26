@@ -1,0 +1,7 @@
+.blockList, .tabList{list-style-type: none; padding-left: 0;}
+.blockList li, .tabList li{padding: 5px 0;}
+.blockList li ul{margin-left: 20px;}
+
+.blockList li .row .col{height: 28px; line-height: 28px;}
+
+.drag-shadow{background: #fff; z-index: 999;}

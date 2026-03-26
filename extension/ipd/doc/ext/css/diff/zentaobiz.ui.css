@@ -1,0 +1,25 @@
+.htmldiff {
+    white-space: pre-wrap;
+}
+
+.htmldiff del {
+    color: #D91B1B;
+    text-decoration: line-through;
+}
+
+.htmldiff ins {
+    color: #0CA76F;
+    background: rgba(208, 246, 232, 0.4);
+    text-decoration: none;
+    border-left: 2px solid #dfd;
+    border-right: 2px solid #dfd;
+}
+
+table.alldiff {
+    border: 0px
+}
+
+#exchangeDiffBtn {
+    font-size: 22px;
+    cursor: pointer;
+}

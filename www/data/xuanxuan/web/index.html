@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    name="viewport" />
+  <link rel="shortcut icon" type="image/x-icon" href="resources/favicon.ico">
+  <link rel="manifest" href="manifest.json">
+  <link rel="bookmark" type="image/x-icon" href="resources/favicon.ico">
+  <link rel="apple-touch-icon" href="resources/icon-modern-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="resources/icon-modern-precomposed.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <style>
+    .theme-changing * {
+      transition: all .5s !important
+    }
+
+    .lds-ring div {
+      box-sizing: border-box;
+      display: block;
+      position: absolute;
+      width: 51px;
+      height: 51px;
+      margin: 6px;
+      border: 6px solid #A57AE6;
+      border-radius: 50%;
+      animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+      border-color: #A57AE6 transparent transparent transparent;
+    }
+
+    @keyframes lds-ring {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    .no-animation,
+    .no-animation * {
+      transition: none !important;
+    }
+  </style>
+  <script>
+    (function () {
+      if (typeof global === 'undefined') { window.global = window; }
+      if (!global.process) { global.process = { type: 'renderer', env: {} }; }
+      const { env } = process;
+
+      const params = new URLSearchParams(window.location.search);
+      for (const [name, value] of params.entries()) env[name] = value;
+
+      if (env.HOT_SERVER === '_SELF') env.HOT_SERVER = location.origin;
+      env.ENTRY = env.ENTRY || 'main';
+
+      if (!env.HOT) {
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = `./dist/${env.ENTRY}.css?v=7.3.0.202407051108`;
+        link.id = 'theme';
+        document.getElementsByTagName('head')[0].appendChild(link);
+      }
+    }());
+  </script>
+</head>
+
+<body class="no-animation">
+  <div class="page" id="app-container"></div>
+  <div class="page flex flex-center flex-middle" id="loading">
+    <div
+      style="position:fixed;top:0;left:0;right:0;bottom:0;display:flex;align-items:center;justify-content:center;text-align:center;font-family:'Helvetica Neue',Helvetica,Tahoma,Arial,sans-serif;">
+      <div>
+        <div class="lds-ring" style="display:inline-block;position:relative;width:64px;height:64px;">
+          <div></div>
+          <div style="animation-delay:-0.45s;"></div>
+          <div style="animation-delay:-0.3s;"></div>
+          <div style="animation-delay:-0.15s;"></div>
+        </div>
+        <div style="color:#A57AE6;font-size:12px;font-weight:bold;">Loading</div>
+      </div>
+    </div>
+  </div>
+  <input style="position: fixed!important;bottom: -50px!important;left: 0!important;opacity: 0!important;" type="file"
+    id="fileOpenButton" />
+  <script>
+    {
+      const script = document.createElement('script');
+      const { HOT_SERVER, HOT, HTTPS, ENTRY } = process.env;
+      script.src = HOT
+        ? ((HOT_SERVER || (HOT.length > 5 ? HOT : `http${HTTPS ? 's' : ''}://localhost:3000`)) + `/dist/${ENTRY}.js`)
+        : `./dist/${ENTRY}.js?v=7.3.0.202407051108`;
+      document.body.appendChild(script);
+
+      document.body.dataset.entry = ENTRY;
+    }
+  </script>
+</body>
+
+</html>

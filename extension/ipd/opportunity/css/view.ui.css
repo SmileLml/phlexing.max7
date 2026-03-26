@@ -1,0 +1,7 @@
+.opportunity-basic-info .datalist-item-label {width: 80px;}
+.opportunity-basic-info [class^=pri-] {border: none; font-size: .8125rem;}
+.opportunity-basic-info .pri-high, .opportunity-basic-info .status-active {color: rgb(255 73 18/var(--tw-text-opacity));}
+.opportunity-basic-info .pri-middle {color: rgba(var(--color-warning-600-rgb),var(--tw-text-opacity));}
+.opportunity-basic-info .pri-low {color: rgba(var(--color-gray-600-rgb),var(--tw-text-opacity));}
+
+.opportunity-lift-item .datalist-item-label {width: 80px;}

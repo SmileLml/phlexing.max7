@@ -1,0 +1,7 @@
+.form-title {font-size: 15px; font-weight: bold; padding: 10px; background-color: #efefef;}
+.detail {padding: 10px 0; margin: 0 10px;}
+.detail-title {font-size: 14px; font-weight: 700; line-height: 20px;}
+.detail-content {padding: 0; margin-top: 10px;}
+.detail+.detail {padding-top: 10px; border-top: none;}
+#listHead {height: 50px; display: flex; justify-content: space-between; border-bottom: 1px solid #eee; align-items: center;}
+#tableList.main-content {padding-top: 0!important;}

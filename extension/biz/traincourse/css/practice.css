@@ -1,0 +1,40 @@
+.block-introduce .panel{min-height: 190px}
+[lang^=zh] .block-introduce .panel{min-height: 160px}
+.introduce-image img{padding: 30px}
+.introduce-source{float: right}
+.introduce-source {padding-right: 20px}
+.block-all-practice .panel-body{min-height: 300px}
+.all-practice-heading{padding: 12px 16px 12px 20px;}
+.update-practice{background: white;}
+.block-latest-practice .panel-body{min-height: 115px}
+.block-recommend-practice .panel-body{min-height: 115px}
+#cards .panel-content {margin: 8px 0 5px 0; border: 1px solid #EDEEF2; border-radius: 2px; box-shadow: none; cursor: pointer;}
+#cards .col-sm-3{width: 20%}
+.block-all-practice .panel .panel-body{padding: 0 6px 11px 6px;}
+.block-latest-practice .panel .panel-body{padding: 0 16px 6px 16px;}
+.block-recommend-practice .panel .panel-body{padding: 0 12px 6px 16px;}
+.category .panel-heading, .second-category{cursor: default;}
+.first-category {overflow: hidden; white-space: nowrap;}
+.category {min-height: 140px}
+.category .panel-heading{padding: 7px 5px 7px 13px;}
+.category .second-category{padding: 0 12px 0 6px; min-height: 121px}
+.category .second-category li{color: #5E626D; line-height: 30px; height: 27px;}
+.first-category .icon-angle-right{color: #898B90;font-size: 16px;}
+.childrenName{font-size: 14px; overflow: hidden; white-space: nowrap;}
+.childrenName a{color: #2E7FFF;}
+.category .second-category li::marker{color: #D9D9D9;}
+ol, ul {margin-top: 0;margin-bottom: 0;}
+.latest-practice , .recommend-practice{height: 35px; margin: 8px 0; border: 1px solid #EDEEF2; padding: 6px;}
+.practice-name{color: #313C52; overflow: hidden; white-space: nowrap; line-height: 23px;}
+.contributor{color: #5E626D; line-height: 23px; white-space: nowrap; overflow: hidden;}
+.label-item {padding: 0 4px; margin-left: 5px; font-size:12px; border-radius: 2px; line-height: 20px; max-width: 57px; overflow: hidden; white-space: nowrap;}
+.label-item-secondary {color: #31BEEB; border: 1px solid #b3ebfd;}
+.label-item-special {color: #A38CF8; border: 1px solid #e4ddfd;}
+.label-item-primary {color: #66A2F8; border: 1px solid #d1e3fd; background: #fff;}
+.label-item-primary:hover {color: #66A2F8; border: 1px solid #d1e3fd; background: #fff;}
+.label-item-secondary:hover {color: #31BEEB; background: #fff;}
+.label-item-special:hover {color: #A38CF8; background: #fff;}
+#loadImages .modal-title {font-weight: bold; font-size: 16px;}
+#loadImages .modal-dialog {width: 600px;}
+#loadImages .modal-body li {font-weight: normal;}
+.load-images {background: white;}

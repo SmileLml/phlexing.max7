@@ -1,0 +1,17 @@
+.no-padding{padding: 0;}
+#tabsNav .tab-content .tab-pane .actions {float: right; position: relative; top: -33px;}
+#tabsNav .tab-content .tab-pane .main-actions {margin-top: 10px; text-align: center;}
+#tabsNav .tab-content .tab-pane .table-actions .btn-group {margin-top: 0px;}
+#tabsNav .tab-content .tab-pane.with-link-button .main-row .main-col .panel:first-child {margin-top: -28px;}
+#tabsNav .tab-content .tab-pane.with-link-button .main-row .side-col .panel:first-child {margin-top: -28px;}
+#tabsNav .tab-content .tab-pane.without-search .actions {top: -5px;}
+#tabsNav .tab-content .tab-pane.without-search .main-table {margin-top: -28px;}
+#tabsNav .tab-content .tab-pane #querybox #searchform > table > tbody > tr > td:last-child {display: none;}
+#tabsNav .tab-content .tab-pane #querybox #searchform > table > tbody > tr > td .btn-group button#submit {border-radius: 4px !important;}
+#tabsNav .tab-content .tab-pane #querybox #searchform > table > tbody > tr > td .btn-group button:not(#submit) {display: none;}
+#querybox .container {padding: 0px !important;}
+.unlinkedTable > * > tr > th:first-child {padding-left: 6px;}
+.linkedTable > * > tr > th:first-child {padding-left: 6px;}
+.linkedTable > thead > tr > th:last-child {width: 50px !important;}
+.scroll {overflow: scroll;}
+.panel-body {word-wrap: break-word;}

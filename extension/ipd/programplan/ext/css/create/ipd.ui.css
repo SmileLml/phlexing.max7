@@ -1,0 +1,3 @@
+th[data-name="enabled"] span {text-wrap: wrap;}
+td[data-name="enabled"] {vertical-align: middle}
+.switch>input:disabled+label:before {--tw-grayscale: grayscale(10%); opacity: .5;}

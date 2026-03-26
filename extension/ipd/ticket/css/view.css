@@ -1,0 +1,5 @@
+.has-top-line::after {position: absolute; content: ""; top: 0; bottom: 0; left:10px ;right: 0;border-top: 1px solid #dddddd;}
+.has-top-line {position: relative;}
+.has-top-line:nth-child(1)::after {border-top: white;}
+
+.label-status {background:none; border:1px solid #ddd; font-weight:normal; margin-left:5px;}

@@ -1,0 +1,3 @@
+INSERT INTO `zt_workflowdatasource` (`type`, `name`, `datasource`) VALUES 
+('system', '反馈分支',  '{\"app\":\"system\",\"module\":\"tree\",\"method\":\"getOptionMenu\",\"methodDesc\":\"Create an option menu in html.\",\"params\":[{\"name\":\"rootID\",\"type\":\"int\",\"desc\":\"\",\"value\":\"0\"},{\"name\":\"type\",\"type\":\"string\",\"desc\":\"\",\"value\":\"feedback\"},{\"name\":\"startModule\",\"type\":\"int\",\"desc\":\"\",\"value\":\"0\"},{\"name\":\"branch\",\"type\":\"\",\"desc\":\"\",\"value\":\"0\"}]}');
+UPDATE `zt_workflowfield` as t1 INNER JOIN (select id from `zt_workflowdatasource` order by id desc limit 1) as t2 SET `options`= t2.id WHERE t1.`module` = 'feedback' AND t1.`field` = 'module';

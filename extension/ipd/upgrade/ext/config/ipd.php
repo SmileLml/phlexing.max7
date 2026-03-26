@@ -1,0 +1,27 @@
+<?php
+$config->delete['18_4'][] = 'extension/ipd/dataview/config.php';
+$config->delete['18_4'][] = 'extension/ipd/dataview/control.php';
+$config->delete['18_4'][] = 'extension/ipd/dataview/model.php';
+$config->delete['18_4'][] = 'extension/ipd/dataview/lang/de.php';
+$config->delete['18_4'][] = 'extension/ipd/dataview/lang/en.php';
+$config->delete['18_4'][] = 'extension/ipd/dataview/lang/fr.php';
+$config->delete['18_4'][] = 'extension/ipd/dataview/lang/zh-cn.php';
+$config->delete['18_4'][] = 'extension/ipd/dataview/css/browse.css';
+$config->delete['18_4'][] = 'extension/ipd/dataview/css/browse.zh-cn.css';
+$config->delete['18_4'][] = 'extension/ipd/dataview/css/browse.zh-cn.css';
+$config->delete['18_4'][] = 'extension/ipd/dataview/css/create.css';
+$config->delete['18_4'][] = 'extension/ipd/dataview/css/edit.css';
+$config->delete['18_4'][] = 'extension/ipd/dataview/css/query.css';
+$config->delete['18_4'][] = 'extension/ipd/dataview/css/querybase.css';
+$config->delete['18_4'][] = 'extension/ipd/dataview/js/browse.js';
+$config->delete['18_4'][] = 'extension/ipd/dataview/js/common.js';
+$config->delete['18_4'][] = 'extension/ipd/dataview/js/create.js';
+$config->delete['18_4'][] = 'extension/ipd/dataview/js/datastorage.js';
+$config->delete['18_4'][] = 'extension/ipd/dataview/js/edit.js';
+$config->delete['18_4'][] = 'extension/ipd/dataview/js/query.js';
+$config->delete['18_4'][] = 'extension/ipd/dataview/js/querybase.js';
+$config->delete['18_4'][] = 'extension/ipd/dataview/view/browse.html.php';
+$config->delete['18_4'][] = 'extension/ipd/dataview/view/create.html.php';
+$config->delete['18_4'][] = 'extension/ipd/dataview/view/edit.html.php';
+$config->delete['18_4'][] = 'extension/ipd/dataview/view/query.html.php';
+$config->delete['18_4'][] = 'extension/ipd/dataview/view/querybase.html.php';

@@ -1,0 +1,3 @@
+#auditclList td{overflow: hidden; white-space: nowrap; text-overflow: none;}
+#mainMenu {margin-top: 0; margin-bottom: 0;}
+.toolbar {display: flex; justify-content: space-between; background: #fff; padding: 5px 10px;}

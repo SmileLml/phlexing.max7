@@ -1,0 +1,12 @@
+body {margin-bottom: 25px;}
+td.c-title,td.c-closedReason,.c-solution {white-space: nowrap; overflow: hidden;}
+[lang='en'] th.c-activatedBy {width:100px !important;}
+[lang='en'] th.c-activatedDate {width:120px !important;}
+[lang='de'] th.c-activatedBy {width:100px !important;}
+[lang='de'] th.c-activatedDate {width:120px !important;}
+[lang='fr'] th.c-activatedBy {width:100px !important;}
+[lang='fr'] th.c-activatedDate {width:120px !important;}
+.table-form>tbody>tr>th {width:135px;}
+.dropdown-menu>li>a {text-align: left;}
+#feedbackList td.c-notifyEmail {overflow: hidden;}
+.dropdown-menu {width: unset};

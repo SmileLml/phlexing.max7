@@ -1,0 +1,20 @@
+.CodeMirror {color: #313c52 !important;}
+
+#modules .icon-file-text-alt {font-size: 12px;}
+#mainMenu .breadcrumb {padding: 8px 15px 0; margin-bottom:0;}
+#contentBox .CodeMirror-scroll {display: none;}
+#contentBox .editor-preview {position: unset; background: unset; padding: 10px 20px 0 20px;}
+#contentBox .CodeMirror-vscrollbar {overflow-y: hidden;}
+#contentBox .editor-preview .label-list {margin-top: 16px; display: flex; flex-wrap: wrap;}
+#contentBox .editor-preview .label-list .label {margin-right: 4px; background: transparent; border-radius: 2px; margin-bottom: 4px;}
+#contentBox .editor-preview .label-list .label-info {color: #00BBF6; border: 1px solid #C0ECFF;}
+#contentBox .editor-preview .author-info {margin: 10px 0px 20px 0; display: flex; align-items: center;}
+#contentBox .editor-preview .authors-wrap .authors {border-right: 1px solid #f1f1f1; margin: 0 5px 0 10px; padding-right: 5px; font-weight: bold; color: #333;}
+#contentBox .editor-preview .authors-wrap .authors:last-child {border-right: unset;}
+.label-item {padding: 0 4px; margin-left: 5px; font-size:12px; border-radius: 2px; line-height: 20px; max-width: 57px; overflow: hidden; white-space: nowrap;}
+.label-item-secondary {color: #31BEEB; border: 1px solid #b3ebfd;}
+.label-item-special {color: #A38CF8; border: 1px solid #e4ddfd;}
+.label-item-primary {color: #66A2F8; border: 1px solid #d1e3fd; background: #fff;}
+.label-item-primary:hover {color: #66A2F8; border: 1px solid #d1e3fd; background: #fff;}
+.label-item-secondary:hover {color: #31BEEB; background: #fff;}
+.label-item-special:hover {color: #A38CF8; background: #fff;}

@@ -1,0 +1,17 @@
+.form-group.showAllModuleBox, #multipleBox {align-items: center;}
+
+.assignedToBox {align-items: center !important}
+.assignedToList {display: flex; align-items: center; overflow: hidden;}
+.assignedToList .picker-multi-selection, .assignedToList .icon{margin-right: 5px;}
+.assignedToBox .add-team {height: 24px; width: 81px; margin-left: 0.25rem;}
+.panel-heading {z-index: 2 !important;}
+.assignedToBox.border {border-color: var(--form-control-border); padding-top: 0.25rem; padding-bottom: 0.25rem;}
+
+
+#modalTeam .modal-body {max-height: 400px;}
+#modalTeam .table tr {border:none}
+#modalTeam .team-saveBtn {text-align: center !important}
+#modalTeam .team-saveBtn .btn{min-width: 96px;}
+#modalTeam .team-index {text-align: right;}
+.team-number {display: inline-block; width: 20px; height: 20px; line-height: 20px; border-radius: 10px; text-align: center; background: #f4f5f7;}
+#teamTable .form-batch-label {position: relative;}

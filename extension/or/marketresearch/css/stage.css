@@ -1,0 +1,24 @@
+#stageList > thead > tr > th .table-nest-toggle-global {position: static!important;}
+#stageList > thead > tr > th .table-nest-toggle-global:before {color: #a6aab8; position: static!important;}
+#mainMenu .pull-left .checkbox-primary {margin-top: 5px;}
+.main-table tbody>tr>td:first-child, .main-table thead>tr>th:first-child { padding-left: 8px; }
+
+th.table-nest-title-edit {padding-left: 50px !important;}
+th.table-nest-title-edit .table-nest-toggle {left: 28px;}
+th.table-nest-title .check-all {position: absolute; left: 15px; top: 7px;}
+.c-date {text-align: center;}
+#stageTableList > tr.has-nest-child .table-nest-toggle {vertical-align: middle;}
+#stageTableList > tr:not(.has-nest-child) .table-nest-toggle {display: none;}
+#stageTableList > tr.is-top-level:not(.has-nest-child) .project-type-label {margin-left: 22px;}
+.table-statistic {padding-left: 10px;}
+td.flex {display: flex; flex-flow: row nowrap; justify-content: flex-start; align-items: center; margin-bottom: 0px;}
+td.c-name > .project-type-label {flex: 0 0 36px; padding-right: 2px;}
+.c-name > a, .table-children .text-left > a, .c-name > span.text-ellipsis { padding-left: 5px; text-overflow: clip;}
+span.table-nest-icon.table-nest-toggle {min-width: 22px; max-width: 22px;}
+span.table-nest-icon {padding-left: 22px;}
+#projectForm .c-name, #executionTableList .c-name, #programTableList .c-name {padding-right:47px;}
+#mainMenu .pull-left > .btn-group > a > .text{overflow: hidden;display: inline-flex;}
+#mainMenu .pull-right .icon-list{padding-left: 7px;}
+#mainMenu .btn-group.dropdown > .create-execution-btn {border-right: 1px solid rgba(255,255,255,0.2);}
+#mainMenu .btn-group.dropdown > button.btn-primary {padding: 6px;}
+#stageTableList .c-pm {padding-left: 30px !important;}

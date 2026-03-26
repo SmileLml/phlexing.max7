@@ -1,0 +1,6 @@
+.icon-undo:before { content: "\e952"; }
+.icon-redo:before { content: "\e93e"; }
+.icon-minus-circle:before { content: "\e926"; }
+.icon-plus-circle:before { content: "\e925"; }
+.side-col.column > .cell {overflow-y:visible; }
+.side-col.column .tooltip.fade {min-width:150px !important;}

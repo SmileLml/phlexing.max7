@@ -1,0 +1,3 @@
+#reviewRow .CodeMirror {border: none;}
+#reviewRow .editor-preview {background: #fff;}
+.side-col .cell, .main-col .cell{overflow-y:auto;}

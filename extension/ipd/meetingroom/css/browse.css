@@ -1,0 +1,5 @@
+.position, .equipment, .openTime {overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+#querybox #searchform{border-bottom: 1px solid #ddd; margin-bottom: 20px;}
+.btn-group a i.icon-plus {font-size: 16px;}
+.btn-group a.btn-primary {border-right: 1px solid rgba(255,255,255,0.2);}
+.btn-group button.dropdown-toggle.btn-primary {padding:6px;}

@@ -1,0 +1,9 @@
+.item {display:block; width:150px; float:left; margin-right: 10px;}
+.item label{word-break:keep-all; width: 150px; text-overflow:ellipsis; overflow: hidden;}
+.group{padding-top:0px;}
+.group .checkbox-primary label{color:rgb(20, 92, 205);}
+.group .checkbox-primary:after{float:right; margin-top:-20px; margin-right:-10px;}
+.main-form .clearfix{margin-left:15px;}
+
+.bt-1px{border-top:1px solid #ddd;}
+.bt-dotted-1px{border-top:1px dotted #ddd;}

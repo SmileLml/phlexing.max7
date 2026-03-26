@@ -1,0 +1,36 @@
+.cell{overflow:auto !important}
+.table-footer .pager:before,
+.table-footer .pager,
+.table-footer {background: none;}
+
+.row a:hover{ color: #3c4353;}
+
+.course{border-radius: 4px; border: solid 1px #ddd; margin-bottom: 20px; position: relative;}
+.course .top {text-align: center; min-height:150px; position:relative;}
+.course .top.img {height: 150px; text-align: center;}
+.course .top.img img {height:100%; width:auto}
+.course .top .image{height:100%; display:flex; align-items:center; justify-content:center;}
+.course .top .image i{font-size:100px;}
+.course .top .image i:before{content: '\f1c5';}
+
+.course .medium {margin: -25px 5px;}
+.course .medium .course-status {float:left; margin-right:3px;}
+.course .medium .course-status span.text-ellipsis{background-color: #ea644a;}
+.course .medium .course-status span.status-doing{background-color: #e7a444; color: white;}
+.course .medium .course-status span.status-wait{background-color: gray; color: white;}
+.course .medium .course-status span.status-done{background-color: #38b03f; color: white;}
+.course .medium .estimate-info{float:right; color: white; background-color: #AAAAAA; margin-right: 5px;}
+
+.course .bottom {padding: 10px; height: 70px;margin-top:15px;}
+.course .bottom .course-title{font-size: 16px; font-weight: 700; color: black;}
+.course .bottom .course-title a{color: white;}
+.course .bottom div.course-desc{margin: 0;font-size:10px; overflow: hidden; display: -webkit-box; line-clamp: 2; -webkit-line-clamp: 2; -webkit-box-orient: vertical;}
+
+.row a.btn-collect-course {color: white; position: absolute; right: 10px; top: 117px; z-index: 1;}
+
+.bg1{background:#1183fb;}.bg2{background:#ea644a;}.bg3{background:#f1a325;}.bg4{background:#0bd6c0;}.bg5{background:#0997bb;}.bg6{background:#0abbad;}.bg7{background:#0cba7b;}.bg8{background:#0cba4e;}.bg9{background:#5909bb;}.bg10{background:#0948bb;}.bg11{background:#0975bb;}.bg12{background:#0997bb;} .course:hover{box-shadow:0 0 10px rgba(0,0,0,0.3);}
+
+.main-col {background-color: white;}
+.main-col .row {margin:10px 0px;}
+#queryBox.show {overflow: visible !important;}
+#mainContent .row {margin-top: 0px; padding-top: 10px;}

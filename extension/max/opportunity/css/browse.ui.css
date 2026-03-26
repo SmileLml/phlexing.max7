@@ -1,0 +1,4 @@
+#table-opportunity-browse [class^=pri-] {border: none; font-size: .8125rem;}
+#table-opportunity-browse .pri-high, #table-opportunity-browse .status-active {color: rgb(255 73 18/var(--tw-text-opacity));}
+#table-opportunity-browse .pri-middle {color: rgba(var(--color-warning-600-rgb),var(--tw-text-opacity));}
+#table-opportunity-browse .pri-low {color: rgba(var(--color-gray-600-rgb),var(--tw-text-opacity));}

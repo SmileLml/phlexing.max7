@@ -1,0 +1,10 @@
+.panel-body{overflow-y: scroll;}
+
+.table tbody .icon-move {cursor: pointer;}
+.buildin0 {color: red;}
+.buildin1 {color: green;}
+
+#ajaxForm .alert{padding: 8px!important;}
+#ajaxForm .alert > .remove{cursor: pointer;}
+
+tr.no-padding td{padding: 0!important;}

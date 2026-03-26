@@ -1,0 +1,3 @@
+#mainMenu .page-title {display: inline; width: 80%; overflow: hidden; white-space: nowrap;}
+#mainMenu .btn-toolbar.pull-left {width: 100%;}
+.table-data tbody>tr .bindproduct{vertical-align: sub;}

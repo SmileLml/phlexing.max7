@@ -1,0 +1,11 @@
+.select-7 {width:70px}
+.icon-green-effort-view:before{content: "\f0f6";}
+.fixed-footer{color:#fff}
+td.c-work, td.c-objectType,td.c-execution{white-space:nowrap; overflow: hidden;}
+
+#switchButton {background: #fff !important;}
+.panel-actions {position: relative; padding: 0;}
+.panel-actions .btn-icon {padding-left: 7px;}
+td.c-consumed, td.c-left {text-align: right; padding-right: 15px !important; overflow: hidden;}
+th.c-date {text-align: center; padding-right: 8px !important;}
+td.c-left {padding-right: 8px !important;}

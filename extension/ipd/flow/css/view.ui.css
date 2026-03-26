@@ -1,0 +1,7 @@
+.no-padding{padding: 0;}
+.unlinkedTable > * > tr > th:first-child {padding-left: 6px;}
+.linkedTable > * > tr > th:first-child {padding-left: 6px;}
+.linkedTable > thead > tr > th:last-child {width: 50px !important;}
+.scroll {overflow: scroll;}
+.panel-body {word-wrap: break-word;}
+.tab-actions{position:absolute; right:5px; top:-38px;z-index:10;}

@@ -1,0 +1,2 @@
+.c-name,.c-industry,.c-scale{white-space: nowrap; overflow: hidden;}
+#marketList tbody>tr>td, .table thead>tr>th {vertical-align: middle; white-space: nowrap; overflow: hidden;}

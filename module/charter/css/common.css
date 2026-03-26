@@ -1,0 +1,5 @@
+#roadmap_chosen {width: 100% !important}
+
+.flex{flex-wrap: wrap;display: flex;}
+.clip{overflow: hidden; text-overflow: clip; white-space: nowrap; width: 20%; padding: 6px 20px}
+.gray-pale{background-color: rgba(100, 117, 139, .1); color: rgba(100,117,139,1)}

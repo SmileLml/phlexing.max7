@@ -1,0 +1,35 @@
+title: table zt_deliverable
+desc: "交付物"
+author: Wang yuting
+version: "1.0"
+fields:
+  - field: id
+    note: "ID"
+    range: 1-100000
+  - field: name
+    fields:
+    - field: name1
+      range: '[瀑布,敏捷]{4},瀑布{16},敏捷{6}'
+    - field: name2
+      range: '产品,项目'
+    - field: name3
+      range: '[]{8},[综合阶段,需求阶段,设计阶段,开发阶段,测试阶段,发布阶段,总结评审阶段,其他阶段]{2},[短期迭代,长期迭代,运维迭代]{2}'
+    - field: name4
+      range: '创建动作{4},关闭动作{26}'
+    - field: name5
+      range: '的交付物名称'
+    - field: name6
+      range: '1-100000'
+  - field: module
+    range: 'project{8}, execution{22}'
+  - field: method
+    range: 'create{4},close{26}'
+  - field: model
+    fields:
+    - field: model1
+      range: product,project
+    - field: model2
+      range: '[waterfall,scrum]{2},[waterfall,scrum]{2},waterfall{16},scrum{6}'
+      prefix: "_"
+    - field: model3
+      range: '[]{8},[_mix,_request,_design,_dev,_qa,_release,_review,_other]{2},[_short,_long,_ops]{2}'

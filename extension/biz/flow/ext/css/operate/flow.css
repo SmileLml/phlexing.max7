@@ -1,0 +1,5 @@
+.modal-content #ajaxForm .text-important{display:none;}
+#ajaxForm {min-height:380px;}
+
+td.child > .table tr:first-child > td {padding-top: 0px;}
+td.child > .table tr:last-child  > td {padding-bottom: 0px;}

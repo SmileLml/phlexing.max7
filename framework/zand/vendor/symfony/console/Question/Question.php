@@ -1,0 +1,334 @@
+<?php
+
+/*
+ * This file is part of the Symfony package.
+ *
+ * (c) Fabien Potencier <fabien@symfony.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+namespace Symfony\Component\Console\Question;
+
+use Symfony\Component\Console\Exception\InvalidArgumentException;
+use Symfony\Component\Console\Exception\LogicException;
+
+/**
+ * Represents a Question.
+ *
+ * @author Fabien Potencier <fabien@symfony.com>
+ */
+class Question
+{
+    /**
+     * @var string
+     */
+    private $question;
+    /**
+     * @var int|null
+     */
+    private $attempts;
+    /**
+     * @var bool
+     */
+    private $hidden = false;
+    /**
+     * @var bool
+     */
+    private $hiddenFallback = true;
+    /**
+     * @var \Closure|null
+     */
+    private $autocompleterCallback;
+    /**
+     * @var \Closure|null
+     */
+    private $validator;
+    /**
+     * @var string|int|bool|null|float
+     */
+    private $default;
+    /**
+     * @var \Closure|null
+     */
+    private $normalizer;
+    /**
+     * @var bool
+     */
+    private $trimmable = true;
+    /**
+     * @var bool
+     */
+    private $multiline = false;
+
+    /**
+     * @param string                     $question The question to ask to the user
+     * @param string|bool|int|float $default The default answer to return if the user enters nothing
+     */
+    public function __construct($question, $default = null)
+    {
+        $this->question = $question;
+        $this->default = $default;
+    }
+
+    /**
+     * Returns the question.
+     */
+    public function getQuestion()
+    {
+        return $this->question;
+    }
+
+    /**
+     * Returns the default answer.
+     * @return string|bool|int|float|null
+     */
+    public function getDefault()
+    {
+        return $this->default;
+    }
+
+    /**
+     * Returns whether the user response accepts newline characters.
+     */
+    public function isMultiline()
+    {
+        return $this->multiline;
+    }
+
+    /**
+     * Sets whether the user response should accept newline characters.
+     *
+     * @return $this
+     * @param bool $multiline
+     */
+    public function setMultiline($multiline)
+    {
+        $this->multiline = $multiline;
+
+        return $this;
+    }
+
+    /**
+     * Returns whether the user response must be hidden.
+     */
+    public function isHidden()
+    {
+        return $this->hidden;
+    }
+
+    /**
+     * Sets whether the user response must be hidden or not.
+     *
+     * @return $this
+     *
+     * @throws LogicException In case the autocompleter is also used
+     * @param bool $hidden
+     */
+    public function setHidden($hidden)
+    {
+        if ($this->autocompleterCallback) {
+            throw new LogicException('A hidden question cannot use the autocompleter.');
+        }
+
+        $this->hidden = $hidden;
+
+        return $this;
+    }
+
+    /**
+     * In case the response cannot be hidden, whether to fallback on non-hidden question or not.
+     */
+    public function isHiddenFallback()
+    {
+        return $this->hiddenFallback;
+    }
+
+    /**
+     * Sets whether to fallback on non-hidden question if the response cannot be hidden.
+     *
+     * @return $this
+     * @param bool $fallback
+     */
+    public function setHiddenFallback($fallback)
+    {
+        $this->hiddenFallback = $fallback;
+
+        return $this;
+    }
+
+    /**
+     * Gets values for the autocompleter.
+     */
+    public function getAutocompleterValues()
+    {
+        $callback = $this->getAutocompleterCallback();
+
+        return $callback ? $callback('') : null;
+    }
+
+    /**
+     * Sets values for the autocompleter.
+     *
+     * @return $this
+     *
+     * @throws LogicException
+     * @param mixed[]|null $values
+     */
+    public function setAutocompleterValues($values)
+    {
+        if (\is_array($values)) {
+            $values = $this->isAssoc($values) ? array_merge(array_keys($values), array_values($values)) : array_values($values);
+
+            $callback = static function () use ($values) {
+                return $values;
+            };
+        } elseif ($values instanceof \Traversable) {
+            $callback = static function () use ($values) {
+                static $valueCache;
+
+                return $valueCache = $valueCache ?? iterator_to_array($values, false);
+            };
+        } else {
+            $callback = null;
+        }
+
+        return $this->setAutocompleterCallback($callback);
+    }
+
+    /**
+     * Gets the callback function used for the autocompleter.
+     */
+    public function getAutocompleterCallback()
+    {
+        return $this->autocompleterCallback;
+    }
+
+    /**
+     * Sets the callback function used for the autocompleter.
+     *
+     * The callback is passed the user input as argument and should return an iterable of corresponding suggestions.
+     *
+     * @return $this
+     * @param callable|null $callback
+     */
+    public function setAutocompleterCallback($callback = null)
+    {
+        if (1 > \func_num_args()) {
+            trigger_deprecation('symfony/console', '6.2', 'Calling "%s()" without any arguments is deprecated, pass null explicitly instead.', __METHOD__);
+        }
+        if ($this->hidden && null !== $callback) {
+            throw new LogicException('A hidden question cannot use the autocompleter.');
+        }
+
+        $this->autocompleterCallback = null === $callback ? null : \Closure::fromCallable($callback);
+
+        return $this;
+    }
+
+    /**
+     * Sets a validator for the question.
+     *
+     * @return $this
+     * @param callable|null $validator
+     */
+    public function setValidator($validator = null)
+    {
+        if (1 > \func_num_args()) {
+            trigger_deprecation('symfony/console', '6.2', 'Calling "%s()" without any arguments is deprecated, pass null explicitly instead.', __METHOD__);
+        }
+        $this->validator = null === $validator ? null : \Closure::fromCallable($validator);
+
+        return $this;
+    }
+
+    /**
+     * Gets the validator for the question.
+     */
+    public function getValidator()
+    {
+        return $this->validator;
+    }
+
+    /**
+     * Sets the maximum number of attempts.
+     *
+     * Null means an unlimited number of attempts.
+     *
+     * @return $this
+     *
+     * @throws InvalidArgumentException in case the number of attempts is invalid
+     * @param int|null $attempts
+     */
+    public function setMaxAttempts($attempts)
+    {
+        if (null !== $attempts && $attempts < 1) {
+            throw new InvalidArgumentException('Maximum number of attempts must be a positive value.');
+        }
+
+        $this->attempts = $attempts;
+
+        return $this;
+    }
+
+    /**
+     * Gets the maximum number of attempts.
+     *
+     * Null means an unlimited number of attempts.
+     */
+    public function getMaxAttempts()
+    {
+        return $this->attempts;
+    }
+
+    /**
+     * Sets a normalizer for the response.
+     *
+     * The normalizer can be a callable(a string), a closure or a class implementing __invoke.
+     *
+     * @return $this
+     * @param callable $normalizer
+     */
+    public function setNormalizer($normalizer)
+    {
+        $this->normalizer = \Closure::fromCallable($normalizer);
+
+        return $this;
+    }
+
+    /**
+     * Gets the normalizer for the response.
+     *
+     * The normalizer can ba a callable (a string), a closure or a class implementing __invoke.
+     */
+    public function getNormalizer()
+    {
+        return $this->normalizer;
+    }
+
+    /**
+     * @return bool
+     * @param mixed[] $array
+     */
+    protected function isAssoc($array)
+    {
+        return (bool) \count(array_filter(array_keys($array), 'is_string'));
+    }
+
+    public function isTrimmable()
+    {
+        return $this->trimmable;
+    }
+
+    /**
+     * @return $this
+     * @param bool $trimmable
+     */
+    public function setTrimmable($trimmable)
+    {
+        $this->trimmable = $trimmable;
+
+        return $this;
+    }
+}

@@ -1,0 +1,9 @@
+.btn-group {margin-right: 10px !important;}
+.btn-group a i.icon-plus {font-size: 16px;}
+.btn-group a.btn-primary {border-right: 1px solid rgba(255,255,255,0.2);}
+.btn-group button.dropdown-toggle.btn-primary {padding:6px;}
+td.status-checked{color: #43a047}
+td.status-delay{color: #f00}
+.table td{white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+#queryBox .table td{overflow:visible;}
+.c-checkDate {text-align: center;}

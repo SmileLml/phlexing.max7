@@ -1,0 +1,9 @@
+#relationTable input[type=checkbox] {margin-top: 8px;}
+#relationTable .input-group .chosen-single {border-radius: 4px 0px 0px 4px;}
+#relationTable .input-group .input-group-addon {border-right-width: 1px;}
+#relationTable .input-group input {border-left-color: #ddd!important; border-radius: 4px 0px 0px 4px !important;}
+#relationTable div.checkbox {width: 50%; margin: 0px; float: left;}
+
+#treeMenu{background: #fff; text-align: center; padding: 10px 0;}
+#treeMenu > li{padding: 10px 15px;}
+#treeMenu > li > a{color: #272e33;}

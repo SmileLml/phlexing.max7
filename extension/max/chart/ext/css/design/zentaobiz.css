@@ -1,0 +1,159 @@
+body{overflow: overlay;line-height:1.378;}
+html, body {height: 100%;}
+#main {height: calc(100% - 50px); padding-bottom: 0;}
+#main .container {height: 100%;}
+#main .container .step-content {height: calc(100% - 40px);}
+#main .container .step-content #mainContent {height: 100%;}
+#main .container .step-content #mainContent .display-content,
+#main .container .step-content #mainContent .config-content,
+#main .container .step-content #mainContent .display-content .cell,
+#main .container .step-content #mainContent .config-content .cell {height: 100%; overflow: auto;}
+#main .container .step-content #mainContent .display-content .cell .panel {height: 100%; border: unset;}
+#main .container .step-content #mainContent .display-content .cell .panel .panel-body {height: calc(100% - 50px); overflow: auto;}
+#main .container .step-content #mainContent .config-content .cell .panel-settings {height: 100%; background: #FFFFFF}
+#main .container .step-content #mainContent .config-content .cell .panel .panel-body {height: 100%;}
+
+#mainContent #sidebar.col-lg  {width: 450px;}
+#mainContent #sidebar > .cell  {width: 100%; padding: 16px 16px 14px 16px;}
+#mainContent #sidebar .form-control {height: auto; position: relative;}
+#mainContent #sidebar .form-control button {width: 100%; height: 28px; text-align: left; font-size: 15px; align-items: center;color: rgb(178,178,178);border: 1px dashed rgb(224,224,224); border-radius: 4px; cursor: pointer; background: #fff;}
+#mainContent #sidebar .form-control button:hover {background-color: rgb(240,240,240);}
+
+#mainContent #sidebar .form-control a.btn-link {position: absolute; right: 0; top: -32px;}
+#mainContent #sidebar .edit-button {margin-bottom: 5px;}
+#mainContent #sidebar .edit-button i {float: right; margin-top: 4px;}
+#mainContent #sidebar .edit-button i:hover {color: #000;}
+
+.steps {height: 30px; text-align: center;}
+.steps>ul {display: inline-block; margin: 0;}
+.steps>ul>li {position: relative; background-color: #fff;}
+.steps>ul>li.active>a {color: #fff;}
+.steps>ul>li>a {padding: 7px 20px; text-align: center; border-radius: 0; border: 0; -webkit-transition: none; -o-transition: none; transition: none;}
+.step-margin {margin-left: -10px !important;}
+#step1 {z-index: 20;}
+#step1 > a {width: 130px; padding-left: 15px;}
+#step2 {z-index: 18}
+#step2 > a {width: 142px;}
+#step3 {z-index: 16}
+#step3 > a {width: 142px;}
+#step4 {z-index: 14;}
+#step4 > a {width: 130px; padding-left: 25px;}
+
+#designSteps > ul {box-shadow: inset 0 0px 0px rgb(0 0 0 / 10%), 0 0 15px rgb(0 0 0 / 10%); border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-top-left-radius: 4px; border-bottom-left-radius: 4px;}
+#designSteps > ul.nav-primary > li#step1 {border-top-left-radius: 4px; border-bottom-left-radius: 4px;}
+#designSteps > ul.nav-primary > li#step4 {border-top-right-radius: 4px; border-bottom-right-radius: 4px;}
+#designSteps > ul > li, #designSteps > ul > li > a {height: 32px !important;}
+#designSteps > ul > li {background-color: transparent;}
+#designSteps > ul > li.current > a {font-weight: bold;}
+#designSteps > ul > li.active > a:hover {color: #2e7fff;}
+#designSteps > ul > li.clickable > a {color: #313C52;}
+#designSteps > ul > li.clickable > a:hover {color: #2e7fff;}
+#step1.active  > a {background: url('static/svg/arrow-step1-lightblue.svg') no-repeat; }
+#step1.current > a {background: url('static/svg/arrow-step1-darkblue.svg')  no-repeat; }
+#step1 > a:hover {background: url('static/svg/arrow-step1-grey.svg')  no-repeat; }
+#step2.active  > a, #step3.active  > a {background: url('static/svg/arrow-step2-lightblue.svg') no-repeat;}
+#step2.current > a, #step3.current > a {background: url('static/svg/arrow-step2-darkblue.svg')  no-repeat;}
+#step2 > a:hover, #step3 > a:hover {background: url('static/svg/arrow-step2-grey.svg')  no-repeat; }
+#step4.active  > a {background: url('static/svg/arrow-step3-lightblue.svg') no-repeat; }
+#step4.current > a {background: url('static/svg/arrow-step3-darkblue.svg')  no-repeat; }
+#step4 > a:hover {background: url('static/svg/arrow-step3-grey.svg')  no-repeat; }
+
+#main>.container #mainMenu {padding-bottom: 4px;}
+.display-content .cell #draw {width: 100%; min-height: 300px;}
+#mainContent .panel-position-child,.panel-body-child {position: absolute; top: 50%; bottom: 50%; left: 50%; transform: translate(-50%, -50%);white-space: nowrap;}
+#mainContent .display-content .cell {padding: 10px 0px 0px 0px;}
+#mainContent .display-content .cell .panel-heading {border-bottom: 1px solid #f4f5f7; padding: 0px 16px 10px 16px;}
+#mainContent .display-content .cell .panel-heading .panel-title {line-height: 32px}
+#mainContent .panel-title{font-size: 13px;}
+
+#mainContent .config-content {padding-left: 16px;}
+#mainContent .config-content .cell .panel-body {padding: 0px;}
+#mainContent .btn-save-setting {margin-right: 9px;}
+
+#filterContent {display: flex; margin-bottom: 16px;}
+#filterContent #filterItems {display: flex; flex-wrap: wrap; flex: 1;}
+#filterContent #filterItems .filter-item {padding: 0 16px 5px 0;}
+#filterContent #filterItems .filter-item-grow {flex-grow: 1;}
+#filterContent .queryButton{display: flex; align-items: center; padding-bottom: 5px; flex-basis: 60px;}
+#filterContent #filterItems .filter-item .chosen-container, #mainContent #filterItems .filter-item .picker-multi {min-width: 128px !important;}
+
+#mainContent #sidebar .cell {padding: unset;}
+#mainContent #sidebar .cell .panel {border: unset;}
+#mainContent #sidebar .cell .panel.pull-bottom {padding: 16px; width: 100%;}
+#mainContent #sidebar .cell .panel.pull-bottom .panel-heading {padding: 0;}
+#mainContent #sidebar .cell.cell-filter .panel-title {display: inline;}
+#mainContent #sidebar .cell.cell-filter .panel-body {overflow: auto; width: 100%;}
+#mainContent #sidebar .cell.cell-filter .panel-body .filter:not(:last-child) {margin-bottom: 16px;}
+#mainContent #sidebar .cell.cell-filter .panel-body .filter {background-color: #F7F7FA;}
+#mainContent #sidebar .cell.cell-filter .panel-body .filter .filter-header {border-bottom: 1px solid #EDEEF2; padding: 12px 16px;}
+#mainContent #sidebar .cell.cell-filter .panel-body .filter .filter-heading {font-weight: 700;}
+#mainContent #sidebar .cell.cell-filter .panel-body .filter .filter-body {padding: 6px 16px;}
+#mainContent #sidebar .cell.cell-filter .panel-body .filter .filter-body .table th {font-weight: 400; font-size: 13px; color: #5E626D;}
+#mainContent #sidebar .cell.cell-filter .panel-body .filter .filter-body .table .chosen-container .chosen-results {max-height: 160px;}
+
+#mainContent #sidebar .table > tbody > tr > th {white-space: nowrap; padding: 8px 4px 8px 0px;}
+#mainContent #sidebar .table tbody > tr > td {vertical-align: top; padding: 8px 0px 8px 4px;}
+#step1Content #mainContent div.panel .titleResult {padding:20px 0px 10px 20px;}
+
+.action-padding {padding-top: 5px !important;}
+div.draft button {font-size: 14px;}
+
+#mainMenu .next-step .btn-next-step {display: block;}
+#mainMenu .next-step .btn-publish {display: none;}
+
+#mainMenu .publish .btn-next-step {display: none;}
+#mainMenu .publish .btn-publish {display: block;}
+#mainMenu #chartNav {position: absolute; left: 50%; transform: translateX(-50%);}
+#mainMenu .margin-left-20 {margin-left: 20px;}
+
+#mainMenu #chartNav {position: absolute; left: 50%; transform: translateX(-50%);}
+
+.fieldSettings {margin: -8px 10px; border: none;}
+.ptitle {font-size: 14px !important; padding-bottom: 0px !important}
+#mainContent .display-content .cell .panel .panel-body {overflow-y: overlay;}
+
+#mainContent #filterContent .field-search .form-control {width: 128px;}
+
+.auto-scroll {height: calc(100% - 110px); overflow-y: auto; width: 100%;}
+
+.pull-bottom {position: absolute; bottom: 0;}
+#mainContent #sidebar .cell .panel.pull-bottom {padding: 16px; width: 100%;}
+#mainContent #sidebar .cell .panel.pull-bottom .panel-heading {padding: 0;}
+
+#step2Content .help-text {white-space: nowrap;}
+#step2Content .required::after{right: -8px;}
+#step2Content .addRow {padding: 5px; border: unset; margin-right: 4px;}
+#step2Content .delRow {padding: 5px; border: unset;}
+
+#mainContent .panel-heading {padding:20px;}
+#step2Content #sidebar .panel-heading, #step3Content #sidebar .panel-heading, #step4Content #sidebar .panel-heading {padding:16px;}
+#step2Content #sidebar .panel-content .panel-body .table-form > tbody > tr > td.btn-list {padding-left: 8px !important;}
+#step2Content #mainContent .config-content .cell .panel-content .panel-heading:first-child .panel-body {padding: 12px 0px 0px 0px;}
+#step2Content #chartConfig {padding-top: 8px;}
+#step2Content #mainContent #sidebar .table tbody > tr > td {padding: 8px 4px;}
+#step3Content #sidebar .panel-settings > div.filter-heading {display: flex; justify-content: space-between; align-items: center; height: 52px !important;}
+#step2Content #mainContent .panel, #step3Content #mainContent .panel, #step4Content #mainContent .panel {padding: unset;}
+#step2Content #sidebar .cell .panel .panel-content .panel-heading:last-child {padding: 16px 12px 16px 16px;}
+#step3Content #mainContent #sidebar #filterForm .filter-title {display: flex; justify-content: space-between;}
+#step3Content #mainContent #sidebar #filterForm .filter-title .close {font-size: 16px;}
+
+#mainMenu {margin: -10px 0 2px;}
+.clear-padding {padding-top: 0 !important;}
+
+.exportButton {display: inline-block; position: absolute; top: 0; right: 16px;}
+.exportButton a i {margin-right: 5px;}
+
+#filterContent #filterItems .picker-multi .picker-selections{width: 128px; overflow: hidden; text-overflow: clip; white-space: nowrap;}
+#filterForm .picker-selections{overflow: hidden; text-overflow: clip; white-space: nowrap;}
+#filterForm .table > tbody > tr > th {padding: 6px 4px 6px 0px !important;}
+#filterForm .table > tbody > tr > td {padding: 6px 0px 6px 4px !important;}
+#filterForm td.required:after {right: -10px; top: 10px;}
+
+#releaseForm td.required:after {right: -10px; top: 6px;}
+#releaseForm .table tbody tr:not(:first-child) td.required:after {top: 13px;}
+#releaseForm .table tbody tr:first-child th, #releaseForm .table tbody tr:first-child td {padding-top: unset !important;}
+#releaseForm .table tbody tr:last-child th, #releaseForm .table tbody tr:last-child td {padding-bottom: unset !important;}
+
+.main-content { width: 100%; height: 100%; }
+.display-content {float:left;width: calc(100% - 450px); height:100%;}
+.config-content {float: right; width: 450px;}

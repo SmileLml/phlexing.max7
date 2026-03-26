@@ -1,0 +1,16 @@
+.select-7 {width:70px}
+.selectActive{border:2px solid #090;}
+
+.outer.hide-side .side .panel{display:none;}
+.outer.hide-side .side .side-handle{height:32px;}
+
+.side-col{width: 300px;}
+#sidebar > .cell{width: 280px;}
+.hide-sidebar #sidebar > .cell{display: none;}
+
+#execution_chosen > a {width: 190px;}
+#execution_chosen > a > span {white-space: unset;}
+.table-responsive {overflow: auto !important;}
+.main-table thead>tr>th:last-child {width: 15px;}
+.m-company-effort {margin-bottom: 15px;}
+td.c-consumed, td.c-left{text-align: right; padding-right: 17px !important;}

@@ -1,0 +1,4 @@
+.table.form-batch-table > * > tr > * {border-width: 1px; border-style: solid;}
+.table.form-batch-table > * > tr > th {align-content: center; text-align: center;}
+.table.form-batch-table > * > tr > td {align-content: center; justify-items: center;}
+form.form-batch {height: calc(100vh - 180px);}

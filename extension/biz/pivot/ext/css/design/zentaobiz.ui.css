@@ -1,0 +1,64 @@
+#stepNav {left: calc(50% - 244px);}
+.sql-panel .panel-heading {justify-content: start !important; gap: 0 !important;}
+.sql-panel .sql-help-text {padding-left: 8px;}
+.sql-panel .sql-help-text i{color: var(--color-warning-500);}
+
+.dtable-content, .config-content {height: 100%; overflow: auto;}
+.dtable-content {width: calc(100% - 450px);}
+.config-content {width: 450px;}
+.dtable-content .panel .panel-body-height {height: calc(100% - 48px);}
+.config-content-bottom {position: absolute; bottom: 0;}
+
+.stepquery-query-filters .filter {width: 240px; flex: initial;}
+
+#stepquery {align-items: stretch; gap: 1rem; justify-content: space-between;}
+#stepquery > div {flex-grow: 1;}
+
+#stepdesign, #stepdrill, #stepfilter, #steppublish {height: calc(100vh - 120px);}
+#stepdesign .config-content #summaryForm {overflow-y: auto; height: calc(100% - 120px);}
+#stepdesign .config-content .column {background-color: var(--color-gray-100);}
+#stepdesign .config-content .column-header-begin {width: 80%;}
+#stepdesign .config-content .picker-group {width: 75%}
+#stepdesign .config-content .picker-column {width: 40%}
+#stepdesign .config-content .picker-columnTotal {width: 80%}
+#stepdesign .config-content .body-th {width: 30%}
+#stepdesign .config-content .body-picker {width: 60%}
+#stepdesign .config-content .showmode-picker {width: 38%}
+
+#stepdrill .config-content #drillForm {overflow-y: auto; height: calc(100% - 80px); position: relative;}
+#stepdrill .config-content .drill-empty-tip {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); white-space: nowrap;}
+#stepdrill .config-content .drill-container {background-color: var(--color-gray-100); width: 80%;}
+#stepdrill .drill-add {background-color: var(--color-primary-100);}
+
+.drill-modal .bg-text-padding {padding: 4px 12px 4px 12px;}
+.drill-modal .drill-select-picker {width: 40%;}
+.drill-modal .drill-condition {width: 70%;}
+.drill-modal .origin-sql {width: 30%; background-color: var(--color-gray-100);}
+.drill-modal .condition-lines {width: 90%;}
+.drill-modal .condition-lines .drill-condition-picker {width: 25%;}
+.drill-modal .drill-result {min-height: 100px; max-height: 300px; position: relative}
+.drill-modal .drill-result .empty-tip {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); white-space: nowrap;}
+.drill-modal .drill-preview {background-color: var(--color-secondary-500); color: white;}
+.drill-modal .drill-save {background-color: var(--color-primary-500); color: white;}
+.drill-modal .where-sql textarea {box-shadow: inset 0 0px 0px rgb(0 0 0 / 10%), 0 0 15px rgb(0 0 0 / 10%); border: 0px;}
+
+#stepfilter .config-content #filterForm {overflow-y: auto; height: calc(100% - 80px); position: relative;}
+#stepfilter .config-content .filter-empty-tip {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); white-space: nowrap;}
+#stepfilter .config-content #summaryForm {overflow-y: auto; height: calc(100% - 120px);}
+#stepfilter .config-content .column {background-color: var(--color-gray-100);}
+#stepfilter .config-content .column-header-begin {width: 80%;}
+#stepfilter .config-content .picker-group {width: 75%}
+#stepfilter .config-content .picker-column {width: 40%}
+#stepfilter .config-content .body-th {width: 30%}
+#stepfilter .config-content .body-picker {width: 60%}
+#stepfilter .filter-add {background-color: var(--color-primary-100);}
+
+#steppublish .config-content #legendForm {overflow-y: auto; height: calc(100% - 80px); position: relative;}
+#steppublish .config-content .whitelistBox .w-full .form-group-wrapper {width: 100%;}
+#steppublish .config-content .whitelistBox {padding-bottom: 5px;}
+.border-bottom-300 {border-bottom: 1px solid var(--color-gray-300);}
+.max-height {height: 100%;}
+.add-button {color: var(--color-primary-500);}
+.nav-steps > .nav-item:has(+ .nav-item > .active, + .nav-item > .selected) > a:not(.active, .selected)::before {display: none}
+
+#drillFieldGroup .picker-box {max-width: 140px; width: 100%;}

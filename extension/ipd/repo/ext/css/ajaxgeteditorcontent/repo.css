@@ -1,0 +1,26 @@
+.cpp .comment-row, .cpp #bugForm {font-family: "Helvetica Neue",Helvetica,Tahoma,Arial,'PingFang SC','Source Han Sans CN','Source Han Sans','Source Han Serif','Hiragino Sans GB','WenQuanYi Micro Hei','Microsoft YaHei',sans-serif;}
+#bugForm {display: none;}
+.with-action-row #bugForm {position: absolute; top: 0; right: 0; width: 50%; background: #fff; overflow: scroll;}
+.input-group .chosen-container {min-width: 150px;}
+.comment-cell .panel-heading {padding: 8px 16px 7px 20px;}
+.comment-row {font-size: 13px;}
+.repoCode .bugFormContainer {margin: 0; padding: 10px 20px 10px 0;}
+.repoCode .commented .comment-btn .icon-wrapper {color: #438EFF; min-width: 38px; text-align: left;}
+.repoCode .commented .comment-btn .icon-wrapper .bug-num {margin-left: 2px; margin-bottom: 3px;}
+.repoCode .over .comment-btn .icon-wrapper, .repoCode over .icon-wrapper, .repoCode .selected.commented .comment-btn .icon-wrapper {line-height: 20px; height: 20px; background: none; left: 0px; width: 25px; text-align: left;}
+.repoCode .over .commented .comment-btn .icon-wrapper:before, .repoCode tr.over .icon-wrapper:before, .repoCode tr.selected.commented .comment-btn .icon-wrapper:before {display: none;}
+.repoCode .over .commented .comment-btn, .repoCode tr.over .comment-btn{margin-left: 0;}
+.repoCode .over .comment-btn, .repoCode .bug-view {display: block; margin-left: -35px;}
+.repoCode .comment {background-color: #fff;}
+.repoCode .commented {min-width: 60px;}
+.repoCode table td {white-space: unset;}
+.comment-btn .icon-wrapper, .comment-btn {position: unset;}
+.repoCode .panel-bug.show .panel-body {margin-top: 10px;}
+.repoCode .icon-wrapper {color: #438EFF; min-width: 25px; text-align: right;}
+.repoCode .panel {background-color: #fafafa;}
+.repoCode .view-line-icon {position: absolute; right: 50px; top: 2px; font-weight: bold; cursor: pointer;}
+.repoCode .view-line-icon.add-bug {right: 30px;}
+.repoCode .view-line-icon.add-bug .icon {font-weight: bold;}
+.repoCode .view-line-icon .bug-count {vertical-align: middle; padding-left: 5px;}
+.view-content-line:hover {background: rgba(230,240,255,.8);}
+.monaco-editor .margin-view-overlays .current-line, .monaco-editor .view-overlays .current-line {display: none !important;}

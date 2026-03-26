@@ -1,0 +1,3 @@
+.newMarket {width: 120px;}
+#marketBox > .input-group {table-layout: fixed;}
+#marketBox.disabled .picker-selection-remove {display: none;}

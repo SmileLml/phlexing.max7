@@ -1,0 +1,60 @@
+<?php
+
+/*
+ * This file is part of the Symfony package.
+ *
+ * (c) Fabien Potencier <fabien@symfony.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+namespace Symfony\Component\HttpClient\Response;
+
+use Symfony\Contracts\HttpClient\ChunkInterface;
+use Symfony\Contracts\HttpClient\ResponseInterface;
+use Symfony\Contracts\HttpClient\ResponseStreamInterface;
+
+/**
+ * @author Nicolas Grekas <p@tchwork.com>
+ */
+final class ResponseStream implements ResponseStreamInterface
+{
+    /**
+     * @var \Generator
+     */
+    private $generator;
+
+    /**
+     * @param \Generator $generator
+     */
+    public function __construct($generator)
+    {
+        $this->generator = $generator;
+    }
+
+    public function key()
+    {
+        return $this->generator->key();
+    }
+
+    public function current()
+    {
+        return $this->generator->current();
+    }
+
+    public function next()
+    {
+        $this->generator->next();
+    }
+
+    public function rewind()
+    {
+        $this->generator->rewind();
+    }
+
+    public function valid()
+    {
+        return $this->generator->valid();
+    }
+}

@@ -1,0 +1,4 @@
+.c-name {width:auto; overflow: hidden; white-space: nowrap;}
+.c-level,.c-status,.c-category,.c-market,.c-budget,.c-appliedBy{width:100px;}
+.c-createdDate{width:150px;}
+.c-category{width:110px;}

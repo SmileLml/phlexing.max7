@@ -1,0 +1,11 @@
+#featurebar .breadcrumb{padding: 5px 0; margin: 0}
+#featurebar .breadcrumb>li+li:before {content: '>'}
+.actions .checkbox.btn {margin-top: 0px;}
+.btn-back.btn-wide{min-width:auto !important;}
+.main-actions {text-align: center;}
+
+#adminLayoutForm{padding-bottom:0px;}
+.form-actions{padding-bottom:10px;}
+.w-280px{width:380px;}
+.w-60px{width:70px!important;}
+#adminLayoutForm .form-actions{position: relative;}

@@ -1,0 +1,6 @@
+#querybox #searchform {border-bottom: 1px solid #ddd; margin-bottom: 20px;}
+.pull-right .dropdown .dropdown-toggle {padding-bottom: 7px;}
+.btn-group a i.icon-plus, .btn-group a i.icon-link {font-size: 16px;}
+.btn-group a.btn-secondary, .btn-group a.btn-primary {border-right: 1px solid rgba(255,255,255,0.2);}
+.btn-group button.dropdown-toggle.btn-secondary, .btn-group button.dropdown-toggle.btn-primary {padding:6px;}
+.c-role, .c-needTrain {width: 320px;}

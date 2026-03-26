@@ -1,0 +1,10 @@
+.row-module {max-width: 500px; min-width: 400px;}
+.row-module + .row-module {margin-top: 5px;}
+
+#modulesTree li {padding-left: 20px;}
+#modulesTree > li.system > .tree-actions > a[data-type='delete'], #modulesTree > li.system > .tree-actions > a[data-type='edit'] {display: none;}
+#modulesTree  li > ul .tree-actions a[data-type='subModules'] {display: none;}
+#modulesTree .module-name {display: inline-block; max-width: calc(100% - 84px); white-space: nowrap; overflow: hidden; text-overflow: unset;}
+#modulesTree ul .module-name {display: inline-block; max-width: calc(100% - 65px); white-space: nowrap; overflow: hidden; text-overflow: unset;}
+
+#childrenForm table tr > td.text-middle span {display: block; float: left;}

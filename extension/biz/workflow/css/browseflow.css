@@ -1,0 +1,16 @@
+.flow-block{height: 200px;}
+.flow-block strong{white-space: nowrap;}
+.flow-block .panel-heading{padding-right:40px; position:relative;}
+.flow-block .panel-heading strong{overflow:hidden; display:block;}
+.flow-block .info{height: 100px; margin-bottom: 10px; word-wrap: break-word;overflow: auto; overflow-x: hidden;}
+.flow-block .info div{margin-bottom: 5px;}
+
+#cardMode .footerbar .btn{border: none;}
+
+.tr-child {border: 2px solid #cbd0db !important;}
+
+.buildin0 {color: red;}
+.buildin1 {color: green;}
+
+.flow-block:hover .footerbar{display: block;}
+#workflowTable td.actions {text-align: left;}

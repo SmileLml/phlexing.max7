@@ -1,0 +1,9 @@
+.productCol{width: 250px; padding-bottom: 5px;}
+.releaseCol{width: 250px;}
+.actionCol{width: 90px; padding-left: 10px;}
+.actionCol .btn-group .btn{padding-bottom: 5px;}
+.productCol .chosen-single, .releaseCol .chosen-single{width: 200px !important}
+#kanbanHeader{margin-bottom: 0px;}
+.label-danger{margin-top: 7px;}
+.label-deleted{margin-top: 0px;}
+.label-deleted{margin-top: 0px;}

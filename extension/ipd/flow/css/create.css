@@ -1,0 +1,18 @@
+.radio-inline, .checkbox-inline {min-width: 90px;}
+.radio-inline + .radio-inline, .checkbox-inline + .checkbox-inline {margin-left: 0;}
+
+input[type=checkbox] {margin-top: 2px;}
+td > .files-list > li > a {line-height: 18px;}
+.checkboxDIV, .radioDIV {padding: 8px; border: 1px solid #ccc; border-radius: 4px;}
+
+.table-form td + td {padding-left: 5px;}
+td.child > .table tr > td {padding-left: 0px;}
+td.child > .table tr > td:last-child {padding-right: 0px;}
+td.child > .table tr > td > textarea {height: 28px;}
+td.child > .table tr:first-child > td {padding-top: 0px;}
+td.child > .table tr:last-child  > td {padding-bottom: 0px;}
+.modal-content #ajaxForm .text-important {display:none;}
+
+.chosen-container.ajaxSearchMore .chosen-results > li.no-results {cursor: pointer;}
+.chosen-container.ajaxSearchMore .chosen-results > li.no-results:hover {color: #1a4f85; background-color: #ddd;}
+.chosen-container.ajaxSearchMore .chosen-results > li.no-results > span {font-weight: bold;}

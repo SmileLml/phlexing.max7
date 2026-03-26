@@ -1,0 +1,81 @@
+.chartbox .ant-table-thead>tr:first-child>th:first-child, .chartbox .ant-table-thead>tr:first-child>th:last-child {
+    padding: 8px;
+}
+.ant-table-tbody>tr>td, .ant-table-thead>tr>th {
+    padding: 8px!important;
+}
+.form-control {height: auto;}
+.form-control .ant-select-selection {
+    border: none;
+    border-radius: 0;
+}
+.form-control .ant-calendar-picker-input {
+    border: none;
+}
+.ant-select-dropdown-menu-item {
+    min-height: 30px;
+}
+.filter-container {
+    display: flex;
+    padding: 10px 10px 0;
+    flex-wrap: wrap;
+}
+.filter-condition {
+    flex: 1;
+    display: flex;
+}
+.filter-action {
+    padding-bottom: 10px;
+    text-align: right;
+    display: flex;
+    justify-content: end;
+}
+.filter-action button {
+    margin-left: 5px;
+}
+.filter {
+    position: relative;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+.filter .remove {
+    position: absolute;
+    top: -13px;
+    right: -8px;
+    z-index: 1000;
+    background: #f1f1f1;
+    border: 1px solid #ddd;
+    padding: 3px;
+    border-radius: 14px;
+    width: 28px;
+    height: 28px;
+    text-align: center;
+    cursor: pointer;
+}
+.reportbox {
+    margin-top: 45px;
+}
+#dashboard-container .table, #dashboard-container .table td {
+    border: 1px solid #ddd;
+}
+#dashboard-container .table td.bold {
+    font-weight: bold;
+}
+#dashboard-container .table td.bold {
+    font-weight: bold;
+}
+#dashboard-container .table td.short {
+    width: 150px;
+}
+.chartbox {
+    border: 1px solid #ddd;
+}
+.vue-grid-item:not(.vue-grid-placeholder) {
+    border: none !important;
+}
+.vue-grid-item {
+    overflow: hidden;
+}
+.vue-grid-item .table-title {
+    height: 45px;
+}

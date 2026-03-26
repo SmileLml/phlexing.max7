@@ -1,0 +1,21 @@
+.legend span {display: inline-block; margin-right: 12px;}
+
+.pie-legend 
+{
+  text-align: left; 
+  border-bottom: unset;
+  position: absolute;
+  right: 15%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform:  translateY(-50%);
+  transform: translateY(-50%);
+}
+.pie-legend li {width: 100px; height: 30px; list-style: none; overflow: hidden; text-overflow: ellipsis; white-space:nowrap;}
+.pie-legend span {width: 22px; height: 13px; border-radius: 3px;}
+.bar-legend span {width: 22px; height : 13px;}
+.line-legend span {width: 35px; height: 2px; vertical-align: middle;}
+.bar-legend ul, .line-legend ul {position: relative; left: 50%; float: left;}
+.bar-legend li, .line-legend li {list-style: none; float: left; margin-left: 20px; position: relative; right: 50%;}

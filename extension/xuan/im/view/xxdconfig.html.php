@@ -1,0 +1,17 @@
+[server]
+ip=$ip
+commonPort=$commonPort
+chatPort=$chatPort
+https=$https
+uploadPath=$uploadPath
+uploadFileSize=$uploadFileSizeM
+pollingInterval=$pollingInterval
+maxOnlineUser=$maxOnlineUser
+logPath=$logPath
+certPath=$certPath
+debug=$debug
+thumbnail=$thumbnail
+syncConfig=$syncConfig
+[backend]
+$hostx.php
+$key

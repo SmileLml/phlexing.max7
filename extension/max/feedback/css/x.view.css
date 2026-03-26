@@ -1,0 +1,7 @@
+body * {font-size: 13px !important; line-height: 1.42857143; color: rgb(51, 51, 51);}
+#main {margin-bottom: 40px; min-width: unset; position: unset !important;}
+#mainMenu .pull-left>a, #mainMenu .pull-left .divider, #mainContent .col-4, .main-actions {display: none;}
+#mainMenu {position: fixed; width: 100%; z-index: 999;}
+html, body, #main, .container, body.xxc-embed { height: 100%;}
+.btn span {line-height: 16px; vertical-align: middle;}
+#mainContent {margin-top: 35px;}

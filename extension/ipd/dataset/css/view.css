@@ -1,0 +1,9 @@
+.tab-pane {overflow: scroll; min-height: 200px;}
+th {max-width: 50px;}
+th.fieldName {width: 150px; min-width: 150px;}
+td {
+    max-width: 120px;
+    word-break: break-all;
+    white-space: nowrap;
+    overflow: hidden;
+}

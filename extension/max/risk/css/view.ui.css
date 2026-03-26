@@ -1,0 +1,7 @@
+.risk-basic-info .datalist-item-label {width: 80px;}
+.risk-basic-info [class^=pri-] {border: none; font-size: .8125rem;}
+.risk-basic-info .pri-high, .risk-basic-info .status-active {color: rgb(255 73 18/var(--tw-text-opacity));}
+.risk-basic-info .pri-middle {color: rgba(var(--color-warning-600-rgb),var(--tw-text-opacity));}
+.risk-basic-info .pri-low {color: rgba(var(--color-gray-600-rgb),var(--tw-text-opacity));}
+
+.risk-lift-item .datalist-item-label {width: 80px;}

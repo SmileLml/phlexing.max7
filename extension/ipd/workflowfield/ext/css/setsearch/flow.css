@@ -1,0 +1,5 @@
+.settingBox > .checkbox-primary {margin-top: 10px;}
+.fieldBox > .checkbox-primary {margin-top: 10px; margin-bottom: 10px;}
+.fieldBox > .checkbox-primary.check-all {border-bottom: 1px solid #d6dae3;}
+.fieldBox > .checkbox-primary.check-all label {margin-bottom: 5px;}
+.fieldBox > .checkbox-primary + .checkbox-primary {margin-top: -5px;}

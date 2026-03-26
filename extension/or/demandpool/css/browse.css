@@ -1,0 +1,8 @@
+.table-children {border-left: 2px solid #cbd0db; border-right: 2px solid #cbd0db;}
+.table-nest-icon {margin-right: 3px;}
+.table-nest-toggle:before {line-height: 22px; content: "\e6f2";}
+.table-nest-child-hide.table-nest-toggle:before {line-height: 22px; content: "\e6f1";}
+.main-table tbody>tr>td.child {padding-left: 40px;}
+#demandpoolList tbody>tr>td {overflow: hidden;}
+
+.c-inCharter {width: 105px}

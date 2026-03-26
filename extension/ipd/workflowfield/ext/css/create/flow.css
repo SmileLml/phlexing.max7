@@ -1,0 +1,4 @@
+#featurebar .breadcrumb{padding: 5px 0; margin: 0}
+#featurebar .breadcrumb>li+li:before {content: '>';}
+
+.input-group-btn a.btn{height:32px}

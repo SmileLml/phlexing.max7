@@ -1,0 +1,4 @@
+#stepViewPage .section-list {flex-direction: row;}
+#stepViewPage .table-data-tr {flex-direction: column;}
+#stepViewPage .table-data-th {font-weight: bold; color: var(--color-gray-900);}
+#stepViewPage .table-data-td {padding-left: 0;}

@@ -1,0 +1,4 @@
+.main-table tbody>tr>td:first-child, .main-table thead>tr>th:first-child {padding-left: 8px}
+.side-col .tree a.active{font-weight: 700; color: #0c64eb;}
+.toolbar {padding:5px 10px; margin-left: 200px; background: #fff; display: flex; flex-direction: row-reverse;}
+#mainMenu {margin: -10px 0 0;}

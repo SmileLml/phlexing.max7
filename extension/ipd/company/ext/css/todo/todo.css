@@ -1,0 +1,3 @@
+body{overflow-x:hidden;}
+.datatable-cell nobr p {overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+.fixed-footer {bottom:0px;}

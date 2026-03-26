@@ -1,0 +1,11 @@
+.page-content.with-menu{margin: 0 0 0 160px;}
+.group-item .checkbox{display: inline-block;}
+.group-item .checkbox input{margin: 2px 0 0 -16px;}
+.leftmenu > .nav > li > a{padding: 0 15px;}
+.input-group-addon label.checkbox{margin: 0; padding-top: 3px;}
+#childList .sort-handle{cursor: move; position: relative; top: 6px; opacity: .7;}
+#childList .sort-handle:hover {color: #145ccd}
+#childList .tree.drop-to {background: #f1f1f1;}
+#childList .tree.drop-to div {visibility: hidden;}
+
+#treeMenuBox ul > li > a{display:contents;}

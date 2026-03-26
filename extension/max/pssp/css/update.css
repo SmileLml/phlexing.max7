@@ -1,0 +1,3 @@
+.main-table tbody>tr>td:first-child, .main-table thead>tr>th:first-child{padding-left:8px;}
+.main-table td{text-overflow:ellipsis}
+.radio-inline input[type=radio] {margin-top: 8px;}

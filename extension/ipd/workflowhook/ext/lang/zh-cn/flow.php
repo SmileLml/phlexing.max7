@@ -1,0 +1,25 @@
+<?php
+$lang->workflowhook->tables['product']     = $lang->productCommon;
+$lang->workflowhook->tables['project']     = $lang->executionCommon;
+$lang->workflowhook->tables['storyspec']   = '需求描述';
+$lang->workflowhook->tables['file']        = '附件';
+$lang->workflowhook->tables['action']      = '历史记录';
+$lang->workflowhook->tables['attend']      = '考勤';
+$lang->workflowhook->tables['branch']      = '平台/分支';
+$lang->workflowhook->tables['deploy']      = '上线';
+$lang->workflowhook->tables['dept']        = '部门';
+$lang->workflowhook->tables['effort']      = '日志';
+$lang->workflowhook->tables['faq']         = 'FAQ';
+$lang->workflowhook->tables['holiday']     = '节假日';
+$lang->workflowhook->tables['host']        = '主机';
+$lang->workflowhook->tables['leave']       = '请假';
+$lang->workflowhook->tables['lieu']        = '调休';
+$lang->workflowhook->tables['makeup']      = '补办';
+$lang->workflowhook->tables['overtime']    = '加班';
+$lang->workflowhook->tables['score']       = '积分';
+$lang->workflowhook->tables['serverroom']  = '机房';
+$lang->workflowhook->tables['service']     = '服务';
+$lang->workflowhook->tables['testreport']  = '测试报告';
+$lang->workflowhook->tables['todo']        = '待办';
+$lang->workflowhook->tables['trip']        = '出差';
+$lang->workflowhook->tables['user']        = '用户';

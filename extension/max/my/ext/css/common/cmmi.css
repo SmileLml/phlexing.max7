@@ -1,0 +1,3 @@
+.dropup .search-list .search-box+.list-group {height: 110px; padding-top: 0;}
+#meetingList .dept {overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+.datatable .table>tbody>tr>td {overflow: hidden; text-overflow: ellipsis;};

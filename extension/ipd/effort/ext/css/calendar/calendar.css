@@ -1,0 +1,12 @@
+#effortCalendar {min-height: 300px; margin: 0;}
+#effortCalendar .event {padding-left: 40px; padding-right: 0;}
+#effortCalendar .event > .time {right: auto; left: 1px; color: #00da88;}
+#date {float: left; margin-right: 10px; margin-left: 0px;}
+.main-row .main-col + .side-col {padding-left: 10px;}
+
+ul.nav.nav-primary > li.active > a{background-color:#00a9fc; color:white;}
+
+#switchButton {background: #fff !important;}
+.panel-actions {position: relative; padding: 0;}
+.panel-actions .btn-icon {padding-left: 7px;}
+.pull-left .btn-link:hover {background: unset;}

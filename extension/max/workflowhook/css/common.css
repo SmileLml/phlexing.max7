@@ -1,0 +1,10 @@
+.detail {margin-bottom: 10px;}
+
+.table-form td {padding-top: 2px; padding-bottom: 2px;}
+
+.nopaddingleft {padding-left: 0px !important;}
+.nopaddingright {padding-right: 0px !important;}
+.nopaddingright .form-control {border-right: 0px !important;}
+#paramType {border-radius: 0 !important;}
+#param, #param_chosen .chosen-single {border-radius: 0 4px 4px 0;}
+#param, #param_chosen .chosen-choices{border-radius: 0 4px 4px 0;}

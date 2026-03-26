@@ -1,0 +1,36 @@
+title: table zt_workflowgroup
+desc: "流程模板"
+author: Wang yuting
+version: "1.0"
+fields:
+  - field: id
+    note: "ID"
+    range: 1-100000
+  - field: name
+    fields:
+    - field: name1
+      range: '流程模板'
+    - field: name2
+      range: '1-100000'
+  - field: type
+    range: 'project'
+  - field: projectModel
+    range: 'waterfall{2},scrum{2}'
+  - field: projectType
+    range: 'project,product'
+  - field: deliverable
+    fields:
+      - field: json1
+        range: '`{"project_waterfall":{"whenCreated":`,`{"product_waterfall":{"whenCreated":`,`{"project_scrum":{"whenCreated":`,`{"product_scrum":{"whenCreated":`'
+      - field: json2
+        range: '`{"deliverable":"2","required":true},{"deliverable":"32","required":false},{"deliverable":"62","required":false}`,`{"deliverable":"1","required":true},{"deliverable":"31","required":false},{"deliverable":"61","required":false}`,`{"deliverable":"4","required":true},{"deliverable":"34","required":false},{"deliverable":"64","required":false}`,`{"deliverable":"3","required":true},{"deliverable":"33","required":false},{"deliverable":"63","required":false}`'
+        prefix: "["
+        postfix: "]"
+      - field: json3
+        range: '`},"project_waterfall_mix":{"whenClosed":`,`},"product_waterfall_mix":{"whenClosed":`,`},"project_scrum_mix":{"whenClosed":`,`},"product_scrum_mix":{"whenClosed":`'
+      - field: json4
+        range: '`{"deliverable":"10","required":true}`,`{"deliverable":"10","required":true}`,`{}`,`{}`'
+        prefix: "["
+        postfix: "]"
+      - field: json5
+        range: '`}}`'

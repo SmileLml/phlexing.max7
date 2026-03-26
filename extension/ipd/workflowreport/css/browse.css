@@ -1,0 +1,61 @@
+.actions {text-align: center !important;}
+#reportList tr td:nth-child(2),#reportList tr td:nth-child(3){cursor:pointer;}
+.noReport {display: none; height: 400px; line-height: 400px;}
+
+/* Use to create and edit report. */
+#granularity_chosen a{margin-left: -1px; border-radius: 0px 4px 4px 0px;}
+.chosen-container-active .chosen-single{z-index: 1;}
+#granularity_chosen a input {border-radius: 0px 4px 4px 0px;}
+.input-group .chosen-container{min-width: 170px;}
+.dimension-half-radius {border-radius: 4px 0px 0px 4px !important;}
+.dimension-all-radius {border-radius: 4px !important;}
+
+/* ajaxpreview */
+.legendContainer
+{
+  text-align: left !important;
+  border-bottom: unset !important;
+  vertical-align: middle !important;
+}
+#previewID
+{
+  font-weight: 400;
+  font-size: 20px;
+  margin-bottom: 16px;
+  margin-top: 17px;
+  border-bottom: unset;
+}
+#previewID + td {border-bottom: unset;}
+#pieLegend li {list-style: none;height: 25px;}
+#pieLegend span
+{
+  display: inline-block;
+  border-radius: 3px;
+  width: 22px;
+  margin-right: 12px;
+  height : 13px;
+}
+#barLegend li,#lineLegend li
+{
+  list-style: none;
+  float: left;
+  margin-left: 20px;
+  position: relative;
+  right: 50%;
+}
+#barLegend ul,#lineLegend ul {position: relative; left: 50%; float: left;}
+#barLegend span
+{
+  display: inline-block;
+  width: 22px;
+  margin-right: 12px;
+  height : 13px;
+}
+#lineLegend span
+{
+  display: inline-block;
+  width: 35px;
+  margin-right: 12px;
+  vertical-align: middle;
+  height: 2px;
+}

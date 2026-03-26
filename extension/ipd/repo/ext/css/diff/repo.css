@@ -1,0 +1,64 @@
+#mainMenu > .btn-toolbar {height: 35px; line-height: 35px;}
+.dropdown-menu > li.selected > a:after {content: '';}
+.repo-select {width: 180px; border-color: darkgray; background: #fff; color: darkgray;}
+.repo-diff .btn-group>.btn:first-child {border-radius: 4px;}
+.repo-diff .dropdown-menu {max-height: 240px; max-width: 300px; overflow-x: initial; overflow-y: overlay;}
+#dropMenuSource.dropdown-menu, #dropMenuTarget.dropdown-menu {overflow-y: hidden;}
+.repo-diff b {padding: 0 5px 0 10px;}
+.repo-diff .search-list .list-group {max-height: 180px; margin: 0;}
+.repoCode .repo-diff .tree li.has-list.open:before {border-left: none; position: unset;}
+.repo-diff .hide-in-search {padding-left: 10px;}
+.repo-diff li>a.selected {color: #e9f2fb; background-color: #16a8f8;}
+.repo-diff .page-title .label {margin: 0px; color: #000;}
+.repo-diff .tree li {padding: 0 0 0 10px; line-height: 25px;}
+.repo-diff .icon-exchange {font-size: 30px !important;}
+.repo-diff .label-exchange, .repo-diff .label-exchange-git {background: none;}
+.diffForm {margin: 3px 0 0 10px;}
+.branch-or-tag {border-radius: 4px;}
+#sourceList .hide-in-search .hidden, #targetList .hide-in-search .hidden {display: block !important; visibility: inherit !important;}
+
+.repoCode .tree li.has-list.open:before {border-left: none;}
+#showClosed1 + label{color: #3c4353}
+#fileSwapper {position: relative; margin-left: 15px;}
+#fileSwapper .text {color: #0c60e1}
+#fileSwapper .caret{color: #838a9d}
+#fileSwapper #dropMenu .tree {margin: 0;}
+#dropMenu .col-left {padding-bottom: 10px;}
+a.fileName:focus, a.fileName:hover {background: #0c64eb; color: #fff !important;}
+.panel-heading {padding-bottom: 0px;}
+
+.code-survey {vertical-align: middle; line-height: 34px; display: inline-block;}
+.code-survey .add-cot {color: limegreen;}
+.code-survey .delete-cot {color: red;}
+
+.repoCode .list-toggle {width: 20px; cursor: pointer; display: inline-block; line-height: 24px; text-align: center; -webkit-transition: all .2s; -o-transition: all .2s; transition: all .2s;}
+.repoCode .list-toggle-open {-webkit-transform: rotate(90deg); -ms-transform: rotate(90deg); -o-transform: rotate(90deg); transform: rotate(90deg);}
+.repoCode .list-toggle:before {content: "\f0da";}
+.repoCode .list-toggle:hover {color: #0c64eb;}
+
+.version-name {padding-left: 5px; max-width: 85px;}
+.svn-version {width: 160px; display: inline-block;}
+.svn-path {display: inline-block; padding: 0px 5px 0px 0px;}
+.diff-btn {position: relative; margin: 0; padding: 0; display: none;}
+.repoCode tr.over .diff-btn {display: block;}
+.icon-info-sign {display: inline-block; position: absolute; font-weight: normal; font-size: 18px; line-height: 18px; right: -3px; background: #cdcdcd; cursor: pointer;}
+#commit-box {position: relative; top: -150px; left: 15px; color: #3c4353;}
+.commit-title {font-size: 15px; font-weight: 700; line-height: 20px; padding: 15px; text-align: left;}
+.commit-show {min-width: 350px; max-width: 800px; max-height: 500px; overflow: hidden;}
+.commit-show table {table-layout: fixed; width: 500px;}
+.commit-show th {padding-top: 8px; text-align: right; width: 80px;}
+.commit-show td {text-align: left; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+
+.file-name, .label-exchange-git {cursor: pointer;}
+.repo .repoCode .hideImportant {display: none !important;}
+
+#dropMenuRepo > div.table-row > div > div > ul > li > div {padding-left: 20px;}
+#dropMenuRepo > div.table-row > div > div > ul > li > i {top: 4px;}
+
+.page-title .tree li > a {max-width: 100%;}
+.page-title .tree li.has-list.open:before {border-left: 0px;}
+
+.repoCode td.code {white-space: inherit;}
+
+.comment-cell .panel-heading {padding: 8px 16px 7px 20px;}
+.view-bug {padding-right: 10px;}

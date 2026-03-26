@@ -1,0 +1,5 @@
+.page-actions {margin-bottom: 0px;}
+
+.main .table{background:#fff;}
+#attendStat tr th:nth-of-type(6),#attendStat tr th:nth-of-type(7) {display:none;}
+#attendStat tr td:nth-of-type(6),#attendStat tr td:nth-of-type(7) {display:none;}

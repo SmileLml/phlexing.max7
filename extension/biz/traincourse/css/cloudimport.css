@@ -1,0 +1,8 @@
+#unimportedCourseList .table-header {padding: 8px 15px;}
+.modal-icon {float: left;}
+.icon-info-sign {color: #ff9800; border-color: #ff9800;margin-right: 5px;}
+.modal-dialog {width: 35%;}
+.modal-text {display: flex;}
+.modal-button {text-align: center; padding: 16px 0px 0px;}
+
+html[lang="en"] .c-number {width: 110px;}

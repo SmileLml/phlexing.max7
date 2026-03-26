@@ -1,0 +1,202 @@
+body.m-dashboard-design {background-color: #efefef;}
+.main-header {padding: 5px 0;}
+.main-col+.side-col {padding-left: 5px; padding-right: 0;}
+.side-col {width: 300px;}
+#sidebar>.cell {width: 100%;}
+#dashboard-container {padding: 0;}
+#dashboard-container .vue-grid-layout, #sidebar .cell {
+    min-height: 500px;
+}
+#sidebar .ant-tabs{
+    background: #fff;
+    border-radius: 5px;
+}
+#sidebar .cell {
+    overflow: scroll;
+}
+#dashboard-container .vue-grid-layout {
+    height: 170px;
+    background: #fff;
+    border: 1px solid #ddd;
+}
+.chart {
+    padding: 10px;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 5px;
+}
+.chart .title {font-weight: bold; margin-bottom: 3px;}
+.chart p {margin: 0; color: #808080;}
+.chartbox {
+    width: 100%;
+    height: 100%;
+    overflow: overlay;
+}
+.chart.disable {
+    cursor: not-allowed;
+}
+.chart.disable .title {
+    color: #ddd;
+}
+.chart.disable p {
+    color: #ddd;
+}
+.ant-table-body table {
+    width: 100%;
+}
+.filterbox {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+}
+.filterbox:hover {
+    background: #f4f4f4;
+}
+.filterbox [class*=" icon-"], .filterbox [class^=icon-] {
+    font-size: 18px;
+}
+.filterbox .name {
+    flex: 1;
+}
+.filterbox .icon {
+    margin-right: 10px;
+}
+.filter-row {
+    display: flex;
+    margin-bottom: 10px;
+}
+.filter-row .title {
+    width: 80px;
+    margin-right: 20px;
+    text-align: right;
+    line-height: 32px;
+}
+.filter-row .content {
+    flex: 1;
+    width: 500px;
+}
+.filter-row .ant-radio-group {
+    line-height: 32px;
+}
+
+.vue-grid-layout {
+    background: #eee;
+}
+.vue-grid-item {touch-action: none;}
+.vue-grid-item:not(.vue-grid-placeholder) {
+    background: #fff;
+    border: 1px solid black;
+}
+.vue-grid-item .resizing {
+    opacity: 0.9;
+}
+.vue-grid-item .text {
+    font-size: 18px;
+    text-align: left;
+    position: absolute;
+    top: 10px;
+    bottom: 0;
+    left: 10px;
+    right: 0;
+    margin: auto;
+    height: 100%;
+    width: 100%;
+}
+.vue-grid-item .no-drag {
+    height: 100%;
+    width: 100%;
+}
+.vue-grid-item .minMax {
+    font-size: 12px;
+}
+.vue-grid-item .add {
+    cursor: pointer;
+}
+.vue-grid-item .action {
+    padding: 5px;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+}
+.vue-draggable-handle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 0;
+    left: 0;
+    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10'><circle cx='5' cy='5' r='5' fill='#999999'/></svg>") no-repeat;
+    background-position: bottom right;
+    padding: 0 8px 8px 0;
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.droppable-element {
+    width: 150px;
+    text-align: center;
+    background: #fdd;
+    border: 1px solid black;
+    margin: 10px 0;
+    padding: 10px;
+}
+.vue-grid-layout {
+    background: #eee;
+}
+.vue-grid-item:not(.vue-grid-placeholder) {
+    background: #fff;
+    border: 1px solid #ddd;
+}
+.vue-grid-item .resizing {
+    opacity: 0.9;
+}
+.vue-grid-item .no-drag {
+    height: 100%;
+    width: 100%;
+}
+.vue-grid-item .minMax {
+    font-size: 12px;
+}
+.vue-grid-item .add {
+    cursor: pointer;
+}
+.vue-draggable-handle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 0;
+    left: 0;
+    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10'><circle cx='5' cy='5' r='5' fill='#999999'/></svg>") no-repeat;
+    background-position: bottom right;
+    padding: 0 8px 8px 0;
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.layoutJSON {
+    background: #ddd;
+    border: 1px solid black;
+    margin-top: 10px;
+    padding: 10px;
+}
+.layoutJSON {
+    background: #ddd;
+    border: 1px solid black;
+    margin-top: 10px;
+    padding: 10px;
+}
+.columns {
+    -moz-columns: 120px;
+    -webkit-columns: 120px;
+    columns: 120px;
+}
+.vue-grid-item.vue-grid-placeholder {
+    background: none !important;
+}

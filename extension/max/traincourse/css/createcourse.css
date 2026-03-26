@@ -1,0 +1,11 @@
+#mainContent .uploader {margin-bottom: 0; border: 1px solid #dcdcdc;}
+#mainContent .uploader-actions {background-color: transparent;}
+#mainContent .file-list+.uploader-actions {margin-top: 5px;}
+#mainContent .file-list{min-height:160px;margin:0;}
+#mainContent .file-list .file{min-height:160px;width:100%;margin:0 0 35px 0;}
+#mainContent .file-list .file-wrapper{height:160px;}
+#mainContent .file-list .file-icon{height:160px;}
+#mainContent .file-list .file-wrapper>.actions, #mainContent .file-list .file-wrapper>.content,#mainContent .file-list .file-wrapper>.file-icon{width:100%;}
+#mainContent .file-list .file-icon-image {background-size: auto 100%;}
+
+#mainContent .file-list-grid .file-wrapper > .actions > .btn.btn-delete-file {margin:3px 6px;}

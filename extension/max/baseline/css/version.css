@@ -1,0 +1,9 @@
+.unit-select {width:30%; float: left; display:inline;}
+.unit-input {width: 70%; float: left; display:inline;}
+.padding {margin-right: 10px;}
+
+.unit-col-3{width:30%; float: left; display:inline;}
+.unit-col-3.border-left{border-left: 0;}
+.unit-col-4{width:40%; float: left; display:inline;}
+.unit-col-4.border-left{border-left: 0;}
+.unit-col-7{width:70%; float: left; display:inline;}

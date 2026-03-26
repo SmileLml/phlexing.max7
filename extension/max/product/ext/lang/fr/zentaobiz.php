@@ -1,0 +1,35 @@
+<?php
+$lang->product->exportTrack   = 'Export Track';
+$lang->product->workflowGroup = 'Product Workflow';
+
+$lang->product->exportTrackFields['epic']['title']         = '{fieldName}';
+$lang->product->exportTrackFields['epic']['pri']           = 'Priority';
+$lang->product->exportTrackFields['epic']['status']        = 'Status';
+$lang->product->exportTrackFields['epic']['stage']         = 'Stage';
+$lang->product->exportTrackFields['requirement']['title']  = '{fieldName}';
+$lang->product->exportTrackFields['requirement']['pri']    = 'Priority';
+$lang->product->exportTrackFields['requirement']['status'] = 'Status';
+$lang->product->exportTrackFields['requirement']['stage']  = 'Stage';
+$lang->product->exportTrackFields['story']['title']        = '{fieldName}';
+$lang->product->exportTrackFields['story']['pri']          = 'Priority';
+$lang->product->exportTrackFields['story']['status']       = 'Status';
+$lang->product->exportTrackFields['story']['stage']        = 'Stage';
+$lang->product->exportTrackFields['project']['title']      = 'Project Name';
+$lang->product->exportTrackFields['project']['status']     = 'Status';
+$lang->product->exportTrackFields['project']['progress']   = 'Progress';
+$lang->product->exportTrackFields['project']['delay']      = 'Delay';
+$lang->product->exportTrackFields['execution']['title']    = 'Execution Name';
+$lang->product->exportTrackFields['execution']['status']   = 'Status';
+$lang->product->exportTrackFields['execution']['progress'] = 'Progress';
+$lang->product->exportTrackFields['execution']['delay']    = 'Delay';
+$lang->product->exportTrackFields['design']['title']       = 'Design Name';
+$lang->product->exportTrackFields['commit']['title']       = 'Commit';
+$lang->product->exportTrackFields['task']['title']         = 'Task Name';
+$lang->product->exportTrackFields['task']['pri']           = 'Priority';
+$lang->product->exportTrackFields['task']['status']        = 'Status';
+$lang->product->exportTrackFields['task']['progress']      = 'Progress';
+$lang->product->exportTrackFields['task']['assignedTo']    = 'Assigned To';
+$lang->product->exportTrackFields['bug']['title']          = 'Bug Name';
+$lang->product->exportTrackFields['bug']['pri']            = 'Priority';
+$lang->product->exportTrackFields['bug']['status']         = 'Status';
+$lang->product->exportTrackFields['bug']['assignedTo']     = 'Assigned To';

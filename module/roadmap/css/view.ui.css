@@ -1,0 +1,6 @@
+#mainContent .detail-body .section-list .tabs ul {border-bottom-width: 1px; border-bottom-style: solid;}
+#mainContent .detail-body .section-list .tab-content .table-data caption {padding-top: 16px;}
+#roadmapInfo table caption {font-size: 1rem; font-weight: bold;}
+#roadmapInfo .history {padding: 16px 0px;}
+#mainContent .entity-label {flex: initial !important; max-width: 75%;}
+#mainContent .tab-actions {z-index: 10;}

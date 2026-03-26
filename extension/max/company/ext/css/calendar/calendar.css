@@ -1,0 +1,13 @@
+body{overflow-x:hidden;}
+.side-col{width: 300px;}
+#sidebar > .cell{width: 280px;}
+.hide-sidebar #sidebar > .cell{display: none;}
+
+#diary-title li{overflow:hidden; text-overflow:ellipsis;}
+.form-group .checkbox-inline{width: 280px}
+.fixed-footer {bottom:0px;}
+
+.datatable-cell > ol > li {overflow: hidden; white-space: nowrap; text-overflow: ellipsis; margin-left: -20px;}
+
+#showUser_chosen .grey {background-color: #f1f1f1 !important}
+#datatable-datatable .scroll-wrapper .scroll-slide, #dataWrapper {overflow: hidden;}

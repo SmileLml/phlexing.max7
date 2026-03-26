@@ -1,0 +1,3 @@
+#dataList [data-col=actions] .toolbar > .toolbar-item > span {max-width: 35px; overflow: hidden;}
+#moduleMenu .category-dropdown {justify-content: left;}
+#moduleMenu .category-dropdown:hover {background-color: unset; --skin-ghost-rgb: unset;}

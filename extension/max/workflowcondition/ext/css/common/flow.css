@@ -1,0 +1,7 @@
+#menuActions{float:right !important;}
+#featurebar .breadcrumb{padding: 5px 0; margin: 0}
+#featurebar .breadcrumb>li+li:before {content: '>'}
+.input-group-required > .required::after, .required-wrapper.required::after {top:12px !important;}
+.modal-body .table {margin-bottom:0px !important;}
+a.disabled, a.disabled:focus, a.disabled:hover, a[disabled], a[disabled]:focus, a[disabled]:hover {color: #aaa !important; text-decoration: none; cursor: default;}
+.main-actions {text-align: center;}

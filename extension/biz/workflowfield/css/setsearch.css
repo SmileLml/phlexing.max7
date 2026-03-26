@@ -1,0 +1,5 @@
+.checkbox label {padding-left: 30px; margin-top: 5px;}
+.checkbox.check-all {border-bottom: 1px solid #d6dae3;}
+.checkbox.check-all label {margin-bottom: 5px;}
+
+.sortable .icon-move {margin-left: 10px;}

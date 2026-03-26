@@ -1,0 +1,3 @@
+.fileType {display: flex;}
+.fileType > span {line-height: 28px; margin-right: 20px; color: #9EA3B0;}
+.input-group-addon:empty{width:0px;}

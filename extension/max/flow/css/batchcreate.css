@@ -1,0 +1,4 @@
+#ajaxForm table tbody .required:after {visibility: hidden;}
+#ajaxForm table thead .required:after {right: auto;}
+.btn + .btn {margin-left: 5px;}
+.table-responsive {overflow-x: visible;}

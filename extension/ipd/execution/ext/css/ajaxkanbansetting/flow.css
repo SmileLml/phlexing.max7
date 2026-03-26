@@ -1,0 +1,6 @@
+.checkbox-inline {display: inline-block; margin-left: 10px !important; width: 15%;}
+.checkbox-inline label {padding-left: 8px;}
+.radio-inline {width: 80px;}
+.subStatusTips {margin-left: 20px;}
+.subStatusTR .col-sm-2 {margin-bottom: 5px;}
+.input-group .colorpicker {z-index: auto;}

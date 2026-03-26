@@ -1,0 +1,13 @@
+.table-waterpolo .background-grey { background-color: #F7F7FA !important; padding-top: 8px; padding-bottom: 8px; margin-top: 8px; margin-bottom: 8px; }
+.table-waterpolo .text-molecule, .table-waterpolo .text-denominator { padding-top: 4px; }
+.table-waterpolo .text-denominatorTip { color: #838a9d; }
+.table-waterpolo .molecule-div { display: flex; align-items: center;}
+.table-waterpolo .molecule-div > div {display: flex; justify-content: end; padding: 5px;}
+.table-waterpolo .molecule-div > div > div {width: 100%;}
+.table-waterpolo .molecule-div > div .picker {width: 100%;}
+.flex-div-5 { flex: 0 0 5%; }
+.flex-div-10 { flex: 0 0 10%; }
+.flex-div-15 { flex: 0 0 15%; }
+.flex-div-30 { flex: 0 0 30%; }
+.flex-div-35 { flex: 0 0 35%; }
+.denominator-tip { padding-left: 3px; }

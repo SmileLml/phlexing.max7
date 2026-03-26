@@ -1,0 +1,5 @@
+.icon-cards-view {color: #888fa1;}
+#productTableList > tr > td.table-nest-title {padding-left: 16px; display: flex; align-items: center;}
+#productTableList .c-name > span.table-nest-icon {width: 0; visibility: hidden;}
+.table-nest-title > span {padding-left: 2px; overflow:hidden; min-width: 22px;}
+.fix-table-copy-wrapper{display:none;}

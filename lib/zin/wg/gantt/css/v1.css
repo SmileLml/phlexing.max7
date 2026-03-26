@@ -1,0 +1,62 @@
+#myCover {display:none;left:12px!important;z-index:10!important;top:9px!important;height:unset!important;}
+
+#ganttContainer .gantt_message_area{display:none;}
+#ganttContainer .gantt_grid_head_owner_id {text-align: left}
+#ganttContainer .gantt_grid_head_cell.gantt_grid_head_text{overflow:visible;}
+#ganttContainer .gantt_grid_head_cell, .gantt_scale_cell{color:#000000 !important;}
+#ganttContainer .gantt_grid_scale, .gantt_task_scale, .gantt_task_vscroll{background-color: #F2F7FF;}
+#ganttContainer .gantt_row{cursor: pointer;}
+#ganttContainer .gantt_row > div:first-child .gantt_tree_content{color:#3C4353;}
+#ganttContainer .gantt_row_task:hover .submitBtn{ display: inline-block;}
+#ganttContainer .gantt_link_arrow_right {border-left-color: #2196F3;}
+#ganttContainer .gantt_link_arrow_left {border-right-color: #2196F3;}
+
+#ganttContainer .gantt_tree_content table {width: 100%;}
+#ganttContainer .gantt_tree_content table td {padding: 0 !important;}
+#ganttContainer .gantt_tree_content{color:#838A9D;}
+
+#ganttContainer .gantt_task_content span.task-label, .gantt_task_content span.label-pri{display: none;}
+#ganttContainer .gantt_task_content .icon-seal{display: none;}
+#ganttContainer .gantt_task_line {overflow:visible;}
+#ganttContainer .gantt_task_line.gantt_selected {box-shadow: 0 1px 1px rgba(0,0,0,.05), 0 2px 6px 0 rgba(0,0,0,.045)}
+#ganttContainer .gantt_task_line.gantt_task_inline_color{border:0px;}
+#ganttContainer .gantt_task_link .gantt_line_wrapper div{background-color: #2196F3;}
+#ganttContainer .gantt_task_link.start_to_start .gantt_line_wrapper div { background-color: #DD55EA; }
+#ganttContainer .gantt_task_link.start_to_start:hover .gantt_line_wrapper div { box-shadow: 0 0 5px 0px #DD55EA; }
+#ganttContainer .gantt_task_link.start_to_start .gantt_link_arrow_right { border-left-color: #DD55EA; }
+#ganttContainer .gantt_task_link.finish_to_start .gantt_line_wrapper div { background-color: #7576ba; }
+#ganttContainer .gantt_task_link.finish_to_start:hover .gantt_line_wrapper div { box-shadow: 0 0 5px 0px #7576ba; }
+#ganttContainer .gantt_task_link.finish_to_start .gantt_link_arrow_right { border-left-color: #7576ba; }
+#ganttContainer .gantt_task_link.finish_to_finish .gantt_line_wrapper div { background-color: #55d822; }
+#ganttContainer .gantt_task_link.finish_to_finish:hover .gantt_line_wrapper div { box-shadow: 0 0 5px 0px #55d822; }
+#ganttContainer .gantt_task_link.finish_to_finish .gantt_link_arrow_left { border-right-color: #55d822; }
+#ganttContainer .gantt_task_link.start_to_finish .gantt_line_wrapper div { background-color: #975000; }
+#ganttContainer .gantt_task_link.start_to_finish:hover .gantt_line_wrapper div { box-shadow: 0 0 5px 0px #975000; }
+#ganttContainer .gantt_task_link.start_to_finish .gantt_link_arrow_left { border-right-color: #975000; }
+
+#ganttContainer .gantt_critical_link .gantt_line_wrapper>div {background-color: #e63030 !important;}
+#ganttContainer .gantt_critical_link.start_to_start .gantt_link_arrow_right {border-left-color: #e63030 !important;}
+#ganttContainer .gantt_critical_link.finish_to_start .gantt_link_arrow_right {border-left-color: #e63030 !important;}
+#ganttContainer .gantt_critical_link.start_to_finish .gantt_link_arrow_left {border-right-color: #e63030 !important;}
+#ganttContainer .gantt_critical_link.finish_to_finish .gantt_link_arrow_left {border-right-color: #e63030 !important;}
+#ganttContainer .gantt_critical_task{background:#e63030 !important; border-color:#9d3a3a !important;}
+#ganttContainer .gantt_marker .gantt_marker_content {left: -15px; background-color: #f51e1e;}
+
+#ganttContainer .submitBtn{display:none}
+#ganttContainer .editDeadline {display: none; line-height: normal !important; padding: 2px 6px; color: #fff !important;}
+#ganttContainer td:hover > .editDeadline {display: inline-block !important;}
+#ganttContainer .icon-confirm {color: #18a6fd; font-size: 18px;}
+#ganttContainer .icon-seal{font-size: 18px;}
+#ganttContainer div.delayed {background: #FFEBEB; color: #FB2B2B;}
+#ganttContainer [class*=" pri-"] {max-width:unset;}
+
+#mainContent.loading {overflow: hidden;}
+#mainContent.loading .scrollVer_cell {display: none;}
+.gantt-fullscreen #header,
+.gantt-fullscreen #mainMenu,
+.gantt-fullscreen #footer {display: none!important;}
+.gantt-fullscreen #mainContent {position: fixed; top: 0; right: 0; bottom: 0; left: 0}
+
+.toggle-all-icon {cursor: pointer; position: relative; right: 5px;}
+.toggle-all-icon .icon-expand-alt:before {content: "\e6f2";}
+.is-collapsed .toggle-all-icon .icon-expand-alt:before {content: "\e6f1";}

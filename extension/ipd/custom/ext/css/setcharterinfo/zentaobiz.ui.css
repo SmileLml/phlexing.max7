@@ -1,0 +1,3 @@
+.table.form-batch-table > * > tr > * {border-width: 1px; border-style: solid;}
+.table.form-batch-table > * > tr > td.form-batch-col-actions {align-content: center;}
+.table.form-batch-table > * > tr > th {outline: 1px solid var(--color-border);}

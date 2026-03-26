@@ -1,0 +1,9 @@
+.with-side .side{left: 20px; position: absolute; width: 140px;}
+.with-side .side .menu.affix{top:100px; margin-left:0;}
+.with-side .main{padding-left: 160px; margin-right: 0;}
+
+.tree > li {margin-right: 0;}
+.tree li.active > a{font-weight: bold;}
+
+.table-bordered td, .table-bordered th {border: 1px solid #ddd !important;}
+.table-data tbody > tr >td {padding-right:8px !important;}

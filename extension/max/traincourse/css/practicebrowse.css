@@ -1,0 +1,19 @@
+.breadcrumb{margin-bottom: 0;}
+#update-practice{color: #2E7FFF;}
+.update-practice{margin-right: 4px;}
+#search{width: 240px;}
+.input-group-addon .icon-search {color: #2E7FFF}
+.practices-panel{padding: 16px;}
+.practice{padding: 12px 16px;border: 1px solid #EEE;margin-bottom: 12px;}
+.flex{display: flex; align-items: center}
+.practice-title{color: #000; margin-right: 8px; font-size: 13px;line-height: 22px;}
+.labels {display: flex; flex-wrap: wrap;}
+.labels .label-item {padding: 0 4px; margin-right: 8px; font-size:12px; border-radius: 2px; line-height: 20px}
+.labels .label-item-secondary {color: #31BEEB; border: 1px solid #b3ebfd;}
+.labels .label-item-special {color: #A38CF8; border: 1px solid #e4ddfd;}
+.labels .label-item-primary {color: #66A2F8; border: 1px solid #d1e3fd; background: #fff;}
+.labels .label-item-primary:hover {color: #66A2F8; border: 1px solid #d1e3fd; background: #fff;}
+.labels .label-item-secondary:hover {color: #31BEEB; background: #fff;}
+.labels .label-item-special:hover {color: #A38CF8; background: #fff;}
+.practice-intro{color: #838A9D; margin-top: 3px; margin-bottom: 5px; white-space: nowrap; overflow: hidden;}
+.practice-contributor{color: #313C52; margin-top: 5px}

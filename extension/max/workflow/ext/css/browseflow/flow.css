@@ -1,0 +1,4 @@
+a.disabled, a.disabled:focus, a.disabled:hover, a[disabled], a[disabled]:focus, a[disabled]:hover {color: #aaa !important; text-decoration: none; cursor: default;}
+.tr-child > td {padding-left: 0 !important; padding-right: 0 !important;}
+#main > .container > #menuActions {margin-top: -40px !important;}
+.footerbar a[href='javascript:;']{display:none;}

@@ -1,0 +1,70 @@
+.detail-action {cursor:pointer;}
+.focused {background:#1d1f22;border-radius:0;}
+.focused .detail-content {color:#fff;}
+#docBox {width:100%; position:relative; height: 800px; border-right: 2px solid #9f9f9f; border-bottom: 2px solid #9f9f9f;}
+#docBox iframe {width: 100%; height: 100%; border: none;}
+.fullscreen .fullscreen-btn > .icon-fullscreen:before {content: '\e972'}
+#mainMenu .breadcrumb {padding:0; margin: 8px 0;font-size:14px;color:#666;}
+.detail-title > .pull-right {top: 0px}
+
+.main-row .main-col .detail:first-child {position: relative;}
+
+.courses {position: relative; margin-left: -20px;}
+.courses {position: relative;}
+.courses dl { margin:0 0 0 25px; line-height: 20px; }
+.courses .article { padding: 0; border: none; box-shadow: none; margin: 0;font-size:14px;}
+.book,.chapter,.courses .article { line-height: 30px; padding: 3px 0; transition: all 0.3s; border-radius: 4px}
+.book > strong,.chapter > strong,.courses .article > strong { font-size: 16px; display: inline-block; }
+.chapter > strong,.courses .article > strong { font-size: 14px; }
+.courses .article > strong { font-weight: normal; }
+.courses .actions { display: inline-block; margin-left: 20px;}
+.courses .actions a { color: #999; font-weight: normal; }
+.book:hover .actions a,.chapter:hover .actions a,.courses .article:hover .actions a { color: #506EAF; }
+.chapter, .courses .article { line-height: 20px; }
+.chapter .order,.courses .article .order { display: inline-block; margin-right: 0; height: 20px; line-height: 20px; padding: 0 2px; text-align: center; transition: all 0.3s;  }
+.courses dd:hover .order,.book:hover:before {border-color: #999}
+i.icon-arrow-up, i.icon-arrow-down {cursor:pointer}
+
+.catalog.chapter.dragging, .catalog.article.dragging {opacity: 0.25; background-color: #FFF4E5; border: 1px solid #fff}
+.catalog.chapter.drag-shadow, .catalog.article.drag-shadow {background: #fff; border: 1px solid #ddd; box-shadow:0 1px 8px rgba(0,0,0,.15);}
+.sort {cursor: move;}
+.catalog {position: relative;}
+.catalog.drop-to {background: none;}
+.catalog.drop-to:before {display: block; background-color: #E48600; content: ' '; height: 1px; width: 100%; position: absolute; top: -1px}
+.catalog.dragging .catalog.drop-to:before, .catalog.drop-to.dragging:before {display: none}
+.catalog-empty {display: none; padding: 0; height: 10px; line-height: 5px!important}
+dl.drop-area {background-color: #f1f1f1}
+dl.drop-area .catalog-empty {display: block;}
+.courses > .catalog > .actions > .sort-handle {display: none}
+.chapter > strong {padding: 6px 0 ;line-height:12px;}
+.chapter > strong .labelBlock {height:12px;line-height:12px;}
+.chapter > strong .text-ellipsis {line-height: 20px;height:20px;margin-top: -4px;}
+
+
+/* chapter tree*/
+.checkbox-primary>label:after, .checkbox-primary>label:before, .radio-primary>label:after, .radio-primary>label:before {border-radius:50% !important}
+.checkbox-primary>label {padding-left: 18px;}
+.checkbox-primary.checked>label:before {height: 14px;width: 14px;font-size:12px;top:4px;}
+.checkbox-primary.checked>label:after {height:14px;width:14px;top:3px;}
+.checkbox-primary>label:after {top:3px;width:14px;height:14px;}
+.icon-caret-right {border: 1px solid #828a9d;border-radius: 50%;font-size: 13px;margin-left: 10px;position: relative;top: -1px;    }
+.icon-caret-right:before {position: relative;top: 0px;left: 1px;min-width:10px;}
+
+.action {background: #efefef;padding:20px;}
+.action .cell {background: #efefef;box-shadow:none;}
+.action .btn {width:100px;}
+
+.courses .article {display:flex;justify-content:space-between;padding: 3px 6px;}
+.courses .flex {display:flex;}
+.courses .actions {display:none;}
+.courses .active {background:#f1f1f1;};
+.labelBlock {border-left: 6px solid #e2e2e2;}
+
+.operate {margin-top: 20px;}
+.activeDuration {display: none;}
+.breadcrumb>li+li:before {content: '>';}
+video {width: 100%; height: 100%}
+.videoplay {position:relative}
+.playfailed {position:absolute; left:0; right:0; top:50%; margin:-10px auto 0; color:#ffffff; font-size:18px}
+
+#pdfFullscreen {line-height: 34px;}

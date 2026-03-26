@@ -1,0 +1,24 @@
+.block-dynamic .panel-body {height: 230px; overflow: auto; position: relative;}
+.block-team div.col-xs-6 {white-space: nowrap; overflow: hidden;}
+.cell .detail .row-grid {display: block;}
+
+.timeline > li:before {left: -26px;}
+.timeline > li + li:after {left: -23px;}
+.timeline-text {margin-left: -18px;}
+.block-dynamic .label-action {padding: 0 6px;}
+.block-dynamic .label-action + a {padding-left: 6px;}
+.timeline >li.active:before {left: -30px;}
+.timeline >li > div:after {left: -27px;}
+.timeline .timeline-text {display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+.timeline > li > div > .timeline-tag, .timeline > li > div > .timeline-text > .label-action {color: #838A9D;}
+.timeline > li > div > .timeline-text > a {color: #313C52;}
+
+.card-container {display: grid; grid-template-columns: repeat(5, 1fr); gap: 4px 20px; background-color: unset;}
+.card {position: relative; border-radius: 4px;}
+.card::before {content: ' '; display: block; padding-bottom: 56.25%;}
+.con {display: flex; justify-content: center; align-items: center; position: absolute; top: 0; bottom: 0; left: 0; right: 0;}
+.title {color: white; display: inline-block; text-align: left; padding: 0 20px; max-height: 100%; overflow: hidden; text-overflow: ellipsis;}
+.card-container li {list-style-type: none;}
+.item li.file {padding: 10px 10px 0px 10px;}
+.right-icon {padding-left: 6px;}
+.item li.file a span { display: inline-block;height: 1.2em;overflow: hidden;line-height: 1.2;}

@@ -1,0 +1,173 @@
+.form-group label {font-weight: 700;}
+.ant-tabs-nav .ant-tabs-tab {height: auto !important;}
+.ant-pagination-prev .ant-pagination-item-link, .ant-pagination-next .ant-pagination-item-link {padding: 8px;}
+.ant-form-explain {color: #ff4d4f !important;}
+
+body.m-chart-design {background-color: #efefef;}
+#report #sidebar {width: 350px;}
+#report #sidebar>.cell {width: 100%; padding: 0;}
+#report .main-header {padding: 0 0 5px;}
+#report .item, #report .ant-radio-group.item {margin-top: 10px;}
+#report .item p {margin: 3px 0; font-weight: bold;}
+#report .border {border-top: 1px solid #eee; margin-top: 20px; padding-top: 10px;}
+#report .chart {min-height: 500px; position: relative;}
+#report .form-control {height: auto;}
+#report .form-control .ant-select-selection,
+.ant-popover .form-control.ant-select.ant-select-enabled {
+    border: none;
+    border-radius: 0;
+}
+#report .control-title {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+#report .control-title button {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    height: 18px;
+    width: 18px;
+    padding: 0px;
+    background-color: #f2f2f2;
+    border: none;
+    border-radius: 2px;
+}
+#report .control-title button:hover {
+    background-color: #e0e0e0;
+}
+#report .select-box {
+    padding: 4px;
+    border: 1px solid rgb(224, 224, 224);
+    border-radius: 4px;
+}
+#report .select-inner {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 100%;
+    height: 28px;
+    padding-left: 4px;
+    font-size: 15px;
+    color: rgb(178, 178, 178);
+    border: 1px dashed rgb(224, 224, 224);
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 3px;
+}
+#report .select-inner:active, #report .select-inner:hover {background-color: rgb(240, 240, 240);}
+#report .select-inner:first-child {
+    margin-top: 0;
+}
+#report .select-inner .close {
+    height: 100%;
+    width: 24px;
+    border-right: 1px solid #c3c3c3;
+    cursor: pointer;
+}
+#report .select-inner .name {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-align: center;
+    align-items: center;
+    white-space: nowrap;
+    padding-left: 4px;
+}
+#report .select-inner .pop {
+    width: 24px;
+    cursor: pointer;
+}
+.ant-popover-content {width: 400px;}
+.ant-popover-content p {margin: 15px 0 2px}
+.ant-popover-content p:first-child {margin-top: 2px}
+.pop-bottom {margin-top: 30px;}
+#report .main-col {position: relative;}
+#report .runbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    background: #fff;
+}
+#report .run {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+}
+#report .chart-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+#report .chart-box .ant-table-thead>tr:first-child>th:first-child, #report .chart-box .ant-table-thead>tr:first-child>th:last-child {
+    padding: 8px;
+}
+#report .chart-box .ant-table-tbody>tr>td, #report .chart-box .ant-table-thead>tr>th {
+    padding: 8px;
+}
+#report p.required:after {
+    top: -2px;
+    right: -12px;
+}
+#report #draw {
+    position: relative;
+    width: 100%;
+    height: 500px;
+}
+#report .table {
+    border: 1px solid #ddd;
+}
+#report .table tr td:not(:last-child) {
+    border-right: 1px solid #ddd;
+}
+#report .table tr td:last-child {
+    border-left: 1px solid #ddd;
+}
+#report .table td.bold {
+    font-weight: bold;
+}
+#report .filter-container {
+    display: flex;
+    padding: 10px 0 0;
+    flex-wrap: wrap;
+}
+#report .filter-condition {
+    flex: 1;
+    display: flex;
+}
+#report .filter-action {
+    padding-bottom: 10px;
+    text-align: right;
+    display: flex;
+    justify-content: end;
+}
+#report .filter-action button {
+    margin-left: 5px;
+}
+#report .filter {
+    position: relative;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+#report .filter .remove {
+    position: absolute;
+    top: -13px;
+    right: -8px;
+    z-index: 1000;
+    background: #f1f1f1;
+    border: 1px solid #ddd;
+    padding: 3px;
+    border-radius: 14px;
+    width: 28px;
+    height: 28px;
+    text-align: center;
+    cursor: pointer;
+}

@@ -1,0 +1,25 @@
+.chosen-container[id^="story"] {width: 200px; max-width: 150px;}
+select[id^="story"] + .picker-single {width: 130px; max-width: 130px;}
+[id^=name] {min-width: 165px;}
+#mainContent .main-header h2 {max-width: 300px;}
+
+#batchCreateForm .input-group,
+#batchCreateForm .input-group .form-control {position: static;}
+#batchCreateForm .input-group .colorpicker {z-index: 2;}
+#batchCreateForm .input-group .colorpicker.open {z-index: 5;}
+
+.main-header .pull-left {max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+
+.chosen-results > li.has-task,
+.chosen-results > li.has-new-task {position: relative; color: #388E3C;}
+.chosen-results > li.has-task.highlighted,
+.chosen-results > li.has-new-task.highlighted {color: #fff;}
+
+#importLinesModal .modal-dialog {width: 80%;}
+
+.c-id {width: 20px;}
+.c-name, .c-desc {width: 200px;}
+.c-assigned {width: 130px;}
+.c-date {width: 120px;}
+.c-pri {width: 80px;}
+.c-actions {width: 60px;}

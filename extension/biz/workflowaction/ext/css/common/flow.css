@@ -1,0 +1,5 @@
+.input-group-required > .required::after, .required-wrapper.required::after {top:12px !important;}
+.modal-body .table {margin-bottom:0px !important;}
+.icon-grid:before{content:"\e949"}
+.form-actions .btn {min-width:120px !important;}
+#mainTitle {margin: -10px 0 5px;}

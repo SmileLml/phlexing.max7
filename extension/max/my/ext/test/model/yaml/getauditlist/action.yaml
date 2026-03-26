@@ -1,0 +1,12 @@
+title: zt_action
+author: Shujie Tian
+version: "1.0"
+fields:
+  - field: objectType
+    range: review
+  - field: objectID
+    range: 1-1000
+  - field: actor
+    range: "admin,user1,user2,user3,user4,user5"
+  - field: action
+    range: toaudit,reviewed,audited

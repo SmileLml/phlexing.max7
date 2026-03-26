@@ -1,0 +1,17 @@
+title: zt_module.
+author: Shujie Tian
+version: "1.0"
+fields:
+  - field: id
+    range: 1-1000
+  - field: root
+    range: 0
+  - field: name
+    prefix: "模块"
+    range: 1-1000
+  - field: parent
+    range: 0{2},1{2},0{1000}
+  - field: type
+    range: 'flowa_typea'
+  - field: grade
+    range: 1{2},2{2},1{1000}

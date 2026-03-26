@@ -1,0 +1,16 @@
+.detail-content table tr {vertical-align: middle;}
+.table td.content div {height: 25px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; float: left; max-width: calc(100% - 20px);}
+.table td.content .more {height: 25px; float: left;}
+.pri-low {color: #313C52;}
+.pri-middle {color: #FF9F46;}
+.pri-high {color: #FB2B2B;}
+#main .dropdown-menu {max-height: 240px; max-width: 700px; overflow-y: auto; overflow-x: hidden;}
+
+.c-status, .c-severity, .c-pri {width: 80px;}
+.c-addedBy,.c-openedBy,.c-createdBy,.c-assignedTo {width:90px;}
+.c-assignedTo {padding-left: 8px !important; text-align: left;}
+.c-addedDate,.c-openedDate,.c-createdDate {width:150px;}
+.c-approvedDate {width:120px;}
+.c-estimate {width:80px;}
+.c-order {width: 60px;}
+#pri.text-center {padding-right: 20px;}
