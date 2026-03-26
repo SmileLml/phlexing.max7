@@ -46,6 +46,7 @@ $buildAssignedTo = function()
     return div
         (
             setClass('assignedToBox flex border rounded h-8'),
+            set::required(true),
             taskAssignedTo
             (
                 setClass($hiddenTeamBtn ? '' : 'hidden'),
@@ -88,6 +89,7 @@ if($config->vision != 'lite')
 $fields->field('assignedToBox')
     ->label($lang->task->assignedTo)
     ->checkbox(array('text' => $lang->task->multiple, 'name' => 'multiple', 'checked' => !empty(data('task.mode'))))
+    ->required(true)
     ->control($buildAssignedTo);
 
 /* Set name field width. */

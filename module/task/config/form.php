@@ -12,7 +12,7 @@ $config->task->form->create = array();
 $config->task->form->create['execution']    = array('type' => 'int',      'required' => true,  'default' => 0);
 $config->task->form->create['type']         = array('type' => 'string',   'required' => true,  'default' => '');
 $config->task->form->create['parent']       = array('type' => 'int',      'required' => false, 'default' => 0);
-$config->task->form->create['assignedTo']   = array('type' => 'string',   'required' => false, 'default' => '');
+$config->task->form->create['assignedTo']   = array('type' => 'string',   'required' => true, 'default' => '');
 $config->task->form->create['module']       = array('type' => 'int',      'required' => false);
 $config->task->form->create['story']        = array('type' => 'int',      'required' => false);
 $config->task->form->create['mode']         = array('type' => 'string',   'required' => false, 'default' => '');
@@ -103,7 +103,7 @@ $config->task->form->batchedit['color']          = array('type' => 'string',   '
 $config->task->form->batchedit['type']           = array('type' => 'string',   'required' => true,  'default' => '');
 $config->task->form->batchedit['status']         = array('type' => 'string',   'required' => false, 'default' => '');
 $config->task->form->batchedit['pri']            = array('type' => 'int',      'required' => false, 'default' => 0);
-$config->task->form->batchedit['assignedTo']     = array('type' => 'string',   'required' => false, 'default' => '');
+$config->task->form->batchedit['assignedTo']     = array('type' => 'string',   'required' => true, 'default' => '');
 $config->task->form->batchedit['estimate']       = array('type' => 'float',    'required' => false, 'default' => 0);
 $config->task->form->batchedit['consumed']       = array('type' => 'float',    'required' => false, 'default' => 0);
 $config->task->form->batchedit['left']           = array('type' => 'float',    'required' => false, 'default' => 0);
@@ -121,7 +121,7 @@ $config->task->form->batchcreate['color']         = array('type' => 'string',   
 $config->task->form->batchcreate['type']          = array('type' => 'string',   'required' => false, 'default' => '');
 $config->task->form->batchcreate['version']       = array('type' => 'int',      'required' => false, 'default' => 1);
 $config->task->form->batchcreate['storyVersion']  = array('type' => 'int',      'required' => false, 'default' => 1);
-$config->task->form->batchcreate['assignedTo']    = array('type' => 'string',   'required' => false, 'default' => '');
+$config->task->form->batchcreate['assignedTo']    = array('type' => 'string',   'required' => true, 'default' => '');
 $config->task->form->batchcreate['estimate']      = array('type' => 'float',    'required' => false, 'default' => 0);
 $config->task->form->batchcreate['estStarted']    = array('type' => 'date',     'required' => false, 'default' => null);
 $config->task->form->batchcreate['deadline']      = array('type' => 'date',     'required' => false, 'default' => null);

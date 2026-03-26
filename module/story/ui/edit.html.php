@@ -315,17 +315,26 @@ detailBody
         (
             set::name($lang->story->openedBy),
             zget($users, $story->openedBy)
-        ), item
+        ),
+        item
         (
             set::name($lang->story->assignedTo),
-            picker
+            set::required(true),
+            formGroup
             (
-                setID('assignedTo'),
-                set::name('assignedTo'),
-                set::items($assignedToList),
-                set::value($fields['assignedTo']['default'])
+                inputGroup
+                (
+                    picker
+                    (
+			            setID('assignedTo'),
+                        set::name('assignedTo'),
+                        set::items($assignedToList),
+                        set::value($fields['assignedTo']['default'])
+                    )
+                )
             )
-        ), $story->status == 'reviewing' ? item
+        ),
+            $story->status == 'reviewing' ? item
         (
             set::name($lang->story->reviewers),
             picker

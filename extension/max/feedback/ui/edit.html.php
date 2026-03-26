@@ -86,7 +86,25 @@ formPanel(setID('feedbackEditForm'), set::title($lang->feedback->edit), on::chan
         set::label($lang->feedback->feedbackBy),
         set::value($feedback->feedbackBy)
     )
-), formRow
+),
+formRow
+(
+    formGroup
+    (
+        setID('assignedTo'),
+        set::label($lang->feedback->assignedTo),
+        set::width('1/2'),
+        picker
+        (
+            set::name('assignedTo'),
+            set::items($users),
+            set::value($feedback->assignedTo),
+
+        ),
+        set::required(true),
+    )
+),
+formRow
 (
     formGroup
     (

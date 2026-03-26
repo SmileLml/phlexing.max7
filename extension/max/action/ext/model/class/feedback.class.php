@@ -7,8 +7,8 @@ class feedbackAction extends actionModel
      */
     public function getList($objectType, $objectID)
     {
-        $actions = parent::getList($objectType, $objectID);
-
+        $actions   = parent::getList($objectType, $objectID);
+        $allFields = $this->dao->select('*')->from(TABLE_WORKFLOWFIELD)->where('module')->eq($objectType)->fetchAll('field');
         $this->loadModel('execution');
         foreach($actions as $action)
         {
@@ -101,6 +101,23 @@ class feedbackAction extends actionModel
             {
                 $name = $this->dao->select('title')->from(TABLE_BUG)->where('id')->eq($action->extra)->fetch('title');
                 if($name) $action->extra = (common::hasPriv('bug', 'view') && $this->config->vision == 'rnd') ? html::a(helper::createLink('bug', 'view', "storyID=$action->extra"), "#$action->extra " . $name) : ("#$action->extra " . $name);
+            }
+
+            foreach($action->history as $history)
+            {
+                $fieldListKey = $history->field . 'List';
+                if(isset($this->lang->$objectType->$fieldListKey))
+                {
+                    if(isset($this->lang->$objectType->$fieldListKey[$history->old])) $history->old = $this->lang->$objectType->$fieldListKey[$history->old];
+                    if(isset($this->lang->$objectType->$fieldListKey[$history->new])) $history->new = $this->lang->$objectType->$fieldListKey[$history->new];
+                }
+                else if(isset($allFields[$history->field]) && !empty($allFields[$history->field]->options))
+                {
+                    $options = $this->loadModel('workflowaction')->getRealOptions($allFields[$history->field]);
+
+                    if(isset($options[$history->old])) $history->old = $options[$history->old];
+                    if(isset($options[$history->new])) $history->new = $options[$history->new];
+                }
             }
         }
         return $actions;

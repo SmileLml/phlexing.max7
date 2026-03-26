@@ -350,6 +350,134 @@ class actionModel extends model
                 $history->newValue = trim($history->newValue, ',');
             }
         }
+        elseif(strpos(",{$this->config->action->objectPlan},", ",{$history->field},") !== false)
+        {
+            if(!empty($history->old))
+            {
+                $history->oldValue = $this->dao->select('title')->from(TABLE_PRODUCTPLAN)->where('id')->eq($history->old)->fetch('title');
+                $history->oldValue = trim($history->oldValue, ',');
+            }
+
+            if(!empty($history->new))
+            {
+                $history->newValue = $this->dao->select('title')->from(TABLE_PRODUCTPLAN)->where('id')->eq($history->new)->fetch('title');
+                $history->newValue = trim($history->newValue, ',');
+            }
+        }
+        elseif(strpos(",{$this->config->action->objectStory},", ",{$history->field},") !== false)
+        {
+            if(!empty($history->old))
+            {
+                $history->oldValue = $this->dao->select('title')->from(TABLE_STORY)->where('id')->eq($history->old)->fetch('title');
+                $history->oldValue = trim($history->oldValue, ',');
+            }
+
+            if(!empty($history->new))
+            {
+                $history->newValue = $this->dao->select('title')->from(TABLE_STORY)->where('id')->eq($history->new)->fetch('title');
+                $history->newValue = trim($history->newValue, ',');
+            }
+        }
+        elseif(strpos(",{$this->config->action->objectModule},", ",{$history->field},") !== false)
+        {
+            if(!empty($history->old))
+            {
+                $history->oldValue = $this->dao->select('name')->from(TABLE_MODULE)->where('id')->eq($history->old)->fetch('name');
+                $history->oldValue = trim($history->oldValue, ',');
+            }
+
+            if(!empty($history->new))
+            {
+                $history->newValue = $this->dao->select('name')->from(TABLE_MODULE)->where('id')->eq($history->new)->fetch('name');
+                $history->newValue = trim($history->newValue, ',');
+            }
+        }
+        elseif(strpos(",{$this->config->action->objectBug},", ",{$history->field},") !== false)
+        {
+            if(!empty($history->old))
+            {
+                $history->oldValue = $this->dao->select('title')->from(TABLE_BUG)->where('id')->eq($history->old)->fetch('title');
+                $history->oldValue = trim($history->oldValue, ',');
+            }
+
+            if(!empty($history->new))
+            {
+                $history->newValue = $this->dao->select('title')->from(TABLE_BUG)->where('id')->eq($history->new)->fetch('title');
+                $history->newValue = trim($history->newValue, ',');
+            }
+        }
+        elseif(strpos(",{$this->config->action->objectBuild},", ",{$history->field},") !== false)
+        {
+            if(!empty($history->old))
+            {
+                $history->oldValue = '';
+                $oldValues = explode(',', $history->old);
+                $result = $this->dao->select('name')->from(TABLE_BUILD)->where('id')->in($oldValues)->fetchAll();
+                $names = array_column($result, 'name');
+                $history->oldValue = implode(',', $names);
+            }
+
+            if(!empty($history->new))
+            {
+                $history->newValue = '';
+                $newValues = explode(',', $history->new);
+                $result = $this->dao->select('name')->from(TABLE_BUILD)->where('id')->in($newValues)->fetchAll();
+                $names = array_column($result, 'name');
+                $history->newValue = implode(',', $names);
+            }
+        }
+        elseif(strpos(",{$this->config->action->objectJson},", ",{$history->field},") !== false)
+        {
+            $objects = $this->dao->select('datasource')->from(TABLE_WORKFLOWDATASOURCE)->where('code')->eq($history->field)->fetch('datasource');
+            $keysToFind = ['jh', 'yjj', 'ygb', 'notbug', 'pending', 'yyz'];
+            if(!empty($objects))
+            {
+                $object = json_decode($objects, true);
+            } else {
+                $objects = $this->dao->select('options')->from(TABLE_WORKFLOWFIELD)->where('field')->eq($history->field)->andWhere('module')->eq('bug')->fetch('options');
+                $object = json_decode($objects, true);
+
+            }
+            if(!empty($history->old))
+            {
+                if(in_array($history->old, $keysToFind))
+                {
+                    $history->oldValue = $this->getOptionValue($object, $history->old);
+                }else {
+                    $history->oldValue = $object[$history->old];
+                    $history->oldValue = trim($history->oldValue, ',');
+                }
+
+            }
+
+            if(!empty($history->new))
+            {
+                if(in_array($history->new, $keysToFind))
+                {
+                    $history->newValue = $this->getOptionValue($object, $history->new);
+                }else {
+                    $history->newValue = $object[$history->new];
+                    $history->newValue = trim($history->newValue, ',');
+                }
+            }
+        }
+        elseif(strpos(",{$this->config->action->objectClientPriority},", ",{$history->field},") !== false)
+        {
+            $map = [
+                '1' => '高',
+                '2' => '中',
+                '3' => '低'
+            ];
+            if(!empty($history->old))
+            {
+                $history->oldValue = $map[$history->old];
+            }
+
+            if(!empty($history->new))
+            {
+                $history->newValue = $map[$history->new];
+            }
+        }
         else
         {
             $fieldListVar = isset($this->config->action->objectFields[$objectType][$history->field]) ? $this->config->action->objectFields[$objectType][$history->field] : $history->field . 'List';
@@ -804,7 +932,7 @@ class actionModel extends model
             {
                 if(in_array($actionType, array('restoredsnapshot', 'createdsnapshot')) && in_array($action->objectType, array('vm', 'zanode')) && $value == 'defaultSnap') $value = $this->lang->{$objectType}->snapshot->defaultSnapName;
 
-                if(!is_array($value)) $desc = str_replace('$' . $key, (string)$value, $desc);
+                if(!is_array($value) && !is_object($value)) $desc = str_replace('$' . $key, (string)$value, $desc);
             }
         }
 
@@ -1703,12 +1831,12 @@ class actionModel extends model
             }
             elseif($history->diff != '')
             {
-                $history->diff      = str_replace(array('<ins>', '</ins>', '<del>', '</del>'), array('[ins]', '[/ins]', '[del]', '[/del]'), $history->diff);
-                $history->diff      = $history->field != 'subversion' && $history->field != 'git' ? htmlSpecialString($history->diff) : $history->diff;   // Keep the diff link.
-                $history->diff      = str_replace(array('[ins]', '[/ins]', '[del]', '[/del]'), array('<ins>', '</ins>', '<del>', '</del>'), $history->diff);
-                $history->diff      = nl2br($history->diff);
-                $history->noTagDiff = $canChangeTag ? preg_replace('/&lt;\/?([a-z][a-z0-9]*)[^\/]*\/?&gt;/Ui', '', $history->diff) : '';
-                $content .= sprintf($this->lang->action->desc->diff2, $history->fieldLabel, $history->noTagDiff, $history->diff);
+				$history->diff = str_replace(array('<ins>', '</ins>', '<del>', '</del>'), array('[ins]', '[/ins]', '[del]', '[/del]'), $history->diff);
+                $history->diff = $history->field != 'subversion' && $history->field != 'git' ? htmlSpecialString($history->diff) : $history->diff;   // Keep the diff link.
+                $history->diff = str_replace(array('[ins]', '[/ins]', '[del]', '[/del]'), array('<ins>', '</ins>', '<del>', '</del>'), $history->diff);
+                $history->diff = nl2br($history->diff);
+                $history->diff = $canChangeTag ? preg_replace('/&lt;\/?([a-z][a-z0-9]*)[^\/]*\/?&gt;/Ui', '', $history->diff) : '';
+                $content      .= sprintf($this->lang->action->desc->diff2, $history->fieldLabel, $history->diff, $history->diff);
             }
             else
             {
@@ -2675,4 +2803,27 @@ class actionModel extends model
         }
         return array_values($actions);
     }
+
+    /**
+     * 根据key动态查找对应的value
+     * @param array $data 解析后的JSON数据
+     * @param string $dynamicKey 要查找的key（如"jh", "yjj"等）
+     * @return string $value，未找到返回null
+     */
+    public function getOptionValue(array $data, string $dynamicKey): ?string {
+        foreach ($data as $group) {
+            if (isset($group["options"]) && is_array($group["options"])) {
+
+                // 遍历所有 options（不会只取第一个）
+                foreach ($group["options"] as $key => $value) {
+                    if ($key === $dynamicKey) {
+                        return $value;
+                    }
+                }
+
+            }
+        }
+        return null;
+    }
+
 }

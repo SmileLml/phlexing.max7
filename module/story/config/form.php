@@ -9,7 +9,7 @@ $config->story->form->create['product']     = array('type' => 'int',     'contro
 $config->story->form->create['branch']      = array('type' => 'int',     'control' => 'select',       'required' => false, 'default' => 0,  'options' => array());
 $config->story->form->create['module']      = array('type' => 'int',     'control' => 'select',       'required' => false, 'default' => 0,  'options' => array());
 $config->story->form->create['plan']        = array('type' => 'array',   'control' => 'select',       'required' => false, 'default' => 0,  'options' => array(), 'filter' => 'join');
-$config->story->form->create['assignedTo']  = array('type' => 'string',  'control' => 'select',       'required' => false, 'default' => '', 'options' => 'users');
+$config->story->form->create['assignedTo']  = array('type' => 'string',  'control' => 'select',       'required' => true, 'default' => '', 'options' => 'users');
 $config->story->form->create['source']      = array('type' => 'string',  'control' => 'select',       'required' => false, 'default' => '', 'options' => $lang->story->sourceList);
 $config->story->form->create['sourceNote']  = array('type' => 'string',  'control' => 'text',         'required' => false, 'default' => '', 'filter'  => 'trim');
 $config->story->form->create['feedbackBy']  = array('type' => 'string',  'control' => 'text',         'required' => false, 'default' => '', 'filter'  => 'trim');

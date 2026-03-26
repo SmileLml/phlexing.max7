@@ -73,6 +73,7 @@ $config->action->objectNameFields['miniprogram']  = 'name';
 $config->action->objectNameFields['holiday']      = 'name';
 $config->action->objectNameFields['system']       = 'name';
 $config->action->objectNameFields['deliverable']  = 'name';
+$config->action->objectNameFields['docreview']  = 'PingShenBiaoTi';
 
 $config->action->commonImgSize = 870;
 
@@ -119,10 +120,18 @@ $config->trash->search['params']['date']       = array('operator' => '=', 'contr
 $config->action->newPageModule  = array('repo', 'mr', 'host', 'account', 'serverroom', 'instance', 'store', 'space', 'domain', 'service', 'gitlab', 'gitea', 'gogs', 'sonarqube', 'jenkins', 'nexus', 'board');
 $config->action->latestDateList = array('today', 'yesterday', 'thisWeek', 'lastWeek', 'thisMonth');
 
-$config->action->userFields         = 'openedBy,addedBy,createdBy,editedBy,assignedTo,finishedBy,canceledBy,closedBy,activatedBy,resolvedBy,lastEditedBy,builder,owner,reviewedBy,forwardBy,scriptedBy,manager,commitedBy,archivedBy,PO,QD,RD,feedback,PM,account,changedBy,submitedBy,retractedBy,lastRunner,assignedBy,processedBy';
-$config->action->multipleUserFields = 'mailto,whitelist,reviewer,users,assignee,approver,PMT,committer,backReviewers,contributor,reviewers';
+$config->action->userFields         = 'openedBy,addedBy,createdBy,editedBy,assignedTo,finishedBy,canceledBy,closedBy,activatedBy,resolvedBy,lastEditedBy,builder,owner,reviewedBy,forwardBy,scriptedBy,manager,commitedBy,archivedBy,PO,QD,RD,feedback,PM,account,changedBy,submitedBy,retractedBy,lastRunner,assignedBy,processedBy,fankuiquerenBy,pmclBy';
+$config->action->multipleUserFields = 'mailto,whitelist,reviewer,users,assignee,approver,PMT,committer,backReviewers,contributor,reviewers,Validator';
 
 $config->action->objectFields['task']['closedReason'] = 'reasonList';
+
+$config->action->objectPlan           = 'plan,qiwangjiaofubanben,jihuajiaofubanben';
+$config->action->objectBuild          = 'JieJueBanBenXin,Realizebuild,openedBuild,JiHuaHeRuBanBen,resolveBuild,sjfbbb,resolvedBuild';
+$config->action->objectStory          = 'story';
+$config->action->objectModule         = 'module,ModuleAdd';
+$config->action->objectBug            = 'duplicateBug';
+$config->action->objectJson           = 'Deliver,CustomerProject,CustomerPerception,subStatus';
+$config->action->objectClientPriority = 'ClientPriority';
 
 $config->action->multipleObjectFields['bug']['os']        = 'osList';
 $config->action->multipleObjectFields['bug']['browser']   = 'browserList';

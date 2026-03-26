@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 /**
  * The edit file of bug module of ZenTaoPMS.
  *
@@ -23,17 +24,20 @@ jsVar('projectExecutionPairs', $projectExecutionPairs);
 jsVar('edition',               $config->edition);
 jsVar('isShadowProduct',       !empty($product->shadow));
 
-detailHeader(to::title
+detailHeader
 (
-    entityLabel
+    to::title
     (
-        set::entityID($bug->id),
-        set::level(1),
-        set::text($lang->bug->edit),
-        set::reverse(true),
-        to::suffix($bug->title)
-    )
-));
+        entityLabel
+        (
+            set::entityID($bug->id),
+            set::level(1),
+            set::text($lang->bug->edit),
+            set::reverse(true),
+            to::suffix($bug->title)
+        )
+    ),
+);
 
 $editorUid = uniqid();
 detailBody
@@ -338,7 +342,11 @@ detailBody
                     )
                 )
             ),
-            item(set::name($lang->bug->mailto), mailto(set::items($users), set::value($bug->mailto)))
+            item
+            (
+                set::name($lang->bug->mailto),
+                mailto(set::items($users), set::value($bug->mailto)),
+            )
         ),
         tableData
         (
@@ -512,7 +520,7 @@ detailBody
                 picker
                 (
                     on::click('setDuplicateBug'),
-                    set::items(array()),
+                    set::items($duplicateBugs),
                     set::name('duplicateBug'),
                     set::value($bug->duplicateBug)
                 )

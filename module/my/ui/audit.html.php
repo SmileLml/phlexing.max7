@@ -95,6 +95,18 @@ foreach($reviewList as $review)
         $statusList = $lang->charter->reviewStatusList;
     }
 
+    if($type == 'docreview')
+    {
+        $this->app->loadLang('docreview');
+        $statusList = $lang->approval->statusList;
+    }
+
+    if($type == 'task')
+    {
+        $this->app->loadLang('task');
+        $statusList = $lang->approval->statusList;
+    }
+
     if(!in_array($type, array('demand', 'story', 'testcase', 'feedback', 'review', 'charter')) && !$isOAObject)
     {
         if($rawMethod == 'audit') $statusList = $lang->approval->nodeList;

@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 class bugZen extends bug
 {
     /**
@@ -72,7 +73,6 @@ class bugZen extends bug
      * @param  object    $bug
      * @access protected
      * @return bool
-     * @param int $oldExecution
      */
     protected function checkRequiredForResolve($bug, $oldExecution)
     {
@@ -711,7 +711,6 @@ class bugZen extends bug
      * @param  string    $from
      * @access protected
      * @return void
-     * @param string $actionURL
      */
     protected function buildBrowseSearchForm($productID, $branch, $queryID, $actionURL)
     {
@@ -1164,9 +1163,12 @@ class bugZen extends bug
         if($product->type != 'normal') $branchTagOption = $this->getBranchOptions($product->id);
         if($this->config->edition == 'max') $this->view->injectionList = $this->view->identifyList = $this->loadModel('review')->getPairs($bug->project, $bug->product, true);
 
+        $duplicateBugs = $this->bug->getProductBugPairs($bug->product, $bug->branch);
+
         $this->assignVarsForEdit($bug);
 
         $this->view->title                 = $this->lang->bug->edit . "BUG #$bug->id $bug->title - " . $this->products[$bug->product];
+        $this->view->duplicateBugs         = $duplicateBugs;
         $this->view->bug                   = $bug;
         $this->view->product               = $product;
         $this->view->moduleOptionMenu      = $moduleOptionMenu;
@@ -1979,7 +1981,6 @@ class bugZen extends bug
      * @param  int     $todoID
      * @access private
      * @return bool
-     * @param int $bugID
      */
     private function updateTodoAfterCreate($bugID, $todoID)
     {
@@ -2362,7 +2363,6 @@ class bugZen extends bug
      * @param  string    $message
      * @access protected
      * @return bool
-     * @param mixed[] $toTaskIdList
      */
     protected function responseAfterBatchEdit($toTaskIdList, $message = '')
     {

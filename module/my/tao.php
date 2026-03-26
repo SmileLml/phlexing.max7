@@ -313,10 +313,20 @@ class myTao extends myModel
             {
                 $data = new stdclass();
                 $data->id      = $object->id;
-                $data->title   = empty($titleFieldName) || !isset($object->$titleFieldName) ? $title . " #{$object->id}" : $object->{$titleFieldName};
+                if($flows[$objectType]->table == 'zt_flow_docreview' && $flows[$objectType]->module == 'docreview'){
+                    $data->title   = empty($titleFieldName) || !isset($object->$titleFieldName) ? $title . " #{$object->id}" : $object->{$titleFieldName};
+                    $data->status  = $objectType == 'docreview' ? $object->reviewStatus : 'doing';
+                }
+                elseif($flows[$objectType]->table == 'zt_task' && $flows[$objectType]->module == 'task'){
+                    $data->title   = empty($titleFieldName) || !isset($object->$titleFieldName) ? $title . " #{$object->id}" : $object->{$titleFieldName};
+                    $data->status  = $objectType == 'task' ? $object->reviewStatus : 'doing';
+                }
+                else {
+                    $data->title   = empty($titleFieldName) || !isset($object->$titleFieldName) ? $title . " #{$object->id}" : $object->{$titleFieldName};
+                    $data->status  = $objectType == 'charter' ? $object->reviewStatus : 'doing';
+                }
                 $data->type    = $objectType;
                 $data->time    = $object->{$openedDateField};
-                $data->status  = $objectType == 'charter' ? $object->reviewStatus : 'doing';
                 $data->app     = isset($flows[$objectType]->app) ? $flows[$objectType]->app : zget($this->lang->navGroup, $objectType, '');
                 $data->product = isset($object->product) ? $object->product : 0;
                 $data->project = isset($object->project) ? $object->project : 0;

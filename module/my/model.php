@@ -1209,7 +1209,8 @@ class myModel extends model
             ->where('t2.objectType')->ne('review')
             ->beginIF($objectType != 'all')->andWhere('t2.objectType')->eq($objectType)->fi()
             ->andWhere('t1.account')->eq($this->app->user->account)
-            ->andWhere('t1.status')->eq('doing')
+            ->andWhere("t1.status in ('wait','doing') or t1.result='fail'",1)
+            ->markRight(1)
             ->andWhere('t1.type')->eq('review')
             ->orderBy("t2.{$orderBy}")
             ->query();
@@ -1220,6 +1221,17 @@ class myModel extends model
         $this->loadModel('workflowaction');
         $flows       = $this->dao->select('module,`table`,name,titleField,app')->from(TABLE_WORKFLOW)->where('module')->in(array_keys($objectIdList))->andWhere('vision')->eq($this->config->vision)->fetchAll('module');
         $objectGroup = array();
+        if(empty($objectIdList) && empty($flows))
+        {
+            $objectGroup['docreview'] = $this->dao->select('*')->from('zt_flow_docreview')
+                ->where('deleted')->eq('0')
+                ->andWhere("(createdBy='{$this->app->user->account}' and reviewStatus in ('reject','reverting','wait')) or (FIND_IN_SET('{$this->app->user->account}', reviewers) > 0 and reviewStatus='doing')) ",1)
+                ->fetchAll('id');
+            $objectGroup['task'] = $this->dao->select('*')->from('zt_task')
+                ->where('deleted')->eq('0')
+                ->andWhere("(openedBy='{$this->app->user->account}' and status not in ( 'closed', 'wait' , 'done' ) and reviewStatus in ('reject','reverting','wait')) or (FIND_IN_SET('{$this->app->user->account}', reviewers) > 0 and reviewStatus='doing')) ",1)
+                ->fetchAll('id');
+        }
         foreach($objectIdList as $objectType => $idList)
         {
             $table = zget($this->config->objectTables, $objectType, '');
@@ -1229,8 +1241,23 @@ class myModel extends model
                 if(!$table) $table = $flows[$objectType]->table;
             }
             if(empty($table)) continue;
-
-            $objectGroup[$objectType] = $this->dao->select('*')->from($table)->where('id')->in($idList)->andWhere('deleted')->eq('0')->fetchAll('id');
+            if($flows[$objectType]->table == 'zt_flow_docreview' && $flows[$objectType]->module == 'docreview')
+            {
+                $objectGroup[$objectType] = $this->dao->select('*')->from($table)
+                    ->where('deleted')->eq('0')
+                    ->andWhere("(createdBy='{$this->app->user->account}' and reviewStatus in ('reject','reverting','wait')) or (FIND_IN_SET('{$this->app->user->account}', reviewers) > 0 and reviewStatus='doing')) ",1)
+                    ->fetchAll('id');
+            }
+            elseif($flows[$objectType]->table == 'zt_task' && $flows[$objectType]->module == 'task')
+            {
+                $objectGroup[$objectType] = $this->dao->select('*')->from($table)
+                    ->where('deleted')->eq('0')
+                    ->andWhere("(openedBy='{$this->app->user->account}' and status not in ( 'closed', 'wait' , 'done' )  and reviewStatus in ('reject','reverting','wait')) or (FIND_IN_SET('{$this->app->user->account}', reviewers) > 0 and reviewStatus='doing')) ",1)
+                    ->fetchAll('id');
+            }
+            else {
+                $objectGroup[$objectType] = $this->dao->select('*')->from($table)->where('id')->in($idList)->andWhere('deleted')->eq('0')->fetchAll('id');
+            }
 
             $action = $this->workflowaction->getByModuleAndAction($objectType, 'approvalreview');
             if($action)

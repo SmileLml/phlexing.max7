@@ -105,6 +105,22 @@ formPanel
     (
         formGroup
         (
+            set::label($lang->feedback->assignedTo),
+            set::width('1/2'),
+            set::required(true),
+            picker
+            (
+                set::name('assignedTo'),
+                set::items($users),
+                set::value(isset($feedback) ? $feedback->assignedTo : ''),
+
+            )
+        )
+    ),
+    formRow
+    (
+        formGroup
+        (
             set::width('1/2'),
             set::name('source'),
             set::label($lang->feedback->source),

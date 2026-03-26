@@ -46,6 +46,7 @@ $lang->task->activatedDate       = "激活日期";
 $lang->task->export              = "导出数据";
 $lang->task->exportAction        = "导出任务";
 $lang->task->reportChart         = "报表统计";
+$lang->task->requiredFields      = "必填字段";
 $lang->task->fromBug             = '来源Bug';
 $lang->task->fromBugID           = '来源Bug编号';
 $lang->task->case                = '相关用例';

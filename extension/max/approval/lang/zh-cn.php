@@ -92,6 +92,9 @@ $lang->approval->nodeList = array();
 $lang->approval->nodeList['cc']     = '抄送';
 $lang->approval->nodeList['review'] = '审批';
 $lang->approval->nodeList['doing']  = '审批中';
+$lang->approval->nodeList['wait']  = '待审批';
+$lang->approval->nodeList['reject']  = '不通过';
+$lang->approval->nodeList['reverting']  = '回退中';
 
 $lang->approval->mailContent = array();
 $lang->approval->mailContent['mail'] = '

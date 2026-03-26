@@ -67,9 +67,10 @@ $fields->field('reviewer')
 $fields->field('needNotReview')->control('hidden')->value(0);
 
 $fields->field('assignedTo')
-    ->required($createFields['assignedTo']['required'])
-    ->id('assignedToBox')
-    ->items($createFields['assignedTo']['options']);
+    ->required()
+    ->control('inputGroup')
+    ->items(false)
+    ->itemBegin('assignedTo')->control('picker')->id('assignedToBox')->items($createFields['assignedTo']['options'])->value($createFields['assignedTo']['default'])->itemEnd();
 
 $fields->field('category')
     ->required($createFields['category']['required'])

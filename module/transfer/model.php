@@ -119,7 +119,20 @@ class transferModel extends model
         $fields = $exportDatas['fields'];
         $rows   = !empty($exportDatas['rows']) ? $exportDatas['rows'] : array();
 
-        if($this->config->edition != 'open') list($fields, $rows) = $this->loadModel('workflowfield')->appendDataFromFlow($fields, $rows, $module);
+        if($this->config->edition != 'open')
+        {
+            list($fields, $rows) = $this->loadModel('workflowfield')->appendDataFromFlow($fields, $rows, $module);
+            foreach($fields as $key => $name)
+            {
+                $field = $this->workflowfield->getByField($module, $key);
+
+                if($field->control == 'richtext')
+                {
+                    if(!isset($this->config->excel->editor[$module])) $this->config->excel->editor[$module] = array();
+                    $this->config->excel->editor[$module][] = $key;
+                }
+            }
+        }
 
         $this->post->set('rows',   $rows);
         $this->post->set('fields', $fields);

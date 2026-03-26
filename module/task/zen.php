@@ -267,8 +267,21 @@ class taskZen extends task
             $childrenDateLimit[$parent] = $childDateLimit;
         }
 
-        $storyPairs = $this->story->getExecutionStoryPairs($executionID, 0, 'all', '', 'full', 'active', 'story', false);;
+        $storyPairs = $this->story->getExecutionStoryPairs($executionID, 0, 'all', '', 'full', 'all', 'story', false);
         $storyList  = $this->story->getByList(array_keys($storyPairs));
+
+
+        $taskStories = array();
+        foreach($tasks as $taskID => $task)
+        {
+            $tasks[$taskID]->consumed = 0;
+            $parentTaskIdList[$task->parent] = $task->parent;
+            if($task->story) $taskStories[$task->story] = $this->story->getByID($task->story);
+        }
+
+        $storyList  = $storyList + $taskStories;
+
+
         $stories    = array();
         foreach($storyList as $story)
         {
@@ -340,6 +353,13 @@ class taskZen extends task
             $moduleID = $this->tree->getAllChildID($moduleID);
         }
         $stories = $this->story->getExecutionStoryPairs($this->view->execution->id, 0, 'all', $moduleID, 'full', 'active', 'story', false);
+
+        if($task->story)
+        {
+            $stories = $stories + array($task->storyID => $task->storyID . ':' .$task->storyTitle);
+        }
+
+
 
         $syncChildren   = array();
         $childDateLimit = array('estStarted' => '', 'deadline' => '');
@@ -661,6 +681,7 @@ class taskZen extends task
         if(dao::isError()) return false;
 
         $tasks = form::batchData()->get();
+        if(empty($tasks)) dao::$errors[$this->lang->task->requiredFields] = sprintf($this->lang->error->notempty, $this->lang->task->requiredFields);
         foreach($tasks as $task)
         {
             $task->project      = $execution->project;

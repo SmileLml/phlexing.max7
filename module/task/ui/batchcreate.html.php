@@ -210,10 +210,11 @@ formBatchPanel
     (
         set::name('assignedTo'),
         set::label($lang->task->assignedTo),
-        set::control(array('control' => 'taskAssignedTo', 'manageLink' => ($manageLink ? $manageLink : ''))),
+        set::control(array('control' => 'taskAssignedTo','manageLink' => ($manageLink ? $manageLink : ''))),
         set::items($members),
         set::width('128px'),
-        set::ditto(true)
+        set::ditto(true),
+        set::required(true)
     ),
     formBatchItem
     (

@@ -533,7 +533,7 @@ $lang->block->honorary['review'] = '模范评审官';
 
 $lang->block->welcome = new stdclass();
 $lang->block->welcome->common     = '欢迎总览';
-$lang->block->welcome->reviewByMe = '待我评审';
+$lang->block->welcome->reviewByMe = '待我处理的评审单';
 $lang->block->welcome->assignToMe = '指派给我';
 
 $lang->block->welcome->reviewList = array();
