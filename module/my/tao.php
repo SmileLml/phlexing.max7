@@ -313,11 +313,11 @@ class myTao extends myModel
             {
                 $data = new stdclass();
                 $data->id      = $object->id;
-                if($flows[$objectType]->table == 'zt_flow_docreview' && $flows[$objectType]->module == 'docreview'){
+                if(isset($flows[$objectType]->table) && $flows[$objectType]->table == 'zt_flow_docreview' && $flows[$objectType]->module == 'docreview'){
                     $data->title   = empty($titleFieldName) || !isset($object->$titleFieldName) ? $title . " #{$object->id}" : $object->{$titleFieldName};
                     $data->status  = $objectType == 'docreview' ? $object->reviewStatus : 'doing';
                 }
-                elseif($flows[$objectType]->table == 'zt_task' && $flows[$objectType]->module == 'task'){
+                elseif(isset($flows[$objectType]->table) && $flows[$objectType]->table == 'zt_task' && $flows[$objectType]->module == 'task'){
                     $data->title   = empty($titleFieldName) || !isset($object->$titleFieldName) ? $title . " #{$object->id}" : $object->{$titleFieldName};
                     $data->status  = $objectType == 'task' ? $object->reviewStatus : 'doing';
                 }
